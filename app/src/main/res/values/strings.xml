@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FallenAngels</string>
+    <string name="get_started">Get Started >></string>
+    <string name="ask_sign_in">Wish to sign in?</string>
+    <string name="log_in"><u>Log in here</u></string>
 </resources>
