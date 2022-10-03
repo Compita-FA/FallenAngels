@@ -23,7 +23,7 @@
             android:src="@drawable/fallenangels_logo" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/btnStart"
             android:layout_width="209dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
@@ -37,7 +37,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -59,9 +59,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
+                android:onClick="ClickLogIn"
                 android:text="@string/log_in"
                 android:textColor="@color/custom_pink"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
     </LinearLayout>

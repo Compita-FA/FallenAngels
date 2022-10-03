@@ -3,4 +3,7 @@
     <string name="get_started">Get Started >></string>
     <string name="ask_sign_in">Wish to sign in?</string>
     <string name="log_in"><u>Log in here</u></string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_acc">Create Account</string>
+    <string name="already_have_acc">Already have an account?</string>
 </resources>

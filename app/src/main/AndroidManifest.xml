@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FallenAngels">
         <activity
+            android:name=".startup.Register"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

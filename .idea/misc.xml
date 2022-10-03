@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/drawable/btn_black_rounded.xml" value="0.323" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/drawable/btn_pink_rounded.xml" value="0.323" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_get_started.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_register.xml" value="0.3625" />
       </map>
     </option>
   </component>
