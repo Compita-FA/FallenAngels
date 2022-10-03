@@ -108,13 +108,13 @@
             android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+            android:id="@+id/btnCreateAcc"
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="35dp"
             android:background="@drawable/btn_pink_rounded"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_regular"
             android:text="@string/create_acc"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -141,12 +141,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
+                android:onClick="ClickLogIn"
                 android:text="@string/log_in"
                 android:textColor="@color/custom_pink"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
     </LinearLayout>

@@ -45,11 +45,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="75dp"
+                android:layout_marginStart="85dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="@string/ask_sign_in"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -62,7 +62,7 @@
                 android:onClick="ClickLogIn"
                 android:text="@string/log_in"
                 android:textColor="@color/custom_pink"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 

@@ -16,9 +16,10 @@ public class GetStarted extends AppCompatActivity {
         setContentView(R.layout.activity_get_started);
     }
 
+    //--------------------------------- Log In On Click method -------------------------------------
     public void ClickLogIn(View view) {
-        Intent i = new Intent(GetStarted.this, Register.class);
+        Intent i = new Intent(GetStarted.this, Login.class);
         startActivity(i);
-
     }
+    //----------------------------------------------------------------------------------------------
 }
