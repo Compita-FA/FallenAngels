@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigationViewTextStyle">
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <style name="MainNavigationViewTextStyle">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="MainBarStyle">
+        <item name="layout_goneMarginBottom">-50dp</item>
+    </style>
+</resources>
