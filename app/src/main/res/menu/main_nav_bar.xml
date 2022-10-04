@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/item_home"
-        android:title="Home" />
-    <item
-        android:id="@+id/item_adopt"
-        android:title="Fur Angels for Adoption" />
-    <item
-        android:id="@+id/item_volunteer"
-        android:title="Get Involved" />
-    <item
-        android:id="@+id/item_mission"
-        android:title="Our Mission" />
-    <item
-        android:id="@+id/item_gallery"
-        android:title="Gallery" />
-    <item
-        android:id="@+id/item_events"
-        android:title="Events" />
-    <item
-        android:id="@+id/item_contact"
-        android:title="Contact" />
-    <item
-        android:id="@+id/item_aboutus"
-        android:title="About Us" />
-    <item />
-    <item
-        android:id="@+id/item_account"
-        android:title="Account" />
-    <item
-        android:id="@+id/item_logout"
-        android:title="Logout" />
+        <item
+            android:id="@+id/item_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/item_adopt"
+            android:title="Fur Angels for Adoption" />
+        <item
+            android:id="@+id/item_volunteer"
+            android:title="Get Involved" />
+        <item
+            android:id="@+id/item_mission"
+            android:title="Our Mission" />
+        <item
+            android:id="@+id/item_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/item_events"
+            android:title="Events" />
+        <item
+            android:id="@+id/item_contact"
+            android:title="Contact" />
+        <item
+            android:id="@+id/item_aboutus"
+            android:title="About Us" />
+        <item />
+        <item
+            android:id="@+id/item_account"
+            android:title="Account" />
+        <item
+            android:id="@+id/item_logout"
+            android:title="Logout" />
+
 </menu>
