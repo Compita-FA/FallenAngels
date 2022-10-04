@@ -22,6 +22,7 @@ public class GetStarted extends AppCompatActivity {
         //Finding Id's
         btnStart = findViewById(R.id.btnStart);
 
+        //Listeners
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
