@@ -9,5 +9,52 @@
     <string name="create_acc">Create Account</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="latest_news">Latest News</string>
+    <string name="covid_19">Covid-19 Miracle for our rescues.</string>
+    <string name="home_1">At the Government announcement of the National Lockdown we realised we were in a desperate situation with over 350 dogs at the Farm and no way to feed them or care for them without our usual visitors or funds.</string>
+    <string name="home_2">Our lockdown foster program was the first in our history and by March 26th over 200 dogs left the farm to go to their foster homes. With the addition of new litters, new rescues and pregnant mommies, that number quickly grew to approximately 275 dogs and puppies in foster care.</string>
+    <string name="home_3">Since late March a little over 150 dogs that were in foster care have been adopted, half of those were young dogs or puppies but 50 % were mature adults dogs and 10 % were dogs with medical and behavioral issues.</string>
+    <string name="home_4">That means that 77 dogs that would normally never have had a chance at the Farm, have found a home due to having been in Foster care. That is huge and we are immensely grateful to our fosters and adopters alike. We still have about 125 dogs in foster care, 25 of those are puppies that will or have already been adopted. Out of the 100 remaining dogs about half are potential foster fails, have applications or are with fosters that can keep them indefinitely.</string>
+    <string name="home_5">All in all this has been a huge success and we would like to thank all of you for making this happen. Please join our Fallen Angels Lockdown Fosters Facebook page if you would like to follow our foster dogs and their amazing journeys.</string>
+    <string name="home_6">For most of them, their story has just begun!</string>
+    <string name="home_7">Map to Fallen Angels Pet Rescue Farm. (Please do not use Google Maps)</string>
+    <string name="home_8">SOUTH AFRICA’S FALLEN ANGELS WIN FIRST BRIAN DAVIES AWARD FOR ANIMAL WELFARE</string>
+    <string name="home_9">Named after legendary animal welfare pioneer Brian Davies, The Brian Davies Award is a new annual award made to an animal welfare organisation that has managed to significantly help animals, in difficult and challenging circumstances. It carries a $10,000.00 prize.</string>
+    <string name="home_10">Finalists came from Greece, Uruguay and South Africa. Network for Animals (NFA) organised the awards and asked supporters to vote for the most deserving. More than 10,000 people voted.</string>
+    <string name="home_11">Fallen Angels is a group of women who venture into South Africa’s poverty-stricken and lawless townships to treat, rescue and rehome street dogs. Their Fallen Angels shelter in the Western Cape now cares for 328 dogs.</string>
+    <string name="home_12">Testimonials</string>
+    <string name="home_13">“I went to visit today and I was struck by the friendliness of the staff and the lovely happy condition of the dogs. such a happy atmosphere all round. awesome bunch!”</string>
+    <string name="home_14">- Jackie Wernberg</string>
+    <string name="home_15">"Well done ladies. It was a fantastical day at Willowbridge yesterday. You are passionate caring amazing people"</string>
+    <string name="home_16">- Adrian Hochman</string>
+    <string name="home_17">Such an amazing shelter! We have adopted a doggo from here in the past &amp; he has grown so beautifully, we couldn"'"t imagine life without him!!! The love &amp; care you give these animals is amazing. keep up the good work! ♡"</string>
+    <string name="home_18">- Linzey Marais</string>
+    <string name="home_19">"We visited for the first time today and I just wanted to take all of the doggies home with me! Keep up the amazing heartwarming work you guys are doing and we WILL be back"</string>
+    <string name="home_20">- Jean Pappas</string>
+    <string name="home_21">"Visited today &amp; all the dogs are well looked after and happy...even got to play with a couple of them in the field..definitely worth a visit."</string>
+    <string name="home_22">- Annie Steyn</string>
+    <string name="home_23">"I volunteered at Fallen Angels this week with one of my friends and I can honestly say I had the time of my life. The farm-staff are extremely friendly and are doing such an incredibly good job at looking after those animals. They’re as happy as shelter animals can be. Charmaine, Craig and Princess Bonnie are the friendliest faces to see on that farm!"</string>
+    <string name="home_24">- Kelly Hogg</string>
+    <string name="home_25">"We just adopted a beautiful staffie from fallen angels. They did all the right things. Home inspection, introduction to kids, taken the time to match him for all the right reasons. Well done..."</string>
+    <string name="home_26">- Warren Herman</string>
+    <string name="home_27">"We have never met such caring people before. You can tell everyone there puts their animals first - making sure they are cared for correctly. Thank you for the wonderful advice and most of all for our beautiful new family member Phoenix"</string>
+    <string name="home_28">- Debbie Farrel</string>
+    <string name="home_29">"These people do such an amazing job with what little they have, Lifesavers for our furry friends."</string>
+    <string name="home_30">- David Engelbrecht</string>
+    <string name="home_31">"Thank you so much for our precious Angel we adore him and thank you to all involved especially Stef who patiently helped us match our Roxy to Benji - they are inseparable now. Really would encourage anyone to support this wonderful organization ❤"</string>
+    <string name="home_32">- Linda Durla</string>
+    <string name="home_33">"I have never seen such a well organised pet rescue institution in my life and my own sister runs a rescue shelter. The friendliest, most helpful staff with an amazing amount of knowledge, expertise, love and care about and for all the incredible animals on the farm. Keep up the heavenly work and thank you for taking care of all our furry, four-legged angels."</string>
+    <string name="home_34">- Fred Henriques</string>
+    <string name="home_35">Furry Angel Power</string>
+    <string name="home_36">Our furry angels deserve and get only love, food, tenderness and care from our well trained staff. In fact, our staff live with most of our dogs so as to establish a bond with our angels like at no other rescue organisation. This makes for a mutual bond between our staff and the beautiful creatures that we can all love and save.</string>
+    <string name="home_37">Email: info@fallenangels.org.za</string>
+    <string name="home_38">Registered Charity: NPO 175-638</string>
+    <string name="home_39">PBO Number: 9300 666 72</string>
+    <string name="home_40"><u>Terms of Use</u></string>
+    <string name="home_41"><u>Privacy Policy</u></string>
+    <string name="thanks_heroes">Thanks To Our Heroes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

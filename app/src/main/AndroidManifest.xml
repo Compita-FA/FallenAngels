@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FallenAngels">
         <activity
+            android:name=".admin_pages.AdminDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".admin_pages.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".startup.Login"
             android:exported="false" />
         <activity
             android:name=".startup.Register"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".user_pages.MainActivity"
             android:exported="false" />
         <activity
             android:name=".startup.GetStarted"

@@ -1,23 +1,26 @@
-package com.example.fallenangels;
+package com.example.fallenangels.user_pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
-import com.example.fallenangels.startup.GetStarted;
-import com.example.fallenangels.startup.Login;
+import com.example.fallenangels.R;
+import com.example.fallenangels.others.HomeFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Component variables
     private DrawerLayout mainDrawer;
+    private BottomNavigationView bottomView;
+    private TextView txtHeading;
+
+    //Instances
+    private HomeFragment homeFrag = new HomeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
         //Finding ID's
         mainDrawer = findViewById(R.id.drawerLayout);
+        bottomView = findViewById(R.id.bottomNavView);
+        txtHeading = findViewById(R.id.txtPageName);
 
+        //by default, load the home screen
+        bottomView.setSelectedItemId(R.id.bttm_item_home);
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout,homeFrag).commit();
+        SetTopBar("Home");
+
+    }
+
+    //Change appearance of top bar if any other page is open
+    private void SetTopBar(String heading) {
+        txtHeading.setText(heading);
     }
 
 
