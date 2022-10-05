@@ -9,6 +9,8 @@
     <string name="create_acc">Create Account</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+
+    <!--- TODO: Home Page -->
     <string name="latest_news">Latest News</string>
     <string name="covid_19">Covid-19 Miracle for our rescues.</string>
     <string name="home_1">At the Government announcement of the National Lockdown we realised we were in a desperate situation with over 350 dogs at the Farm and no way to feed them or care for them without our usual visitors or funds.</string>
@@ -53,8 +55,60 @@
     <string name="home_40"><u>Terms of Use</u></string>
     <string name="home_41"><u>Privacy Policy</u></string>
     <string name="thanks_heroes">Thanks To Our Heroes</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--- TODO: Volunteer Page -->
+    <string name="vol_1">Get Involved</string>
+    <string name="vol_2">There are so many ways that you can help our animals. We could not do what we do without all our amazing volunteers. Become part of the Fallen Angels team today!</string>
+    <string name="vol_3">Fundraising</string>
+    <string name="vol_4">Raise money for charity and help us care for sick, abandoned and unwanted pets. You can do anything, from challenging yourself with a sponsored run to organising a tea party! Fundraisers are one of the most effective ways to spread the word about us, and raise money at the same time. Fundraising for Fallen Angels Pet Rescue is a very rewarding experience. Not only will you be helping sick, injured and homeless pets but you will have a great time doing it! Whatever event or challenge you decide to organise or take part in, we’ll support you in every way that we can. Fundraising is a great way to gain new skills and meet friends. On top of that, fundraisers are tax deductible and a great way to show awareness of the cause through your company. 100% of our donations go towards helping our animals find better lives.</string>
+    <string name="vol_5">Some Ideas</string>
+    <string name="vol_6">Why not order a collection box for the reception at your work or ask if you can put one in your local pub, newsagent or vet? Bake some cakes and sell them at work, school or to your friends Have a swear box in your office, or pick a popular word instead and charge everyone that says it Hold a sponsored ‘give something up’ day. Friends and colleagues could give up chocolate, tea or even talking! Hold a lunchtime quiz at work or school Why not do the washing up for a week and ask for a donation? Hold a ‘Come Dine with Me night at home with your friend or family and charge them to dine</string>
+    <string name="vol_7">Organising an Event</string>
+    <string name="vol_8">We’d love for you to organise your own fundraising event for us and we’ll do what we can to support you. There are lots of different events you can hold, and here are a few ideas to get your imagination flowing!</string>
+    <string name="vol_9">Fun dog show</string>
+    <string name="vol_10">Coffee morning</string>
+    <string name="vol_11">Dress down day</string>
+    <string name="vol_12">Karaoke</string>
+    <string name="vol_13">Evening quiz night</string>
+    <string name="vol_14">Jumble sale</string>
+    <string name="vol_15">Tea party</string>
+    <string name="vol_16">Fallen Angels Charity Shop</string>
+    <string name="vol_17">Are you cleaning out your closet or redecorating your home and have unwanted items? Please think of us. Everything that you think can aid us in raising funds for Fallen Angels is welcome at our charity shop! We gratefully accept anything resalable or usable, for example:</string>
+    <string name="vol_18">Clothing</string>
+    <string name="vol_19">Bric-A-Brac and household items</string>
+    <string name="vol_20">Jewellery &amp; branded items</string>
+    <string name="vol_21">Linens &amp; electricals</string>
+    <string name="vol_22">Books &amp; media (CDs and DVDs)</string>
+    <string name="vol_23">Coats, shoes &amp; bags</string>
+    <string name="vol_24">All of the money raised by us selling your clothes in our Blue Cross shops will go towards helping pets.</string>
+
+    <!-- TODO: Our Mission Page -->
+    <string name="miss_1">Our Mission</string>
+    <string name="miss_2">Our main mission is to save and improve the living conditions of animals in their immediate surroundings, while maintaining their rehabilitation. This may involve re-homing animals who are unwanted, unloved or lost (mostly focusing on township animals, but not limited to). Ultimately the rehabilitation of animals will involve children, which will then act as therapy for both the children and the animals.</string>
+
+    <!-- TODO: Gallery Page -->
+    <string name="gall_1">Happy Homings</string>
+    <string name="gall_2">Some of our furbabies in their very own, forever homes. This is what melts our hearts</string>
+    <string name="gall_3">Before &amp; After</string>
+    <string name="gall_4">Amazing what patience, love, nutrition and vet care can do ! Especially with your support and donations.</string>
+    <string name="gall_5">Adoption Days</string>
+    <string name="gall_6">Come for cuddles at our weekend adoption days. Keep an eye on our facebook page for where we are.</string>
+    <string name="gall_7">Dog Walkers</string>
+    <string name="gall_8">Our amazing doggy bootcamp volunteers. Join them every weekend bright and early on the farm.</string>
+    <string name="gall_9">Farm Visitors</string>
+    <string name="gall_10">Bring the kids and come spend some time with our doggies on our farm.</string>
+    <string name="gall_11">Outreach Program</string>
+    <string name="gall_12">Our Outreach Program entails partnering up with "Network For Animals" and provides us the opportunity to visit empoverished areas providing free, veterinary care, yummy food and rescue for animals in need. We also visit schools and educate children on pet care.</string>
+    <string name="gall_13">Our Outreach Program entails partnering up with "Network For Animals" and provides us the opportunity to visit empoverished areas providing free, veterinary care, yummy food and rescue for animals in need. We also visit schools and educate children on pet care.</string>
+
+    <!-- TODO: Events Page -->
+    <string name="events_1">Nelson Mandela Days</string>
+    <string name="events_2">Our annual Nelson Mandela Day functions are held at Fallen Angels Pet Rescue and embody the true spirit of South African generosity.</string>
+    <string name="events_3">Doggy Christmas</string>
+    <string name="events_4">Our annual Doggy Christmas Party, held at Fallen Angels Pet Rescue, is an extraordinary site to see. Come experience our unique doggy, gift unwrapping</string>
+
+
+    <!-- TODO: Remove -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".others.MissionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/miss_1"
+                android:textColor="@color/custom_pink"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="325sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/miss_2"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="312dp"
+                android:layout_height="294dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/img_mission_1" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="307dp"
+                android:layout_height="137dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_mission_2" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="312dp"
+                android:layout_height="89dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_miss_qoute" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="71dp" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

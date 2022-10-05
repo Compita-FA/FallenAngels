@@ -1,14 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".others.GalleryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_1"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_2"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="325dp"
+                android:layout_height="168dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/img_gall_1" />
+
+            <TextView
+                android:id="@+id/textView78"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_3"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_4"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="325dp"
+                android:layout_height="188dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_gall_2" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_5"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_6"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="325dp"
+                android:layout_height="213dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_gall_3" />
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_7"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_8"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="325dp"
+                android:layout_height="223dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_gall_4" />
+
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_9"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_10"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="325dp"
+                android:layout_height="196dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_gall_5" />
+
+            <TextView
+                android:id="@+id/textView86"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_11"
+                android:textColor="@color/custom_pink"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView88"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gall_12"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="325dp"
+                android:layout_height="178dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_gall_6" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="67dp" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
