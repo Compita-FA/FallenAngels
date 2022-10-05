@@ -107,6 +107,23 @@
     <string name="events_3">Doggy Christmas</string>
     <string name="events_4">Our annual Doggy Christmas Party, held at Fallen Angels Pet Rescue, is an extraordinary site to see. Come experience our unique doggy, gift unwrapping</string>
 
+    <!-- TODO: Contact Page -->
+    <string name="con_1">Get in Touch</string>
+    <string name="con_2">Portion 25/19 of the farm Kleine Zoute Rivier 1063</string>
+    <string name="con_3">Melkbosstrand. 7441</string>
+    <string name="con_4">info@fallenangels.org.za</string>
+    <string name="con_5">Tel:</string>
+    <string name="con_6">084 482 0290 Office Hours</string>
+    <string name="con_7">076 993 9670 (Shireen)</string>
+
+    <!-- TODO: About Us Page -->
+    <!-- TODO: Check out, coloured text is giving an error -->
+    <string name="about_1">Fallen Angels Pet Rescue is a registered NPO (NPO 175-638) focusing on the rescue, rehabilitation and rehoming of domestic animals. Any animal that is forgotten, abandoned (abused), lost, lonely, emaciated and neglected <b><font fgcolor='#EA2F69'>(FALLEN)</font></b> is considered to be a Fallen Angel &amp; therefore part of the focus area of this organisation. Through animal therapy they aim to assist in healing the broken souls of any <b><font fgcolor='#EA2F69'>"FALLEN Angels"</font></b> they are financially able to assist.</string>
+    <string name="about_2">Fallen Angels Pet Rescue was founded in February 2014 by three devoted people; already active within the animal rescue and rehabilitation circuits.</string>
+    <string name="about_3">We are situated in Melkbosstrand and we work hard to make sure that all the animals in our care get the love, attention and adoration that they deserve. We have many volunteers that help, which we are all too grateful for. Our aim to make sure that the animals in our care get homes that will give them the comfort that they deserve. It"'"s been a long and hard journey, but one that is worth it every day.</string>
+    <string name="about_4">The <b><font fgcolor='#EA2F69'>'FALLEN'</font></b> in Fallen Angels Pet Rescue stands for <b><font fgcolor='#EA2F69'>F</font></b>orgotten, <b><font fgcolor='#EA2F69'>A</font></b>bandoned (Abused), <b><font fgcolor='#EA2F69'>L</font></b>ost, <b><font fgcolor='#EA2F69'>L</font></b>onely, <b><font fgcolor='#EA2F69'>E</font></b>maciated and <b><font fgcolor='#EA2F69'>N</font></b>eglected. Any animal that falls under these categories is considered a ‘Fallen Angel’ and thus falls within the area of importance for this organisation.</string>
+    <string name="about_5">Furry Angel Power</string>
+    <string name="about_6">Our furry angels deserve and get only love, food, tenderness and care from our well trained staff. In fact, our staff live with most of our dogs so as to establish a bond with our angels like at no other rescue organisation. This makes for a mutual bond between our staff and the beautiful creatures that we can all love and save.</string>
 
     <!-- TODO: Remove -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
