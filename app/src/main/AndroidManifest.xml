@@ -13,9 +13,6 @@
             android:name=".admin_pages.MainActivityAdmin"
             android:exported="false" />
         <activity
-            android:name=".admin_pages.AdminDashboardActivity"
-            android:exported="false" />
-        <activity
             android:name=".startup.Login"
             android:exported="false" />
         <activity
