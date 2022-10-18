@@ -53,21 +53,19 @@ public class Register extends AppCompatActivity
         setContentView(R.layout.activity_register);
 
         //--- Finding ID's
-            //--- Buttons
-            btnCreateAccount = findViewById(R.id.btn_CreateAcc);
-            btnLogin = findViewById(R.id.btnLogin);
+        //--- Buttons
+        btnCreateAccount = findViewById(R.id.btn_CreateAcc);
+        btnLogin = findViewById(R.id.btnLogin);
 
-            //--- Input
-            txtName = findViewById(R.id.edt_firstName);
-            txtSurname = findViewById(R.id.edt_lastName);
-            txtEmail = findViewById(R.id.edt_Email);
-            txtPass = findViewById(R.id.edt_password);
-            txtConPass = findViewById(R.id.edt_confirmPassword);
+        //--- Input
+        txtName = findViewById(R.id.edt_firstName);
+        txtSurname = findViewById(R.id.edt_lastName);
+        txtEmail = findViewById(R.id.edt_Email);
+        txtPass = findViewById(R.id.edt_password);
+        txtConPass = findViewById(R.id.edt_confirmPassword);
 
         //--- Firebase
         user = new User();
-        mAuth = FirebaseAuth.getInstance();
-        fUser = mAuth.getCurrentUser();
 
         //Listeners
         btnCreateAccount.setOnClickListener(new View.OnClickListener()
@@ -154,6 +152,8 @@ public class Register extends AppCompatActivity
     //--------------------Register the user with authentication in firebase-------------------------
     private void RegisterUser(String email, String password)
     {
+        mAuth = FirebaseAuth.getInstance();
+
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
         {
             @Override
@@ -179,6 +179,8 @@ public class Register extends AppCompatActivity
     //-------------------------Method to send a verification email to user--------------------------
     private void SendVerificationEmail(String email)
     {
+        fUser = mAuth.getCurrentUser();
+
         //Retrieving string values of name and surname
         String name = txtName.getText().toString();
         String surname = txtSurname.getText().toString();
