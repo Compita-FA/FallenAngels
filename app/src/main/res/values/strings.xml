@@ -10,6 +10,11 @@
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
 
+    <!--- TODO: Register Page -->
+    <string name="account_created">Your account has been created.</string>
+    <string name="verify_email">A verification link has been sent to your email. Please verify your account before logging in.</string>
+    <string name="change_password">If you would like to change your password then please enter your email. A reset link will be sent.</string>
+
     <!--- TODO: Home Page -->
     <string name="latest_news">Latest News</string>
     <string name="covid_19">Covid-19 Miracle for our rescues.</string>

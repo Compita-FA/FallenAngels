@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249997131314",
+    "firebase_url": "https://fallenangels-app-default-rtdb.firebaseio.com",
+    "project_id": "fallenangels-app",
+    "storage_bucket": "fallenangels-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249997131314:android:3d4d763b790f14952a462b",
+        "android_client_info": {
+          "package_name": "com.example.fallenangels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249997131314-566e1g877fddcbigkpqema7mvn7vfv33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC65Udrilt1BUZI8_CJE34v4jY4v7MlNok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249997131314-566e1g877fddcbigkpqema7mvn7vfv33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
