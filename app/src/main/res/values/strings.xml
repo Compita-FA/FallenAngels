@@ -136,8 +136,9 @@
     <string name="about_5">Furry Angel Power</string>
     <string name="about_6">Our furry angels deserve and get only love, food, tenderness and care from our well trained staff. In fact, our staff live with most of our dogs so as to establish a bond with our angels like at no other rescue organisation. This makes for a mutual bond between our staff and the beautiful creatures that we can all love and save.</string>
 
-    <!--
-    <string name="about_4">Test5</string> -->
+    <!-- TODO: Other strings -->
+    <string name="acc_settings">Please sign in or create an account to continue</string>
+
 
 
     <!-- TODO: Remove -->

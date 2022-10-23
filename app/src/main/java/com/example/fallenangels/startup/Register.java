@@ -41,7 +41,7 @@ public class Register extends AppCompatActivity
     private FirebaseAuth mAuth;
     private FirebaseUser fUser;
 
-    //User varibles
+    //User variables
     private String userID;
     private static final String TAG = "EmailPassword";
     private User user;

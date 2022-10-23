@@ -1,14 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".user_pages.UserSettingsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Currently logged in"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Guest User"
+                android:textColor="#606060"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/acc_settings"
+                android:textColor="#606060"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="46dp" />
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Update email preference"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/background_edit_text"
+                android:backgroundTint="@color/custom_light_grey"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Current email"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edit_text"
+                android:backgroundTint="@color/custom_light_grey"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="New email"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button2"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/btn_pink_rounded"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Update email"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <TextView
+                android:id="@+id/textView108"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Change password"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/background_edit_text"
+                android:backgroundTint="@color/custom_light_grey"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Current password"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edit_text"
+                android:backgroundTint="@color/custom_light_grey"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="New password"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edit_text"
+                android:backgroundTint="@color/custom_light_grey"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Confirm new password"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button3"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/btn_black_rounded"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="76dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

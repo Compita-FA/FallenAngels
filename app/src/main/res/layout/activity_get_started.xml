@@ -24,7 +24,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStart"
-            android:layout_width="209dp"
+            android:layout_width="212dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
