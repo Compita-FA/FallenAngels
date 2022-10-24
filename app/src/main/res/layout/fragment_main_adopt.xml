@@ -35,11 +35,18 @@
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/container"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:scrollIndicators="none">
+                android:layout_gravity="center_horizontal"
+                android:scrollIndicators="none"
+                app:columnCount="2">
 
             </androidx.gridlayout.widget.GridLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="77dp" />
+
         </LinearLayout>
     </ScrollView>
 

@@ -1,5 +1,7 @@
 package com.example.fallenangels.adoption;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,16 +10,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.FragmentManager;
 import androidx.gridlayout.widget.GridLayout;
 import android.widget.TextView;
 
 import com.example.fallenangels.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MainAdoptFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MainAdoptFragment extends Fragment {
 
     private GridLayout layout;
@@ -53,9 +52,8 @@ public class MainAdoptFragment extends Fragment {
 
     }
 
-    /*
-   -------------------------- This method will display populated card views -----------------------
-   */
+
+   //-------------------------- This method will display populated card views ----------------------
     private void AddCard() {
 
         View cardView = getLayoutInflater().inflate(R.layout.cardview_dog_profile, null);
@@ -63,4 +61,5 @@ public class MainAdoptFragment extends Fragment {
         layout.addView(cardView);
     }
     //----------------------------------------------------------------------------------------------
+
 }

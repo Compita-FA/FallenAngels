@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
     android:background="@android:color/transparent"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="179dp"
+        android:layout_width="176dp"
         android:layout_height="289dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/card_background"
+        android:onClick="ViewDog_OnClick"
         android:orientation="vertical">
 
         <ImageView
@@ -19,7 +22,8 @@
             android:layout_height="208dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/img_dog_demo" />
+            app:srcCompat="@drawable/img_dog_demo"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView121"

@@ -10,4 +10,9 @@
     <style name="MainBarStyle">
         <item name="layout_goneMarginBottom">-50dp</item>
     </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
 </resources>

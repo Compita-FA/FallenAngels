@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.fallenangels.R;
@@ -176,4 +178,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     //----------------------------------------------------------------------------------------------
+
+    public void ViewDog_OnClick(View v) {
+
+        Dialog dialog = new Dialog(this, R.style.DialogStyle);
+        dialog.setCanceledOnTouchOutside(false); //To prevent a user from clicking away
+        dialog.setContentView(R.layout.layout_view_dog);
+
+        Button btnClose = dialog.findViewById(R.id.btnCloseView);
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
 }
