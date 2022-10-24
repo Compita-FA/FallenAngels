@@ -2,11 +2,14 @@ package com.example.fallenangels.adoption;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.gridlayout.widget.GridLayout;
+import android.widget.TextView;
 
 import com.example.fallenangels.R;
 
@@ -17,44 +20,18 @@ import com.example.fallenangels.R;
  */
 public class MainAdoptFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private GridLayout layout;
 
     public MainAdoptFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MainAdoptFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MainAdoptFragment newInstance(String param1, String param2) {
+    public static MainAdoptFragment newInstance(String title) {
         MainAdoptFragment fragment = new MainAdoptFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("Main Adoption", title);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -63,4 +40,27 @@ public class MainAdoptFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_adopt, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        //Finding ID's
+        layout = getView().findViewById(R.id.container);
+
+        for (int i = 0; i < 10; i++) {
+            AddCard();
+        }
+
+    }
+
+    /*
+   -------------------------- This method will display populated card views -----------------------
+   */
+    private void AddCard() {
+
+        View cardView = getLayoutInflater().inflate(R.layout.cardview_dog_profile, null);
+
+        layout.addView(cardView);
+    }
+    //----------------------------------------------------------------------------------------------
 }
