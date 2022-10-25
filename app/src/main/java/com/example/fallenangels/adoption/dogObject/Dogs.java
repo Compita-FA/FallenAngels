@@ -11,11 +11,12 @@ public class Dogs {
     private String Name;
     private String Picture;
     private String Suit;
+    private String Nature;
 
     public Dogs() {}
 
     public Dogs(String breed, String DOB, String gender, String history,
-                String ID, String intake, String name, String imageID, String suit) {
+                String ID, String intake, String name, String imageID, String suit, String nature) {
         this.Breed = breed;
         this.DOB = DOB;
         this.Gender = gender;
@@ -25,6 +26,7 @@ public class Dogs {
         this.Name = name;
         this.Picture = imageID;
         this.Suit = suit;
+        this.Nature = nature;
     }
 
     public String getBreed() {
@@ -97,6 +99,14 @@ public class Dogs {
 
     public void setSuit(String suit) {
         this.Suit = suit;
+    }
+
+    public String getNature() {
+        return Nature;
+    }
+
+    public void setNature(String nature) {
+        Nature = nature;
     }
 
 }

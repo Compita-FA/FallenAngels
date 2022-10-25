@@ -13,7 +13,6 @@
         android:layout_height="289dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/card_background"
-        android:onClick="ViewDog_OnClick"
         android:orientation="vertical">
 
         <ImageView

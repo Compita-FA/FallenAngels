@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/black_fallenangels_logo" />
 
         <TextView
-            android:id="@+id/textView109"
+            android:id="@+id/txtDogName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -68,7 +68,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView117"
+                android:id="@+id/txtBreed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -79,7 +79,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView118"
+                android:id="@+id/txtDOB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -90,7 +90,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView119"
+                android:id="@+id/txtGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -101,7 +101,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView120"
+                android:id="@+id/txtIntake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -112,7 +112,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView123"
+                android:id="@+id/txtSuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
@@ -252,10 +252,10 @@
                 android:layoutDirection="inherit" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtNature"
+                android:layout_width="213dp"
                 android:layout_height="58dp"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="101dp"
                 android:layout_marginTop="137dp"
                 android:background="@color/white"
                 android:ems="10"
@@ -266,13 +266,13 @@
                 android:lines="3"
                 android:text="Fearful of strangers. Loves treats and cuddles. Strong!"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtHistory"
+                android:layout_width="213dp"
                 android:layout_height="58dp"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="101dp"
                 android:layout_marginTop="197dp"
                 android:background="@color/white"
                 android:ems="10"
@@ -283,7 +283,7 @@
                 android:lines="3"
                 android:text="Found living on a chain in Mitchells Plain"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
         </FrameLayout>
 

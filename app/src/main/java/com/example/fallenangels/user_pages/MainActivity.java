@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
@@ -176,26 +177,6 @@ public class MainActivity extends AppCompatActivity {
             //Close Drawer
             drawerLayout.closeDrawer(GravityCompat.START);
         }
-    }
-    //----------------------------------------------------------------------------------------------
-
-    //------------------------------ Show dog profile dialogue -------------------------------------
-    public void ViewDog_OnClick(View v) {
-
-        Dialog dialog = new Dialog(this, R.style.DialogStyle);
-        dialog.setCanceledOnTouchOutside(false); //To prevent a user from clicking away
-        dialog.setContentView(R.layout.layout_view_dog);
-
-        Button btnClose = dialog.findViewById(R.id.btnCloseView);
-
-        btnClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
     }
     //----------------------------------------------------------------------------------------------
 
