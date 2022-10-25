@@ -179,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //----------------------------------------------------------------------------------------------
 
+    //------------------------------ Show dog profile dialogue -------------------------------------
     public void ViewDog_OnClick(View v) {
 
         Dialog dialog = new Dialog(this, R.style.DialogStyle);
@@ -196,4 +197,6 @@ public class MainActivity extends AppCompatActivity {
 
         dialog.show();
     }
+    //----------------------------------------------------------------------------------------------
+
 }
