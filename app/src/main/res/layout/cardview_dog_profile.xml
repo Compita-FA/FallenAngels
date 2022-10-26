@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/imgCardDog"
-            android:layout_width="162dp"
+            android:layout_width="145dp"
             android:layout_height="208dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"

@@ -195,6 +195,8 @@ public class MainAdoptFragment extends Fragment {
                         imageURL = dog.getImgURL();
 
                     }
+                    Toast.makeText(getContext(), imageURL, Toast.LENGTH_SHORT).show();
+
                     txtName.setText(dogName);
                     txtBreed.setText(breed);
                     txtDOB.setText(dogDOB);
@@ -218,10 +220,8 @@ public class MainAdoptFragment extends Fragment {
     //------------------------------ Returns bitmap for each dog profile ---------------------------
     private Bitmap RetrieveImage(String imgLink) {
 
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-
         //Retrieving the image based on the image link
-        StorageReference fileRef = storageReference.getStorage().getReferenceFromUrl(imgLink);
+        StorageReference fileRef = FirebaseStorage.getInstance().getReference().getStorage().getReferenceFromUrl(imgLink);
         try
         {
             final File localFile = File.createTempFile("DogImage", "jpeg");
