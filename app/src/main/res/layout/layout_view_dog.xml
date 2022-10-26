@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
-                android:layout_marginTop="260dp"
+                android:layout_marginTop="265dp"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Single doggy home"
                 android:textColor="@color/black"
@@ -207,7 +207,7 @@
                 android:layout_width="300dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="195dp"
+                android:layout_marginTop="198dp"
                 android:background="@color/custom_light_grey"
                 android:layoutDirection="inherit" />
 
@@ -216,7 +216,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="205dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="History"
                 android:textColor="@color/black"
@@ -227,7 +227,7 @@
                 android:layout_width="300dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="255dp"
+                android:layout_marginTop="260dp"
                 android:background="@color/custom_light_grey"
                 android:layoutDirection="inherit" />
 
@@ -236,7 +236,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="260dp"
+                android:layout_marginTop="265dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Suit"
                 android:textColor="@color/black"
@@ -247,14 +247,14 @@
                 android:layout_width="300dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="285dp"
+                android:layout_marginTop="290dp"
                 android:background="@color/custom_light_grey"
                 android:layoutDirection="inherit" />
 
             <EditText
                 android:id="@+id/txtNature"
                 android:layout_width="213dp"
-                android:layout_height="58dp"
+                android:layout_height="61dp"
                 android:layout_marginStart="101dp"
                 android:layout_marginTop="137dp"
                 android:background="@color/white"
@@ -266,14 +266,14 @@
                 android:lines="3"
                 android:text="Fearful of strangers. Loves treats and cuddles. Strong!"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/txtHistory"
                 android:layout_width="213dp"
-                android:layout_height="58dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="101dp"
-                android:layout_marginTop="197dp"
+                android:layout_marginTop="200dp"
                 android:background="@color/white"
                 android:ems="10"
                 android:enabled="false"
@@ -283,12 +283,12 @@
                 android:lines="3"
                 android:text="Found living on a chain in Mitchells Plain"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="14sp" />
 
         </FrameLayout>
 
         <ImageView
-            android:id="@+id/imageView27"
+            android:id="@+id/imgViewDog"
             android:layout_width="129dp"
             android:layout_height="194dp"
             android:layout_marginStart="20dp"

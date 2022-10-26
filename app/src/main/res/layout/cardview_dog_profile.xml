@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView26"
+            android:id="@+id/imgCardDog"
             android:layout_width="162dp"
             android:layout_height="208dp"
             android:layout_gravity="center_horizontal"

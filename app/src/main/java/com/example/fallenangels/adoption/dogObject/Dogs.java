@@ -9,14 +9,14 @@ public class Dogs {
     private String ID;
     private String Intake;
     private String Name;
-    private String Picture;
+    private String ImgURL;
     private String Suit;
     private String Nature;
 
     public Dogs() {}
 
     public Dogs(String breed, String DOB, String gender, String history,
-                String ID, String intake, String name, String imageID, String suit, String nature) {
+                String ID, String intake, String name, String imgURL, String suit, String nature) {
         this.Breed = breed;
         this.DOB = DOB;
         this.Gender = gender;
@@ -24,7 +24,7 @@ public class Dogs {
         this.ID = ID;
         this.Intake = intake;
         this.Name = name;
-        this.Picture = imageID;
+        this.ImgURL = imgURL;
         this.Suit = suit;
         this.Nature = nature;
     }
@@ -85,12 +85,12 @@ public class Dogs {
         this.Name = name;
     }
 
-    public String getPicture() {
-        return Picture;
+    public String getImgURL() {
+        return ImgURL;
     }
 
-    public void setPicture(String picture) {
-        this.Picture = picture;
+    public void setPicture(String imgURL) {
+        this.ImgURL = imgURL;
     }
 
     public String getSuit() {
