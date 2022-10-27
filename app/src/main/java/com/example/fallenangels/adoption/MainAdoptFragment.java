@@ -44,7 +44,7 @@ public class MainAdoptFragment extends Fragment {
     private String dob = "";
     public static String dogKey = "noKey";
 
-    private Bitmap dogImage;
+    private Bitmap dogImage = null;
 
     private String dogName;
     private String breed;
@@ -129,7 +129,7 @@ public class MainAdoptFragment extends Fragment {
 
         txtName.setText(name);
         txtDOB.setText(dob);
-        imgView.setImageBitmap(RetrieveImage(imgURL));
+        RetrieveImage(imgURL, imgView);
 
         layout.addView(cardView);
 
@@ -193,9 +193,7 @@ public class MainAdoptFragment extends Fragment {
                         history = dog.getHistory();
                         suit = dog.getSuit();
                         imageURL = dog.getImgURL();
-
                     }
-                    Toast.makeText(getContext(), imageURL, Toast.LENGTH_SHORT).show();
 
                     txtName.setText(dogName);
                     txtBreed.setText(breed);
@@ -205,7 +203,7 @@ public class MainAdoptFragment extends Fragment {
                     txtNature.setText(nature);
                     txtHistory.setText(history);
                     txtSuit.setText(suit);
-                    imgDog.setImageBitmap(RetrieveImage(imageURL));
+                    RetrieveImage(imageURL, imgDog);
 
                 }
             }
@@ -218,10 +216,10 @@ public class MainAdoptFragment extends Fragment {
     //----------------------------------------------------------------------------------------------
 
     //------------------------------ Returns bitmap for each dog profile ---------------------------
-    private Bitmap RetrieveImage(String imgLink) {
+    private void RetrieveImage(String link, ImageView img) {
 
         //Retrieving the image based on the image link
-        StorageReference fileRef = FirebaseStorage.getInstance().getReference().getStorage().getReferenceFromUrl(imgLink);
+        StorageReference fileRef = FirebaseStorage.getInstance().getReference().getStorage().getReferenceFromUrl(link);
         try
         {
             final File localFile = File.createTempFile("DogImage", "jpeg");
@@ -232,6 +230,8 @@ public class MainAdoptFragment extends Fragment {
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot)
                 {
                     dogImage = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+                    img.setImageBitmap(dogImage);
+
                 }
             }).addOnFailureListener(new OnFailureListener()
             {
@@ -248,7 +248,7 @@ public class MainAdoptFragment extends Fragment {
             Toast.makeText(getView().getContext(), "Major Error: retrieving dog image" + e, Toast.LENGTH_LONG).show();
         }
 
-        return dogImage;
+
     }
     //----------------------------------------------------------------------------------------------
 
