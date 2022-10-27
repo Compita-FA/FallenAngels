@@ -1,12 +1,14 @@
 package com.example.fallenangels.adoption;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -23,6 +25,9 @@ import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.dogObject.Dogs;
+import com.example.fallenangels.adoption.submissions.AdoptSubmissionForm;
+import com.example.fallenangels.adoption.submissions.FosterSubmissionForm;
+import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -173,6 +178,9 @@ public class MainAdoptFragment extends Fragment {
         TextView txtSuit = dialog.findViewById(R.id.txtSuit);
         ImageView imgDog = dialog.findViewById(R.id.imgViewDog);
 
+        AppCompatButton btnAdopt = dialog.findViewById(R.id.btnAdopt);
+        AppCompatButton btnFoster = dialog.findViewById(R.id.btnFoster);
+
         Query query = FirebaseDatabase.getInstance().getReference("Dogs").orderByChild("ID").equalTo(ID);
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -204,12 +212,28 @@ public class MainAdoptFragment extends Fragment {
                     txtHistory.setText(history);
                     txtSuit.setText(suit);
                     RetrieveImage(imageURL, imgDog);
-
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+        MainActivity main = new MainActivity();
+
+        //Listeners
+        btnAdopt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                main.ShowAdoptForm(dialog);
+            }
+        });
+
+        btnFoster.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                main.ShowFosterForm(dialog);
             }
         });
     }

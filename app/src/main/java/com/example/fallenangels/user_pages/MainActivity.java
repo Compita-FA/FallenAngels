@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
+import com.example.fallenangels.adoption.submissions.AdoptSubmissionForm;
+import com.example.fallenangels.adoption.submissions.FosterSubmissionForm;
 import com.example.fallenangels.others.AboutUsFragment;
 import com.example.fallenangels.others.ContactFragment;
 import com.example.fallenangels.others.EventsFragment;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private ContactFragment conFrag = new ContactFragment();
     private AboutUsFragment aboutFrag = new AboutUsFragment();
     private UserSettingsFragment accFrag = new UserSettingsFragment();
+    private AdoptSubmissionForm adoptFormFrag = new AdoptSubmissionForm();
+    private FosterSubmissionForm fosterFormFrag = new FosterSubmissionForm();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +158,16 @@ public class MainActivity extends AppCompatActivity {
         txtHeading.setText(heading);
     }
 
+
+    public void ShowAdoptForm(Dialog dialog) {
+        dialog.dismiss();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, adoptFormFrag).commit();
+    }
+
+    public void ShowFosterForm(Dialog dialog) {
+        dialog.dismiss();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, fosterFormFrag).commit();
+    }
 
     //----------------------------------- Drawer Management Code -----------------------------------
     public void ClickMenu(View view)
