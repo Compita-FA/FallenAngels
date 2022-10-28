@@ -27,6 +27,13 @@ import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.dogObject.Dogs;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm2;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm4;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm5;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm6;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm7;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm8;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm9;
 import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -229,7 +236,7 @@ public class MainAdoptFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm2());
+                ft.replace(R.id.frag_layout, new AdoptionForm1());
                 ft.commit();
                 dialog.dismiss();
             }

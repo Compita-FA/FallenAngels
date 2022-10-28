@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/custom_light_grey"
     android:orientation="vertical"
     tools:context=".adoption.submissions.adoption_pages.AdoptionForm2">
 
@@ -17,7 +18,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="917dp"
+                android:layout_height="779dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -25,25 +26,88 @@
                 android:contextClickable="true"
                 android:elevation="10dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
+                <TextView
+                    android:id="@+id/textView148"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginTop="500dp"
-                    android:buttonTint="@color/custom_pink"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="No" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Page 3"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
 
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="500dp"
-                    android:buttonTint="@color/custom_pink"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Yes" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="90dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Dogs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Cats"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView134"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView138"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="82dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Dogs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView139"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Cats"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView140"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,47 +118,54 @@
                         android:id="@+id/textView122"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Page 2"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
-
-                    <TextView
-                        android:id="@+id/textView137"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="50dp"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question4"
+                        android:text="@string/question10"
                         android:textColor="@color/black" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName6"
-                        android:layout_width="318dp"
+                        android:layout_width="259dp"
                         android:layout_height="48dp"
+                        android:layout_gravity="end"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
-                        android:hint="Cell 1"
+                        android:hint="e.g., 2 months, 5 weeks, 10 years"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName7"
-                        android:layout_width="318dp"
+                        android:layout_width="259sp"
                         android:layout_height="48dp"
+                        android:layout_gravity="end"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
-                        android:hint="Cell 2"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName17"
+                        android:layout_width="259sp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp" />
@@ -106,33 +177,51 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question5"
+                        android:text="@string/question11"
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName10"
-                        android:layout_width="318dp"
+                        android:id="@+id/editTextTextPersonName21"
+                        android:layout_width="259dp"
                         android:layout_height="48dp"
+                        android:layout_gravity="end"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
-                        android:hint="Email 1"
+                        android:hint="e.g., 2 males, 1 female"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName11"
-                        android:layout_width="318dp"
+                        android:id="@+id/editTextTextPersonName22"
+                        android:layout_width="259dp"
                         android:layout_height="48dp"
+                        android:layout_gravity="end"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
-                        android:hint="Email 2"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName23"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp" />
@@ -144,112 +233,68 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question6"
-                        android:textColor="@color/black" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName12"
-                        android:layout_width="318dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/backdrop_form_text"
-                        android:ems="10"
-                        android:fontFamily="@font/poppins_regular"
-                        android:inputType="textPersonName"
-                        android:paddingStart="15dp"
-                        android:textSize="15sp"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView109"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="30dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question7"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/textView126"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="65dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question8"
-                        android:textColor="@color/black" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName13"
-                        android:layout_width="318dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/backdrop_form_text"
-                        android:ems="10"
-                        android:fontFamily="@font/poppins_regular"
-                        android:hint="e.g., 6, 7, 12"
-                        android:inputType="textPersonName"
-                        android:paddingStart="15dp"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/textView127"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="30dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/question9"
+                        android:text="@string/question12"
                         android:textColor="@color/black" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <TextView
+                            android:id="@+id/textView141"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginEnd="18dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="How many are not?"
+                            android:textSize="13sp" />
+
                         <EditText
-                            android:id="@+id/editTextTextPersonName14"
-                            android:layout_width="90dp"
-                            android:layout_height="50dp"
+                            android:id="@+id/editTextTextPersonName24"
+                            android:layout_width="60dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="end"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginEnd="15dp"
                             android:background="@drawable/backdrop_form_text"
                             android:ems="10"
                             android:fontFamily="@font/poppins_regular"
-                            android:hint="Dogs"
                             android:inputType="textPersonName"
                             android:paddingStart="15dp"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/editTextTextPersonName15"
-                            android:layout_width="90dp"
-                            android:layout_height="50dp"
-                            android:layout_marginStart="120dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/backdrop_form_text"
-                            android:ems="10"
-                            android:fontFamily="@font/poppins_regular"
-                            android:hint="Cats"
-                            android:inputType="textPersonName"
-                            android:paddingStart="15dp"
-                            android:textSize="15sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <EditText
-                            android:id="@+id/editTextTextPersonName16"
-                            android:layout_width="90dp"
-                            android:layout_height="50dp"
-                            android:layout_marginStart="225dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/backdrop_form_text"
-                            android:ems="10"
-                            android:fontFamily="@font/poppins_regular"
-                            android:hint="Other"
-                            android:inputType="textPersonName"
-                            android:paddingStart="15dp"
-                            android:textSize="15sp" />
+                            <RadioButton
+                                android:id="@+id/radioButton5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="All of them" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="None of them" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Some of them" />
+                        </LinearLayout>
                     </FrameLayout>
 
                     <LinearLayout
@@ -264,7 +309,7 @@
                             android:layout_weight="1" />
 
                         <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnBack1"
+                            android:id="@+id/btnBack2"
                             android:layout_width="102dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
@@ -287,7 +332,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_weight="1"
-                            android:text="1/15"
+                            android:text="2/15"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -301,7 +346,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:text="2/15"
+                            android:text="3/15"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -311,13 +356,13 @@
                             android:layout_weight="1" />
 
                         <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnNext2"
+                            android:id="@+id/btnNext3"
                             android:layout_width="102dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:background="@drawable/btn_orange_rounded"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Next >>"
+                            android:text="Next"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="18sp" />

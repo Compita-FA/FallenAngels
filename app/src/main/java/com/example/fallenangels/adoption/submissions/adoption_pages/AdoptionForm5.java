@@ -15,19 +15,20 @@ import android.view.ViewGroup;
 import com.example.fallenangels.R;
 
 
-public class AdoptionForm2 extends Fragment {
+public class AdoptionForm5 extends Fragment {
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
 
-    public AdoptionForm2() {
+    public AdoptionForm5() {
         // Required empty public constructor
     }
 
-    public static AdoptionForm2 newInstance(String param1) {
-        AdoptionForm2 fragment = new AdoptionForm2();
+
+    public static AdoptionForm5 newInstance(String param1) {
+        AdoptionForm5 fragment = new AdoptionForm5();
         Bundle args = new Bundle();
-        args.putString("AdoptForm2", param1);
+        args.putString("AdoptForm5", param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -36,15 +37,15 @@ public class AdoptionForm2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_adoption_form2, container, false);
+        return inflater.inflate(R.layout.fragment_adoption_form5, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         //Finding ID's
-        btnNext = getView().findViewById(R.id.btnNext2);
-        btnBack = getView().findViewById(R.id.btnBack1);
+        btnNext = getView().findViewById(R.id.btnNext5);
+        btnBack = getView().findViewById(R.id.btnBack4);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +53,7 @@ public class AdoptionForm2 extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm3());
+                ft.replace(R.id.frag_layout, new AdoptionForm6());
                 ft.commit();
             }
         });
@@ -62,7 +63,7 @@ public class AdoptionForm2 extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm1());
+                ft.replace(R.id.frag_layout, new AdoptionForm4());
                 ft.commit();
             }
         });

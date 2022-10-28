@@ -177,7 +177,8 @@
                         android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
-                        android:text="1. Abigail (F)" />
+                        android:text="1. Abigail (F)"
+                        android:textSize="15sp" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName7"
@@ -190,7 +191,8 @@
                         android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
-                        android:text="2." />
+                        android:text="2."
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/textView123"
@@ -213,6 +215,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
+                        android:textSize="15sp"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -238,10 +241,12 @@
                         android:inputType="textMultiLine|textPersonName"
                         android:lines="6"
                         android:paddingStart="15dp"
-                        android:paddingTop="5dp" />
+                        android:paddingTop="5dp"
+                        android:textSize="15sp"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnNext"
+                        android:id="@+id/btnNext1"
                         android:layout_width="102dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
