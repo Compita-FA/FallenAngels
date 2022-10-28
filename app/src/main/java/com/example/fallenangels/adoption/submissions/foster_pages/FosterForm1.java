@@ -1,4 +1,4 @@
-package com.example.fallenangels.adoption.submissions;
+package com.example.fallenangels.adoption.submissions.foster_pages;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.fallenangels.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FosterSubmissionForm#newInstance} factory method to
+ * Use the {@link FosterForm1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FosterSubmissionForm extends Fragment {
+public class FosterForm1 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class FosterSubmissionForm extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FosterSubmissionForm() {
+    public FosterForm1() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class FosterSubmissionForm extends Fragment {
      * @return A new instance of fragment FosterSubmissionForm.
      */
     // TODO: Rename and change types and number of parameters
-    public static FosterSubmissionForm newInstance(String param1, String param2) {
-        FosterSubmissionForm fragment = new FosterSubmissionForm();
+    public static FosterForm1 newInstance(String param1, String param2) {
+        FosterForm1 fragment = new FosterForm1();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class FosterSubmissionForm extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_foster_submission_form, container, false);
+        return inflater.inflate(R.layout.fragment_foster_form1, container, false);
     }
 }

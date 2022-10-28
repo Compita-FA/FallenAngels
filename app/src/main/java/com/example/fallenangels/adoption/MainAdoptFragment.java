@@ -1,7 +1,6 @@
 package com.example.fallenangels.adoption;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -11,11 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.gridlayout.widget.GridLayout;
 
 import android.widget.Button;
@@ -25,8 +25,9 @@ import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.dogObject.Dogs;
-import com.example.fallenangels.adoption.submissions.AdoptSubmissionForm;
-import com.example.fallenangels.adoption.submissions.FosterSubmissionForm;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm2;
+import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -226,14 +227,22 @@ public class MainAdoptFragment extends Fragment {
         btnAdopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                main.ShowAdoptForm(dialog);
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new AdoptionForm2());
+                ft.commit();
+                dialog.dismiss();
             }
         });
 
         btnFoster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                main.ShowFosterForm(dialog);
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new FosterForm1());
+                ft.commit();
+                dialog.dismiss();
             }
         });
     }

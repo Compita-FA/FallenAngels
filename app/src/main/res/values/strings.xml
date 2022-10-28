@@ -140,6 +140,116 @@
     <string name="acc_settings">Please sign in or create an account to continue</string>
     <string name="main_page">These gorgeous furbabies are looking for their very own, forever homes. If interested, select a furbaby and proceed with the following steps.</string>
     <string name="view_dog">Looking to adopt or foster? Select one of the options below!</string>
+    <string name="back"><u>Back</u></string>
+    <string name="fallen_angels">Fallen Angels</string>
+    <string name="adopt_application">Adoption Application</string>
+    <string name="adopt_fee1">ADOPTION FEE FOR ADULT CATS AND DOGS IS R1000</string>
+    <string name="adopt_fee2">ADOPTION FEE FOR PUPPIES AND KITTENS 0-12 IS R1250</string>
+    <string name="adopt_fee3">TO BE PAID INTO OUR ACCOUNT PRIOR TO THE PET"'"S ARRIVAL</string>
+
+    <!-- TODO: Adoption Form -->
+    <string name="question1">Fur Angel"'"s Name FIRST/SECOND CHOICE</string>
+    <string name="question2">Your Name and Surname</string>
+    <string name="question3">Address where pet will live (Address)</string>
+    <string name="question4">Contact Number</string>
+    <string name="question5">Contact Email Address</string>
+    <string name="question6">I.D. Number</string>
+    <string name="question7">Would you like to be on our mailing list?</string>
+    <string name="question8">Ages of children staying in your home?</string>
+    <string name="question9">Do you have any other Animals? How Many?</string>
+    <string name="question10">Age(s) of your other animals</string>
+    <string name="question11">Gender(s) of your other animals</string>
+    <string name="question12">How many of your animals are sterilised?</string>
+    <string name="question13">If not sterilised, please provide a reason</string>
+    <string name="question14">Did any of your animals have a litter before sterilisation?</string>
+    <string name="question15">Are your pets (cats &amp; dogs) fully vaccinated?</string>
+    <string name="question16">What diet are your pets on?</string>
+    <string name="question17">Quantity hours pet would be alone for during the day?</string>
+    <string name="question18">If someone is at home during the day, who are they and for how long?</string>
+    <string name="question19">Why do you want to Adopt this pet?</string>
+    <string name="question20">Have you ever surrendered your animal to a rescue org or given a pet away? If so, why?</string>
+    <string name="question21">What happened with your previous pets?</string>
+    <string name="question22">Have any of your companions gone missing?</string>
+    <string name="question23">Are you prepared to provide a PERMANENT home for the duration of this animal"'"s life?</string>
+    <string name="question24">Are you willing to teach your pet about digging, chewing, potty training, etc?</string>
+    <string name="question25">Who is responsible for your pets when you go on holiday?</string>
+    <string name="question26">What will happen to your pets should your circumstances change? i.e., Loss of job / move into a place that does not allow animals? Can you appoint God Parents for your pet?</string>
+    <string name="question27">Where will the dog/cat sleep at night?</string>
+    <string name="question28">If outside, what shelter will be provided?</string>
+    <string name="question29">If animal will sleep outside, will they be allowed inside and when?</string>
+    <string name="question30">Do you have a FENCED / GATED yard?</string>
+    <string name="question31">Do you have a pool. If YES, is the pool secure?</string>
+    <string name="question32">How often will feeding take place?</string>
+    <string name="question33">What size garden will the animal have?</string>
+    <string name="question34">Do you have time to play, walk &amp; groom your dog/cat on a daily basis?</string>
+    <string name="question35">Have any animal died on your premises due to Parvo / Distemper? If so, how long ago?</string>
+    <string name="question36">Are you able to provide Vet care, quality pet food, &amp; grooming for your pet?</string>
+    <string name="question37">Type of housing?</string>
+    <string name="question38">Do you own or rent?</string>
+    <string name="question39">Do you understand that your pet must be vaccinated yearly, dewormed every 6 months and be treated for ticks and fleas every month (at your own cost)?</string>
+    <string name="question40">Do you understand that your pet MUST be sterilised at the age of 6 months old?</string>
+
+    <string name="ref1">REF 1:</string>
+    <string name="ref2">REF 2:</string>
+    <string name="Name">Name</string>
+    <string name="relationship_to_you">Relationship to you</string>
+    <string name="address">Address</string>
+    <string name="cell_landline">Cell and Landline</string>
+    <string name="email">Email</string>
+
+    <string name="signed_on_the">Signed on the</string>
+    <string name="day_of">day of</string>
+    <string name="year">202</string>
+    <string name="at">at</string>
+    <string name="app_signature">Applicant"'"s signature:</string>
+    <string name="full_name">Full name:</string>
+    <string name="thank_you">THANK YOU FOR CHANGING THIS FUR ANGEL"'"S WORLD!!</string>
+    <string name="congrats">CONGRATULATIONS ON YOUR SUCCESSFUL APPLICATION!</string>
+
+    <!-- Terms and conditions -->
+
+
+    <!-- TODO: Foster Form -->
+    <string name="f_question1"></string>
+    <string name="f_question2"></string>
+    <string name="f_question3"></string>
+    <string name="f_question4"></string>
+    <string name="f_question5"></string>
+    <string name="f_question6"></string>
+    <string name="f_question7"></string>
+    <string name="f_question8"></string>
+    <string name="f_question9"></string>
+    <string name="f_question10"></string>
+    <string name="f_question11"></string>
+    <string name="f_question12"></string>
+    <string name="f_question13"></string>
+    <string name="f_question14"></string>
+    <string name="f_question15"></string>
+    <string name="f_question16"></string>
+    <string name="f_question17"></string>
+    <string name="f_question18"></string>
+    <string name="f_question19"></string>
+    <string name="f_question20"></string>
+    <string name="f_question21"></string>
+    <string name="f_question22"></string>
+    <string name="f_question23"></string>
+    <string name="f_question24"></string>
+    <string name="f_question25"></string>
+    <string name="f_question26"></string>
+    <string name="f_question27"></string>
+    <string name="f_question28"></string>
+    <string name="f_question29"></string>
+    <string name="f_question30"></string>
+    <string name="f_question31"></string>
+    <string name="f_question32"></string>
+    <string name="f_question33"></string>
+    <string name="f_question34"></string>
+    <string name="f_question35"></string>
+
+    <!-- TODO: Foster and Adoption forms -->
+
+
+
 
     <!-- TODO: Remove -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

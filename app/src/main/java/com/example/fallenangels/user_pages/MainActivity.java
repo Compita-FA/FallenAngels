@@ -9,14 +9,12 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
-import com.example.fallenangels.adoption.submissions.AdoptSubmissionForm;
-import com.example.fallenangels.adoption.submissions.FosterSubmissionForm;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
 import com.example.fallenangels.others.AboutUsFragment;
 import com.example.fallenangels.others.ContactFragment;
 import com.example.fallenangels.others.EventsFragment;
@@ -46,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private ContactFragment conFrag = new ContactFragment();
     private AboutUsFragment aboutFrag = new AboutUsFragment();
     private UserSettingsFragment accFrag = new UserSettingsFragment();
-    private AdoptSubmissionForm adoptFormFrag = new AdoptSubmissionForm();
-    private FosterSubmissionForm fosterFormFrag = new FosterSubmissionForm();
+    private AdoptionForm1 adoptFormFrag = new AdoptionForm1();
+    private FosterForm1 fosterFormFrag = new FosterForm1();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
