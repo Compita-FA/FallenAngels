@@ -53,7 +53,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName18"
+                        android:id="@+id/reasonForNonSterilisation"
                         android:layout_width="318dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
@@ -80,7 +80,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName19"
+                        android:id="@+id/litterBeforeSterilisation"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -107,29 +107,39 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton5"
+                        <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Yes" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/fullyVaccinatedStatus">
+                            <RadioButton
+                                android:id="@+id/radioButton5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:buttonTint="@color/custom_pink"
+                                android:text="Yes"
+                                android:checked="true"/>
 
-                        <RadioButton
-                            android:id="@+id/radioButton6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="No" />
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:buttonTint="@color/custom_pink"
+                                android:text="No" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Some of them" />
+                            <RadioButton
+                                android:id="@+id/radioButton7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:buttonTint="@color/custom_pink"
+                                android:text="Some of them" />
+                        </RadioGroup>
                     </LinearLayout>
 
                     <TextView
@@ -143,7 +153,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName20"
+                        android:id="@+id/petsDiet"
                         android:layout_width="318dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
@@ -170,7 +180,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName25"
+                        android:id="@+id/hoursAlone"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"

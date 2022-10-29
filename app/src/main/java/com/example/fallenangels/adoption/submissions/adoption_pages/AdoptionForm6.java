@@ -11,11 +11,25 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.fallenangels.R;
 
 
-public class AdoptionForm6 extends Fragment {
+public class AdoptionForm6 extends Fragment
+{
+    //User input fields
+    private EditText permanentHome;
+    private EditText teachingWillingness;
+    private EditText petResponsibility_whenOnHoliday;
+    private EditText onCircumstanceChange;
+
+    private CheckBox petSleepingSituation_Inside;
+    private CheckBox petSleepingSituation_OnBed;
+    private CheckBox petSleepingSituation_Outside;
+    //User input fields
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
@@ -61,11 +75,34 @@ public class AdoptionForm6 extends Fragment {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (checkRequiredUserInput() == true)
+                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
+
+                }
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new AdoptionForm5());
                 ft.commit();
             }
         });
+    }
+
+    private boolean checkRequiredUserInput()
+    {
+
+        return true;
+    }
+
+    private void checkOtherUserInputs()
+    {
+
+    }
+
+    private void saveUserInput()
+    {
+
     }
 }

@@ -120,25 +120,37 @@
                 android:contextClickable="true"
                 android:elevation="10dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="40dp"
-                    android:buttonTint="@color/custom_pink"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Canine" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginTop="40dp"
-                    android:buttonTint="@color/custom_pink"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Feline" />
+                    <RadioButton
+                        android:id="@+id/rb_Canine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="40dp"
+                        android:buttonTint="@color/custom_pink"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Canine"
+                        android:enabled="true"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_Feline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="40dp"
+                        android:buttonTint="@color/custom_pink"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Feline"
+                        android:enabled="false"/>
+
+                </RadioGroup>
+
+
 
                 <TextView
                     android:id="@+id/textView125"
@@ -167,7 +179,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName6"
+                        android:id="@+id/edt_dogNameOne"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -181,7 +193,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName7"
+                        android:id="@+id/edt_dogNameTwo"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -205,7 +217,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName8"
+                        android:id="@+id/edt_NameSurname"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -229,7 +241,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName9"
+                        android:id="@+id/edt_address"
                         android:layout_width="318dp"
                         android:layout_height="173dp"
                         android:layout_marginStart="15dp"

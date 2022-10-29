@@ -21,7 +21,7 @@
                 android:layout_height="929dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="70dp"
                 android:background="@drawable/background_white_rounded"
                 android:contextClickable="true"
                 android:elevation="10dp">
@@ -57,32 +57,40 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton5"
+                        <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Small" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/yardSize">
+                            <RadioButton
+                                android:id="@+id/radioButton5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:buttonTint="@color/custom_pink"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Small" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Medium" />
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:buttonTint="@color/custom_pink"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Medium" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="15dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Large" />
+                            <RadioButton
+                                android:id="@+id/radioButton7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:buttonTint="@color/custom_pink"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Large" />
+                        </RadioGroup>
+
+
                     </LinearLayout>
 
                     <TextView
@@ -96,7 +104,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName19"
+                        android:id="@+id/petExtraActivities"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -123,7 +131,7 @@
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName35"
+                            android:id="@+id/deathsOnPremisesPeriod"
                             android:layout_width="127dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="200dp"
@@ -134,24 +142,30 @@
                             android:inputType="textPersonName"
                             android:paddingStart="15dp"
                             android:textSize="15sp" />
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/deathsOnPremises">
+                                <RadioButton
+                                    android:id="@+id/deathsOnPremisesYes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Yes" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Yes" />
+                                <RadioButton
+                                    android:id="@+id/deathsOnPremisesNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="No" />
+                            </RadioGroup>
 
-                        <RadioButton
-                            android:id="@+id/radioButton9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="100dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="No" />
                     </FrameLayout>
 
                     <TextView
@@ -165,7 +179,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName37"
+                        android:id="@+id/providePetCare"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -190,64 +204,67 @@
                     <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/radioButton16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="150dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Smallholding" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="150dp"
-                            android:layout_marginTop="40dp"
-                            android:buttonTint="@color/custom_pink"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Farm" />
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
-
-                            <RadioButton
-                                android:id="@+id/radioButton13"
+                            <RadioGroup
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:buttonTint="@color/custom_pink"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="Relatives" />
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/typeOfHousing">
+                                <RadioButton
+                                    android:id="@+id/radioButton13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Relatives" />
 
-                            <RadioButton
-                                android:id="@+id/radioButton14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:buttonTint="@color/custom_pink"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="Flat" />
+                                <RadioButton
+                                    android:id="@+id/radioButton14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Flat" />
 
-                            <RadioButton
-                                android:id="@+id/radioButton15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:buttonTint="@color/custom_pink"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="House" />
+                                <RadioButton
+                                    android:id="@+id/radioButton15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="House" />
+                                <RadioButton
+                                    android:id="@+id/radioButton16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Smallholding" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Farm" />
+                            </RadioGroup>
+
                         </LinearLayout>
                     </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
+                        android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
                         <Space
@@ -323,7 +340,7 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="bottom" />
+                        android:layout_gravity="bottom"/>
                 </LinearLayout>
 
             </FrameLayout>
