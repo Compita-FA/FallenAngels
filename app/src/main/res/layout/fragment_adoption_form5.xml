@@ -53,7 +53,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName26"
+                        android:id="@+id/hoursTogether"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
@@ -80,7 +80,7 @@
                         android:layout_height="wrap_content">
 
                         <CheckBox
-                            android:id="@+id/checkBox"
+                            android:id="@+id/reasonForAdoption_Gift"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -89,7 +89,7 @@
                             android:text="Gift" />
 
                         <CheckBox
-                            android:id="@+id/checkBox3"
+                            android:id="@+id/reasonForAdoption_Breeding"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="150dp"
@@ -98,7 +98,7 @@
                             android:text="Breeding" />
 
                         <CheckBox
-                            android:id="@+id/checkBox4"
+                            android:id="@+id/reasonForAdoption_Companion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="150dp"
@@ -108,7 +108,7 @@
                             android:text="Companion" />
 
                         <CheckBox
-                            android:id="@+id/checkBox2"
+                            android:id="@+id/reasonForAdoption_Watchdog"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -130,7 +130,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName27"
+                        android:id="@+id/animalSurrender_Reason"
                         android:layout_width="318dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
@@ -157,7 +157,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName20"
+                        android:id="@+id/animalSurrender_Status"
                         android:layout_width="318dp"
                         android:layout_height="85dp"
                         android:layout_marginStart="15dp"
@@ -184,7 +184,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName25"
+                        android:id="@+id/havePetsGoneMissing"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"

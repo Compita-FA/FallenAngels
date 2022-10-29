@@ -11,11 +11,23 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.fallenangels.R;
 
 
-public class AdoptionForm8 extends Fragment {
+public class AdoptionForm8 extends Fragment
+{
+    //User input fields
+    private RadioGroup yardSize;
+    private EditText petExtraActivities;
+    private RadioGroup deathsOnPremises;
+    private EditText deathsOnPremises_Text;
+    private EditText providePetCare;
+    private RadioGroup typeOfHousing;
+    //User input fields
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
@@ -60,11 +72,34 @@ public class AdoptionForm8 extends Fragment {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (checkRequiredUserInput() == true)
+                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
+
+                }
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new AdoptionForm7());
                 ft.commit();
             }
         });
+    }
+
+    private boolean checkRequiredUserInput()
+    {
+
+        return true;
+    }
+
+    private void checkOtherUserInputs()
+    {
+
+    }
+
+    private void saveUserInput()
+    {
+
     }
 }

@@ -125,7 +125,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName6"
+                        android:id="@+id/pageOfOtherAnimals_Dogs"
                         android:layout_width="259dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -141,7 +141,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName7"
+                        android:id="@+id/pageOfOtherAnimals_Cats"
                         android:layout_width="259sp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -156,7 +156,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName17"
+                        android:id="@+id/ageOfOtherAnimals_Others"
                         android:layout_width="259sp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -181,7 +181,7 @@
                         android:textColor="@color/black" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName21"
+                        android:id="@+id/genderOfOtherAnimals_Dogs"
                         android:layout_width="259dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -197,7 +197,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName22"
+                        android:id="@+id/genderOfOtherAnimals_Cats"
                         android:layout_width="259dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -212,7 +212,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName23"
+                        android:id="@+id/genderOfOtherAnimals_Others"
                         android:layout_width="259dp"
                         android:layout_height="48dp"
                         android:layout_gravity="end"
@@ -252,7 +252,7 @@
                             android:textSize="13sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName24"
+                            android:id="@+id/animals_Not_Sterilised"
                             android:layout_width="60dp"
                             android:layout_height="48dp"
                             android:layout_gravity="end"
@@ -271,29 +271,40 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/radioButton5"
+                            <RadioGroup
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="All of them" />
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:id="@+id/animalsSterilised">
 
-                            <RadioButton
-                                android:id="@+id/radioButton6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="None of them" />
+                                <RadioButton
+                                    android:id="@+id/radioButton5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:text="All of them"
+                                    android:checked="true"/>
 
-                            <RadioButton
-                                android:id="@+id/radioButton7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="40dp"
-                                android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="Some of them" />
+                                <RadioButton
+                                    android:id="@+id/radioButton6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:text="None of them" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:buttonTint="@color/custom_pink"
+                                    android:text="Some of them" />
+                            </RadioGroup>
                         </LinearLayout>
                     </FrameLayout>
 
