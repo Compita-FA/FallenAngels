@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.dogObject.Dogs;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm12;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm2;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm4;
