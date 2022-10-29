@@ -18,7 +18,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="778dp"
+                android:layout_height="876dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -74,6 +74,50 @@
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/question19"
                         android:textColor="@color/black" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:buttonTint="@color/custom_grey"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Gift" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="150dp"
+                            android:buttonTint="@color/custom_grey"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Breeding" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="150dp"
+                            android:layout_marginTop="40dp"
+                            android:buttonTint="@color/custom_grey"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Companion" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="40dp"
+                            android:buttonTint="@color/custom_grey"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Watchdog" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/textView142"
