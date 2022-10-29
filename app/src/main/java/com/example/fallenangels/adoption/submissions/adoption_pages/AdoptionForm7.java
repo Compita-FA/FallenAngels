@@ -25,7 +25,10 @@ public class AdoptionForm7 extends Fragment
     private EditText petOutsideShelter;
     private EditText yardStatus;
 
-    private EditText poolFencing;
+    private EditText poolFencing_Cover;
+    private EditText poolFencing_fence;
+    private EditText poolFencing_CoverType;
+    private EditText poolFencing_fenceType;
 
     private EditText numberOfFeedings;
     //User input fields
@@ -53,7 +56,18 @@ public class AdoptionForm7 extends Fragment
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        petInsideOutside = getView().findViewById(R.id.petInsideOutside);
+        petOutsideShelter = getView().findViewById(R.id.petOutsideShelter);
+        yardStatus = getView().findViewById(R.id.yardStatus);
+
+        poolFencing_Cover = getView().findViewById(R.id.poolFencing_Cover);
+        poolFencing_fence = getView().findViewById(R.id.poolFencing_fence);
+        poolFencing_CoverType = getView().findViewById(R.id.poolFencing_CoverType);
+        poolFencing_fenceType = getView().findViewById(R.id.poolFencing_fenceType);
+
+        numberOfFeedings = getView().findViewById(R.id.numberOfFeedings);
 
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext7);

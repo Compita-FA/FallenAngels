@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormModel.AdoptionFormTemplete;
 
 
 public class AdoptionForm2 extends Fragment
@@ -133,7 +134,7 @@ public class AdoptionForm2 extends Fragment
                 }
                 else
                 {
-                    Toast.makeText (getActivity(), "Contact Number 1 is invalid!", Toast.LENGTH_SHORT).show ();
+                    Toast.makeText (getActivity(), "Contact Number 1 is invalid!", Toast.LENGTH_LONG).show ();
                 }
             }
             else
@@ -145,7 +146,7 @@ public class AdoptionForm2 extends Fragment
                 }
                 else
                 {
-                    Toast.makeText (getActivity(), "Contact Number 2 is invalid!", Toast.LENGTH_SHORT).show ();
+                    Toast.makeText (getActivity(), "Contact Number 2 is invalid!", Toast.LENGTH_LONG).show ();
                 }
             }
         }
@@ -185,7 +186,7 @@ public class AdoptionForm2 extends Fragment
             }
             else
             {
-                Toast.makeText (getActivity(), "That's not a valid ID number!\nMake sure it contains only numbers and is longer that 13 Digits", Toast.LENGTH_SHORT).show ();
+                Toast.makeText (getActivity(), "That's not a valid ID number!\nMake sure it contains only numbers and is longer that 13 Digits", Toast.LENGTH_LONG).show ();
             }
         }
 
@@ -206,11 +207,11 @@ public class AdoptionForm2 extends Fragment
 
         if (!emailBeingTested.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailBeingTested).matches())
         {
-            Toast.makeText(getActivity(), "Email Verified !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Email Verified!", Toast.LENGTH_SHORT).show();
         }
         else
         {
-            Toast.makeText(getActivity(), "Enter valid Email address !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Invalid Email address!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -236,6 +237,14 @@ public class AdoptionForm2 extends Fragment
 
     private void saveUserInput()
     {
+        AdoptionForm1.newForm.setPg2_ownerContactNumber("");
+        AdoptionForm1.newForm.setPg2_ownerEmail("");
+        AdoptionForm1.newForm.setPg2_ownerIDNumber("");
+        AdoptionForm1.newForm.setPg2_ownerAddToMailingList("");
+        AdoptionForm1.newForm.setPg2_childrenAges("");
 
+        AdoptionForm1.newForm.setPg2_otherAnimal_Cats("");
+        AdoptionForm1.newForm.setPg2_otherAnimal_Dogs("");
+        AdoptionForm1.newForm.setPg2_otherAnimal_Other("");
     }
 }

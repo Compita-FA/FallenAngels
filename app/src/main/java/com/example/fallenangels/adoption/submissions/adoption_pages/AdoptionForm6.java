@@ -55,7 +55,16 @@ public class AdoptionForm6 extends Fragment
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        permanentHome = getView().findViewById(R.id.permanentHome);
+        teachingWillingness = getView().findViewById(R.id.teachingWillingness);
+        petResponsibility_whenOnHoliday = getView().findViewById(R.id.petResponsibility_whenOnHoliday);
+        onCircumstanceChange = getView().findViewById(R.id.onCircumstanceChange);
+
+        petSleepingSituation_Inside = getView().findViewById(R.id.petSleepingSituation_Inside);
+        petSleepingSituation_OnBed = getView().findViewById(R.id.petSleepingSituation_OnBed);
+        petSleepingSituation_Outside = getView().findViewById(R.id.petSleepingSituation_Outside);
 
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext6);

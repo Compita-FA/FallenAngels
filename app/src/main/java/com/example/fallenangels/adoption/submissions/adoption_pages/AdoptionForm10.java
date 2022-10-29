@@ -11,17 +11,29 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import com.example.fallenangels.R;
 
 
-public class AdoptionForm10 extends Fragment {
+public class AdoptionForm10 extends Fragment
+{
+    //User input fields
+    private EditText refOne_Name;
+    private EditText refOne_Relationship;
+    private EditText refOne_Address;
+    private EditText refOne_Cell;
+    private EditText refOne_Landline;
+    private EditText refOne_Email;
+    //User input fields
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
 
 
-    public AdoptionForm10() {
+    public AdoptionForm10()
+    {
         // Required empty public constructor
     }
 
@@ -43,7 +55,14 @@ public class AdoptionForm10 extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        refOne_Name = getView().findViewById(R.id.refOne_Name);
+        refOne_Relationship = getView().findViewById(R.id.refOne_Relationship);
+        refOne_Address = getView().findViewById(R.id.refOne_Address);
+        refOne_Cell = getView().findViewById(R.id.refOne_Cell);
+        refOne_Landline = getView().findViewById(R.id.refOne_Landline);
+        refOne_Email = getView().findViewById(R.id.refOne_Email);
 
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext10);

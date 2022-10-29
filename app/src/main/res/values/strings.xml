@@ -207,6 +207,7 @@
     <string name="congrats">CONGRATULATIONS ON YOUR SUCCESSFUL APPLICATION!</string>
 
     <!-- Terms and conditions -->
+    <string name="view_tc"><u>View Terms and Conditions</u></string>
     <string name="tc_instructions"><u>PLEASE READ THROUGH CAREFULLY BEFORE TAKING YOUR COMPANION HOME THIS IS A LEGAL DOCUMENT</u></string>
     <string name="a_1">1. AT HOME:</string>
     <string name="a_1.1">1.1. The applicant promises to love their new companion. They promise to make sure the animal/s is/are comfortable with suitable shelter and that fresh food and water is provided at least twice per day.</string>
@@ -219,6 +220,7 @@
     <string name="a_2.2">2.2. The applicant undertakes to sterilise the adopted animal through FALLEN Angels at our monthly welfare mass sterilisation day at 6 months of age. Should the applicant adopt an un-sterilised older animal, arrangements will be made to sterilise the animal as soon as possible via FALLEN Angels. PLEASE NOTE: Our sterilization days are NOT done at a private vet practice but at a MASS STERILIZATION DAY at a booked hall. You are welcome to stay with your pet when they are in recovery.</string>
     <string name="a_contact">PLEASE CONTACT Karen via email karen.fallenadoptions@gmail.com or info@fallenangels.org.za to book your appointment.</string>
     <string name="a_2.3">2.3. Should your own vet be used, proof of sterilization needs to be emailed through to karen.fallenadoptions@gmail.com &amp; info@fallenangels.org.za</string>
+    <string name="read_understand">I have read and understand this document.</string>
 
 
 

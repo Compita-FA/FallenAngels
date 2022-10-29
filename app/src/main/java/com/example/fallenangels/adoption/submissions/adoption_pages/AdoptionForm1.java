@@ -18,11 +18,14 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormModel.AdoptionFormTemplete;
 import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
 
 
 public class AdoptionForm1 extends Fragment
 {
+    static AdoptionFormTemplete newForm = new AdoptionFormTemplete();
+
     //User input fields
     private RadioButton rb_Canine;
     private RadioButton rb_Feline;

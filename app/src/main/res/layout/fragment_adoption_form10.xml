@@ -67,7 +67,7 @@
                             android:textColor="@color/black" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName36"
+                            android:id="@+id/refOne_Name"
                             android:layout_width="318dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="15dp"
@@ -90,7 +90,7 @@
                             android:textColor="@color/black" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName38"
+                            android:id="@+id/refOne_Relationship"
                             android:layout_width="318dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="15dp"
@@ -113,7 +113,7 @@
                             android:textColor="@color/black" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName39"
+                            android:id="@+id/refOne_Address"
                             android:layout_width="318dp"
                             android:layout_height="85dp"
                             android:layout_marginStart="15dp"
@@ -140,7 +140,7 @@
                             android:textColor="@color/black" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName40"
+                            android:id="@+id/refOne_Cell"
                             android:layout_width="318dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="15dp"
@@ -154,7 +154,7 @@
                             android:textSize="15sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName41"
+                            android:id="@+id/refOne_Landline"
                             android:layout_width="318dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="15dp"
@@ -178,7 +178,7 @@
                             android:textColor="@color/black" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName42"
+                            android:id="@+id/refOne_Email"
                             android:layout_width="318dp"
                             android:layout_height="48dp"
                             android:layout_marginStart="15dp"

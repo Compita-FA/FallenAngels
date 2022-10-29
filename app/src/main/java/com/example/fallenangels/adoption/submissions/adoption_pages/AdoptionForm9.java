@@ -49,7 +49,12 @@ public class AdoptionForm9 extends Fragment
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        ownOrRent = getView().findViewById(R.id.ownOrRent);
+        landlordPermission = getView().findViewById(R.id.landlordPermission);
+        acknowledgementOf_dewormTicksFleas = getView().findViewById(R.id.acknowledgementOf_dewormTicksFleas);
+        acknowledgementOf_sterilisation = getView().findViewById(R.id.acknowledgementOf_sterilisation);
 
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext9);
