@@ -162,11 +162,11 @@ public class AdoptionForm11 extends Fragment
 
     private void saveUserInput()
     {
-        AdoptionForm1.newForm.setPg10_referanceOneName(refTwo_Name.getText().toString());
-        AdoptionForm1.newForm.setPg10_referanceOneRelationship(refTwo_Relationship.getText().toString());
-        AdoptionForm1.newForm.setPg10_referanceOneAddress(refTwo_Address.getText().toString());
-        AdoptionForm1.newForm.setPg10_referanceOneCell(refTwo_Cell.getText().toString().trim());
-        AdoptionForm1.newForm.setPg10_referanceOneLandline(refTwo_Landline.getText().toString().trim());
-        AdoptionForm1.newForm.setPg10_referanceOneEmail(refTwo_Email.getText().toString().trim());
+        AdoptionForm1.newForm.setPg11_referanceTwoName(refTwo_Name.getText().toString());
+        AdoptionForm1.newForm.setPg11_referanceTwoRelationship(refTwo_Relationship.getText().toString());
+        AdoptionForm1.newForm.setPg11_referanceTwoAddress(refTwo_Address.getText().toString());
+        AdoptionForm1.newForm.setPg11_referanceTwoCell(refTwo_Cell.getText().toString().trim());
+        AdoptionForm1.newForm.setPg11_referanceTwoLandline(refTwo_Landline.getText().toString().trim());
+        AdoptionForm1.newForm.setPg11_referanceTwoEmail(refTwo_Email.getText().toString().trim());
     }
 }

@@ -130,18 +130,18 @@ public class AdoptionForm9 extends Fragment
     {
         int ownRent = ownOrRent.getCheckedRadioButtonId();
         RadioButton ownRentButton = (RadioButton) getView().findViewById(ownRent); // find the radiobutton by returned id
-        AdoptionForm1.newForm.setPg8_yardSize(ownRentButton.getText().toString().trim());
+        AdoptionForm1.newForm.setPg9_ownOrRent(ownRentButton.getText().toString().trim());
 
         int yesNo = landlordPermission.getCheckedRadioButtonId();
         RadioButton yesNoRadioButton = (RadioButton) getView().findViewById(yesNo); // find the radiobutton by returned id
-        AdoptionForm1.newForm.setPg8_typeOfHousing(yesNoRadioButton.getText().toString().trim());
+        AdoptionForm1.newForm.setPg9_landlordPermission(yesNoRadioButton.getText().toString().trim());
 
         int ackOne = acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId();
         RadioButton ackOneRadioButton = (RadioButton) getView().findViewById(ackOne); // find the radiobutton by returned id
-        AdoptionForm1.newForm.setPg8_typeOfHousing(ackOneRadioButton.getText().toString().trim());
+        AdoptionForm1.newForm.setPg9_acknowledgementOf_dewormTicksFleas(ackOneRadioButton.getText().toString().trim());
 
         int ackTwo = acknowledgementOf_sterilisation.getCheckedRadioButtonId();
         RadioButton ackTwoRadioButton = (RadioButton) getView().findViewById(ackTwo); // find the radiobutton by returned id
-        AdoptionForm1.newForm.setPg8_typeOfHousing(ackTwoRadioButton.getText().toString().trim());
+        AdoptionForm1.newForm.setPg9_acknowledgementOf_sterilisation(ackTwoRadioButton.getText().toString().trim());
     }
 }

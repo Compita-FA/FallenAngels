@@ -132,11 +132,18 @@ public class AdoptionForm10 extends Fragment
                 Toast.makeText (getActivity(), "Cell is invalid!", Toast.LENGTH_LONG).show ();
             }
         }
+        else
+        {
+            Toast.makeText (getActivity(), "Enter your Cell Number!", Toast.LENGTH_LONG).show ();
+        }
 
         //CHecks the email
         if (refOne_Email.getText().toString().trim().isEmpty() == false)
         {
             emailValidator(refOne_Email);
+        }else
+        {
+            Toast.makeText (getActivity(), "Email is empty!", Toast.LENGTH_LONG).show ();
         }
 
         if (referanceName == true && referanceRelation == true && referanceAddress == true && referanceCell == true && referanceEmail == true)
