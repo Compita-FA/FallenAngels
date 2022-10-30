@@ -186,6 +186,10 @@ public class Register extends AppCompatActivity
         String surname = txtSurname.getText().toString();
         userID = mAuth.getCurrentUser().getUid().toString();
 
+        if (fUser == null) {
+
+        }
+
         fUser.sendEmailVerification().addOnCompleteListener(this, new OnCompleteListener<Void>()
         {
             @Override
@@ -252,6 +256,5 @@ public class Register extends AppCompatActivity
         user.setUserID(userID);
 
         ref.push().setValue(user);
-        //AddDefaultSettings(userID);
     }
 }
