@@ -32,13 +32,14 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView159"
+                android:id="@+id/txtViewTerms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:gravity="center_horizontal"
+                android:onClick="ViewTermsConditions"
                 android:text="@string/view_tc"
                 android:textColor="@color/custom_pink"
                 android:textSize="17sp" />

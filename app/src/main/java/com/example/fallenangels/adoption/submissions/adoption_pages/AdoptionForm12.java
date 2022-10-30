@@ -1,5 +1,6 @@
 package com.example.fallenangels.adoption.submissions.adoption_pages;
 
+import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -11,6 +12,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.fallenangels.R;
 
@@ -18,6 +21,7 @@ import com.example.fallenangels.R;
 public class AdoptionForm12 extends Fragment {
 
     private AppCompatButton btnBack;
+    private TextView txtView;
 
     public AdoptionForm12() {
         // Required empty public constructor
@@ -44,6 +48,7 @@ public class AdoptionForm12 extends Fragment {
 
         //Finding ID's
         btnBack = getView().findViewById(R.id.btnBack11);
+        txtView = getView().findViewById(R.id.txtViewTerms);
 
         //Listeners
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -56,5 +61,32 @@ public class AdoptionForm12 extends Fragment {
             }
         });
 
+        txtView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ViewTermsConditions(view);
+            }
+        });
+
     }
+
+    //------------------------------ Show terms & conditions dialogue ------------------------------
+    public void ViewTermsConditions(View view) {
+
+        Dialog dialog = new Dialog(getContext(), R.style.DialogStyle);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setContentView(R.layout.dialogue_ts_and_cs_adoption);
+
+        AppCompatButton closeDialogue = dialog.findViewById(R.id.btnCloseRules);
+
+        closeDialogue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+    //----------------------------------------------------------------------------------------------
 }

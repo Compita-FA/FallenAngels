@@ -229,8 +229,6 @@ public class MainAdoptFragment extends Fragment {
             }
         });
 
-        MainActivity main = new MainActivity();
-
         //Listeners
         btnAdopt.setOnClickListener(new View.OnClickListener() {
             @Override
