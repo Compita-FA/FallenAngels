@@ -246,7 +246,7 @@
                         <Space
                             android:layout_width="15dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_weight="2" />
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/f_btnBack6"
@@ -264,33 +264,29 @@
                         <Space
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_weight="3" />
 
-                        <TextView
-                            android:id="@+id/textView129"
-                            android:layout_width="wrap_content"
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/f_btnSubmit"
+                            android:layout_width="102dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_weight="1"
-                            android:text="7/7"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <Space
-                            android:layout_width="29dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
+                            android:background="@drawable/btn_blue_rounded"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Submit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
 
                         <Space
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_weight="3" />
 
-                        <Space
-                            android:layout_width="15dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
                     </LinearLayout>
+
+
 
                     <Space
                         android:layout_width="match_parent"

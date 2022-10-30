@@ -11,11 +11,21 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm5;
 
 
 public class FosterForm5 extends Fragment {
+
+    private EditText petsDiet;
+    private EditText hoursAlone;
+    private EditText sleepArea;
+    private EditText petPast;
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
@@ -42,6 +52,11 @@ public class FosterForm5 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        petsDiet = getView().findViewById(R.id.f_petsDiet);
+        hoursAlone = getView().findViewById(R.id.f_hoursAlone);
+        sleepArea = getView().findViewById(R.id.f_fosters_sleep);
+        petPast = getView().findViewById(R.id.f_hoursAlone);
+
         //Finding ID's
         btnNext = getView().findViewById(R.id.f_btnNext6);
         btnBack = getView().findViewById(R.id.f_btnBack4);
@@ -50,10 +65,15 @@ public class FosterForm5 extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new FosterForm6());
-                ft.commit();
+                if (checkRequiredUserInput() == true)
+                {
+                    saveUserInput();
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new FosterForm6());
+                    ft.commit();
+                }
             }
         });
 
@@ -66,5 +86,26 @@ public class FosterForm5 extends Fragment {
                 ft.commit();
             }
         });
+    }
+
+    private boolean checkRequiredUserInput()
+    {
+        if (petsDiet.getText().toString().trim().isEmpty() || hoursAlone.getText().toString().trim().isEmpty() ||
+                sleepArea.getText().toString().trim().isEmpty() || petPast.getText().toString().trim().isEmpty())
+        {
+            Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
+            return false;
+        }else
+        {
+            return true;
+        }
+    }
+
+    private void saveUserInput()
+    {
+        FosterForm1.newForm.setPg5_petsDiet(petsDiet.getText().toString());
+        FosterForm1.newForm.setPg5_hoursAlone(hoursAlone.getText().toString());
+        FosterForm1.newForm.setPg5_sleepingArea(sleepArea.getText().toString());
+        FosterForm1.newForm.setPg5_sleepingArea(petPast.getText().toString());
     }
 }
