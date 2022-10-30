@@ -232,7 +232,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:layout_weight="1"
-                        android:text="8/15"
+                        android:text="8/12"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -246,7 +246,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
-                        android:text="9/15"
+                        android:text="9/12"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
