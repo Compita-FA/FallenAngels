@@ -31,6 +31,7 @@ public class AdoptionForm12 extends Fragment
 {
     private DatabaseReference dbRef;
     private FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
+    private FirebaseAuth mAuth;
     private String userID;
 
     private EditText currentDay;
@@ -66,6 +67,7 @@ public class AdoptionForm12 extends Fragment
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
         //userID = fUser.getUid();
+        mAuth = FirebaseAuth.getInstance();
 
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
@@ -111,6 +113,15 @@ public class AdoptionForm12 extends Fragment
                 else
                 {
                     saveUserInput();
+                    if (mAuth != null)
+                    {
+                        //They ARE logged in
+
+                    }
+                    else
+                    {
+
+                    }
                     submitApplicationDialog();
                 }
             }
