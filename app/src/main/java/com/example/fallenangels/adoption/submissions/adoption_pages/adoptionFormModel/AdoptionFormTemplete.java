@@ -81,6 +81,31 @@ public class AdoptionFormTemplete
     private String pg9_acknowledgementOf_dewormTicksFleas;
     private String pg9_acknowledgementOf_sterilisation;
 
+    //All information from Page 10 and 11, the references
+    private String pg10_referanceOneName;
+    private String pg10_referanceOneRelationship;
+    private String pg10_referanceOneAddress;
+    private String pg10_referanceOneCell;
+    private String pg10_referanceOneLandline;
+    private String pg10_referanceOneEmail;
+    private String pg11_referanceTwoName;
+    private String pg11_referanceTwoRelationship;
+    private String pg11_referanceTwoAddress;
+    private String pg11_referanceTwoCell;
+    private String pg11_referanceTwoLandline;
+    private String pg11_referanceTwoEmail;
+
+    //All information from Page 12
+    private String pg12_CurrentDay;
+    private String pg12_CurrentMonth;
+
+
+
+    private String pg12_CurrentYear;
+    private String pg12_CurrentTime;
+    private String pg12_Signature;
+
+
     public String getPg1_animalSelection() {
         return pg1_animalSelection;
     }
@@ -471,5 +496,141 @@ public class AdoptionFormTemplete
 
     public void setPg9_acknowledgementOf_sterilisation(String pg9_acknowledgementOf_sterilisation) {
         this.pg9_acknowledgementOf_sterilisation = pg9_acknowledgementOf_sterilisation;
+    }
+
+    public String getPg10_referanceOneName() {
+        return pg10_referanceOneName;
+    }
+
+    public void setPg10_referanceOneName(String pg10_referanceOneName) {
+        this.pg10_referanceOneName = pg10_referanceOneName;
+    }
+
+    public String getPg10_referanceOneRelationship() {
+        return pg10_referanceOneRelationship;
+    }
+
+    public void setPg10_referanceOneRelationship(String pg10_referanceOneRelationship) {
+        this.pg10_referanceOneRelationship = pg10_referanceOneRelationship;
+    }
+
+    public String getPg10_referanceOneAddress() {
+        return pg10_referanceOneAddress;
+    }
+
+    public void setPg10_referanceOneAddress(String pg10_referanceOneAddress) {
+        this.pg10_referanceOneAddress = pg10_referanceOneAddress;
+    }
+
+    public String getPg10_referanceOneCell() {
+        return pg10_referanceOneCell;
+    }
+
+    public void setPg10_referanceOneCell(String pg10_referanceOneCell) {
+        this.pg10_referanceOneCell = pg10_referanceOneCell;
+    }
+
+    public String getPg10_referanceOneLandline() {
+        return pg10_referanceOneLandline;
+    }
+
+    public void setPg10_referanceOneLandline(String pg10_referanceOneLandline) {
+        this.pg10_referanceOneLandline = pg10_referanceOneLandline;
+    }
+
+    public String getPg10_referanceOneEmail() {
+        return pg10_referanceOneEmail;
+    }
+
+    public void setPg10_referanceOneEmail(String pg10_referanceOneEmail) {
+        this.pg10_referanceOneEmail = pg10_referanceOneEmail;
+    }
+
+    public String getPg11_referanceTwoName() {
+        return pg11_referanceTwoName;
+    }
+
+    public void setPg11_referanceTwoName(String pg11_referanceTwoName) {
+        this.pg11_referanceTwoName = pg11_referanceTwoName;
+    }
+
+    public String getPg11_referanceTwoRelationship() {
+        return pg11_referanceTwoRelationship;
+    }
+
+    public void setPg11_referanceTwoRelationship(String pg11_referanceTwoRelationship) {
+        this.pg11_referanceTwoRelationship = pg11_referanceTwoRelationship;
+    }
+
+    public String getPg11_referanceTwoAddress() {
+        return pg11_referanceTwoAddress;
+    }
+
+    public void setPg11_referanceTwoAddress(String pg11_referanceTwoAddress) {
+        this.pg11_referanceTwoAddress = pg11_referanceTwoAddress;
+    }
+
+    public String getPg11_referanceTwoCell() {
+        return pg11_referanceTwoCell;
+    }
+
+    public void setPg11_referanceTwoCell(String pg11_referanceTwoCell) {
+        this.pg11_referanceTwoCell = pg11_referanceTwoCell;
+    }
+
+    public String getPg11_referanceTwoLandline() {
+        return pg11_referanceTwoLandline;
+    }
+
+    public void setPg11_referanceTwoLandline(String pg11_referanceTwoLandline) {
+        this.pg11_referanceTwoLandline = pg11_referanceTwoLandline;
+    }
+
+    public String getPg11_referanceTwoEmail() {
+        return pg11_referanceTwoEmail;
+    }
+
+    public void setPg11_referanceTwoEmail(String pg11_referanceTwoEmail) {
+        this.pg11_referanceTwoEmail = pg11_referanceTwoEmail;
+    }
+
+    public String getPg12_CurrentDay() {
+        return pg12_CurrentDay;
+    }
+
+    public void setPg12_CurrentDay(String pg12_CurrentDay) {
+        this.pg12_CurrentDay = pg12_CurrentDay;
+    }
+
+    public String getPg12_CurrentMonth() {
+        return pg12_CurrentMonth;
+    }
+
+    public void setPg12_CurrentMonth(String pg12_CurrentMonth) {
+        this.pg12_CurrentMonth = pg12_CurrentMonth;
+    }
+
+    public String getPg12_CurrentYear() {
+        return pg12_CurrentYear;
+    }
+
+    public void setPg12_CurrentYear(String pg12_CurrentYear) {
+        this.pg12_CurrentYear = pg12_CurrentYear;
+    }
+
+    public String getPg12_CurrentTime() {
+        return pg12_CurrentTime;
+    }
+
+    public void setPg12_CurrentTime(String pg12_CurrentTime) {
+        this.pg12_CurrentTime = pg12_CurrentTime;
+    }
+
+    public String getPg12_Signature() {
+        return pg12_Signature;
+    }
+
+    public void setPg12_Signature(String pg12_Signature) {
+        this.pg12_Signature = pg12_Signature;
     }
 }

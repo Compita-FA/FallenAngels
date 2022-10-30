@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,9 +22,11 @@ import com.example.fallenangels.R;
 
 public class AdoptionForm3 extends Fragment
 {
+    boolean ageDogs = true, ageCats = true, ageOther = true;
+
     //User input fields
-    private EditText pageOfOtherAnimals_Dogs;
-    private EditText pageOfOtherAnimals_Cats;
+    private EditText ageOfOtherAnimals_Dogs;
+    private EditText ageOfOtherAnimals_Cats;
     private EditText ageOfOtherAnimals_Others;
 
     private EditText genderOfOtherAnimals_Dogs;
@@ -61,8 +64,8 @@ public class AdoptionForm3 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        pageOfOtherAnimals_Dogs = getView().findViewById(R.id.pageOfOtherAnimals_Dogs);
-        pageOfOtherAnimals_Cats = getView().findViewById(R.id.pageOfOtherAnimals_Cats);
+        ageOfOtherAnimals_Dogs = getView().findViewById(R.id.pageOfOtherAnimals_Dogs);
+        ageOfOtherAnimals_Cats = getView().findViewById(R.id.pageOfOtherAnimals_Cats);
         ageOfOtherAnimals_Others = getView().findViewById(R.id.ageOfOtherAnimals_Others);
 
         genderOfOtherAnimals_Dogs = getView().findViewById(R.id.genderOfOtherAnimals_Dogs);
@@ -76,6 +79,8 @@ public class AdoptionForm3 extends Fragment
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext3);
         btnBack = getView().findViewById(R.id.btnBack2);
+
+        checkInformation();
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener()
@@ -108,42 +113,110 @@ public class AdoptionForm3 extends Fragment
         });
     }
 
+    private void checkInformation()
+    {
+        Toast.makeText(getActivity(), "Other Animal Numbers: \n"
+                + "Cell: " + AdoptionForm1.newForm.getPg2_ownerContactNumber() + "\n"
+                + "Email: " + AdoptionForm1.newForm.getPg2_ownerEmail()+ "\n"
+                + "ID: " + AdoptionForm1.newForm.getPg2_ownerIDNumber()+ "\n"
+                + "Mailing list: " + AdoptionForm1.newForm.getPg2_ownerAddToMailingList()+ "\n"
+                + "Children: " + AdoptionForm1.newForm.getPg2_childrenAges()+ "\n"
+                + "Dogs: " + AdoptionForm1.newForm.getPg2_otherAnimal_Dogs()+ "\n"
+                + "Cats: " + AdoptionForm1.newForm.getPg2_otherAnimal_Cats()+ "\n"
+                + "Other: " + AdoptionForm1.newForm.getPg2_otherAnimal_Other(), Toast.LENGTH_LONG).show();
+
+        int dogs = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Dogs());
+        int cats = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Cats());
+        int other = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Other());
+
+        if( dogs == 0)
+        {
+            ageOfOtherAnimals_Dogs.setEnabled(false);
+            genderOfOtherAnimals_Dogs.setEnabled(false);
+            ageOfOtherAnimals_Dogs.setHint("N/A");
+            genderOfOtherAnimals_Dogs.setHint("N/A");
+
+            ageDogs = false;
+        }
+
+        if( cats == 0)
+        {
+            ageOfOtherAnimals_Cats.setEnabled(false);
+            genderOfOtherAnimals_Cats.setEnabled(false);
+            ageOfOtherAnimals_Cats.setHint("N/A");
+            genderOfOtherAnimals_Cats.setHint("N/A");
+
+            ageCats = false;
+        }
+
+        if( other == 0)
+        {
+            ageOfOtherAnimals_Others.setEnabled(false);
+            genderOfOtherAnimals_Others.setEnabled(false);
+            ageOfOtherAnimals_Others.setHint("N/A");
+            genderOfOtherAnimals_Others.setHint("N/A");
+            ageOther = false;
+        }
+    }
+
     private boolean checkRequiredUserInput()
     {
+        if (animalsSterilised.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "Missing Checklist!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        else
+        {
+            // radio button is checked
+            int selectedId = animalsSterilised.getCheckedRadioButtonId();
+            RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
 
-        return true;
+            if (selectedRadioButton.getText().toString().equals("All of them"))
+            {
+                animals_Not_Sterilised.setText("N/A");
+            }
+
+            return true;
+        }
     }
 
     private void checkOtherUserInputs()
     {
-        if (pageOfOtherAnimals_Dogs.getText().toString().trim().isEmpty())
+        if (ageDogs == false)
         {
-            pageOfOtherAnimals_Dogs.setText("0");
+            ageOfOtherAnimals_Dogs.setText("N/A");
+            genderOfOtherAnimals_Dogs.setText("N/A");
         }
-        if (pageOfOtherAnimals_Cats.getText().toString().trim().isEmpty())
+
+        if (ageCats == false)
         {
-            pageOfOtherAnimals_Cats.setText("0");
+            ageOfOtherAnimals_Cats.setText("N/A");
+            genderOfOtherAnimals_Cats.setText("N/A");
         }
-        if (ageOfOtherAnimals_Others.getText().toString().trim().isEmpty())
+
+        if (ageOther == false)
         {
-            ageOfOtherAnimals_Others.setText("0");
-        }
-        if (genderOfOtherAnimals_Dogs.getText().toString().trim().isEmpty())
-        {
-            genderOfOtherAnimals_Dogs.setText("0");
-        }
-        if (genderOfOtherAnimals_Cats.getText().toString().trim().isEmpty())
-        {
-            genderOfOtherAnimals_Cats.setText("0");
-        }
-        if (genderOfOtherAnimals_Others.getText().toString().trim().isEmpty())
-        {
-            genderOfOtherAnimals_Others.setText("0");
+            ageOfOtherAnimals_Others.setText("N/A");
+            genderOfOtherAnimals_Others.setText("N/A");
         }
     }
 
     private void saveUserInput()
     {
+        AdoptionForm1.newForm.setPg3_ageOfOtherAnimals_Dogs(ageOfOtherAnimals_Dogs.getText().toString());
+        AdoptionForm1.newForm.setPg3_ageOfOtherAnimals_Cats(ageOfOtherAnimals_Cats.getText().toString());
+        AdoptionForm1.newForm.setPg3_ageOfOtherAnimals_Others(ageOfOtherAnimals_Others.getText().toString());
 
+        AdoptionForm1.newForm.setPg3_genderOfOtherAnimals_Dogs(genderOfOtherAnimals_Dogs.getText().toString());
+        AdoptionForm1.newForm.setPg3_genderOfOtherAnimals_Cats(genderOfOtherAnimals_Cats.getText().toString());
+        AdoptionForm1.newForm.setPg3_genderOfOtherAnimals_Others(genderOfOtherAnimals_Others.getText().toString());
+
+        int selectedId = animalsSterilised.getCheckedRadioButtonId();
+        RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg3_animalsSterilised(selectedRadioButton.getText().toString());
+
+        AdoptionForm1.newForm.setPg3_animals_Not_Sterilised(animals_Not_Sterilised.getText().toString());
     }
 }

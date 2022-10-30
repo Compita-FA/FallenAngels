@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,11 +40,13 @@ public class AdoptionForm2 extends Fragment
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
 
-    private Boolean contactNumber = false, emailAddress= false, ID= false;
+    private Boolean contactNumber = false, emailAddress= false, ID= false, MAILINGLIST, OtherAnimalFormat;
 
     public AdoptionForm2()
     {
         // Required empty public constructor
+
+
     }
 
     public static AdoptionForm2 newInstance(String param1)
@@ -190,7 +193,34 @@ public class AdoptionForm2 extends Fragment
             }
         }
 
-        if (contactNumber == true && emailAddress == true && ID == true)
+        if (ownerAddToMailingList.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "You need to select Yes or No!", Toast.LENGTH_SHORT).show();
+            MAILINGLIST = false;
+        }
+        else
+        {
+            // radio button is checked
+            MAILINGLIST = true;
+        }
+
+        String otherAnimalsDogsT = otherAnimal_Dogs.getText().toString().trim();
+        String otherAnimalsCatsT = otherAnimal_Dogs.getText().toString().trim();
+        String otherAnimalsOtherT = otherAnimal_Dogs.getText().toString().trim();
+        if (otherAnimalsDogsT.matches("[0-9]+") || otherAnimalsDogsT.matches("")
+                && otherAnimalsCatsT.matches("[0-9]+") || otherAnimalsCatsT.matches("")
+                && otherAnimalsOtherT.matches("[0-9]+") || otherAnimalsOtherT.matches(""))
+        {
+            OtherAnimalFormat = true;
+        }
+        else
+        {
+            OtherAnimalFormat = false;
+            Toast.makeText (getActivity(), "Please indicate other animals numerically!", Toast.LENGTH_LONG).show();
+        }
+
+        if (contactNumber == true && emailAddress == true && ID == true && MAILINGLIST == true && OtherAnimalFormat == true)
         {
             return true;
         }
@@ -207,7 +237,7 @@ public class AdoptionForm2 extends Fragment
 
         if (!emailBeingTested.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailBeingTested).matches())
         {
-            Toast.makeText(getActivity(), "Email Verified!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getActivity(), "Email Verified!", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -237,14 +267,18 @@ public class AdoptionForm2 extends Fragment
 
     private void saveUserInput()
     {
-        AdoptionForm1.newForm.setPg2_ownerContactNumber("");
-        AdoptionForm1.newForm.setPg2_ownerEmail("");
-        AdoptionForm1.newForm.setPg2_ownerIDNumber("");
-        AdoptionForm1.newForm.setPg2_ownerAddToMailingList("");
-        AdoptionForm1.newForm.setPg2_childrenAges("");
+        AdoptionForm1.newForm.setPg2_ownerContactNumber(ownerContactNumber1.getText().toString() + ", " + ownerContactNumber2.getText().toString());
+        AdoptionForm1.newForm.setPg2_ownerEmail(ownerEmail1.getText().toString() + ", " + ownerEmail2.getText().toString());
+        AdoptionForm1.newForm.setPg2_ownerIDNumber(ownerIDNumber.getText().toString());
 
-        AdoptionForm1.newForm.setPg2_otherAnimal_Cats("");
-        AdoptionForm1.newForm.setPg2_otherAnimal_Dogs("");
-        AdoptionForm1.newForm.setPg2_otherAnimal_Other("");
+        int selectedId = ownerAddToMailingList.getCheckedRadioButtonId();
+        RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg2_ownerAddToMailingList(selectedRadioButton.getText().toString());
+
+        AdoptionForm1.newForm.setPg2_childrenAges(childrenAges.getText().toString());
+
+        AdoptionForm1.newForm.setPg2_otherAnimal_Dogs(otherAnimal_Dogs.getText().toString().trim());
+        AdoptionForm1.newForm.setPg2_otherAnimal_Cats(otherAnimal_Cats.getText().toString().trim());
+        AdoptionForm1.newForm.setPg2_otherAnimal_Other(otherAnimal_Other.getText().toString().trim());
     }
 }

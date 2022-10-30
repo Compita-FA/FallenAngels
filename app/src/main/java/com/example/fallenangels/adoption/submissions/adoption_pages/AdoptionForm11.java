@@ -8,16 +8,21 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 
 
 public class AdoptionForm11 extends Fragment
 {
+    Boolean referanceName = false , referanceRelation = false , referanceAddress = false , referanceCell = false , referanceEmail = false;
+
+
     //User input fields
     private EditText refTwo_Name;
     private EditText refTwo_Relationship;
@@ -68,11 +73,17 @@ public class AdoptionForm11 extends Fragment
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm12());
-                ft.commit();
+            public void onClick(View view)
+            {
+                if (checkRequiredUserInput() == true)
+                {
+                    saveUserInput();
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new AdoptionForm12());
+                    ft.commit();
+                }
             }
         });
 
@@ -85,6 +96,77 @@ public class AdoptionForm11 extends Fragment
                 ft.commit();
             }
         });
+    }
 
+    private boolean checkRequiredUserInput()
+    {
+        //Checks Name, relaion and address
+        if (refTwo_Name.getText().toString().trim().isEmpty() || refTwo_Relationship.getText().toString().trim().isEmpty() ||
+                refTwo_Address.getText().toString().trim().isEmpty())
+        {
+            Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            referanceName = true ;
+            referanceRelation = true;
+            referanceAddress = true;
+        }
+
+        //Checks the contact number
+        if (refTwo_Cell.getText().toString().trim().isEmpty() == false)
+        {
+            String text = refTwo_Cell.getText().toString().trim();
+            if (text.matches("[0-9]+") && text.length() >= 10)
+            {
+                referanceCell = true;
+            }
+            else
+            {
+                Toast.makeText (getActivity(), "Cell is invalid!", Toast.LENGTH_LONG).show ();
+            }
+        }
+
+        //CHecks the email
+        if (refTwo_Email.getText().toString().trim().isEmpty() == false)
+        {
+            emailValidator(refTwo_Email);
+        }
+
+        if (referanceName == true && referanceRelation == true && referanceAddress == true && referanceCell == true && referanceEmail == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void emailValidator(EditText email)
+    {
+        // extract the entered data from the EditText
+        String emailBeingTested = email.getText().toString();
+
+        if (!emailBeingTested.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailBeingTested).matches())
+        {
+            //Toast.makeText(getActivity(), "Email Verified!", Toast.LENGTH_SHORT).show();
+            referanceEmail = true;
+        }
+        else
+        {
+            Toast.makeText(getActivity(), "Invalid Email address!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void saveUserInput()
+    {
+        AdoptionForm1.newForm.setPg10_referanceOneName(refTwo_Name.getText().toString());
+        AdoptionForm1.newForm.setPg10_referanceOneRelationship(refTwo_Relationship.getText().toString());
+        AdoptionForm1.newForm.setPg10_referanceOneAddress(refTwo_Address.getText().toString());
+        AdoptionForm1.newForm.setPg10_referanceOneCell(refTwo_Cell.getText().toString().trim());
+        AdoptionForm1.newForm.setPg10_referanceOneLandline(refTwo_Landline.getText().toString().trim());
+        AdoptionForm1.newForm.setPg10_referanceOneEmail(refTwo_Email.getText().toString().trim());
     }
 }

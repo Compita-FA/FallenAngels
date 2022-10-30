@@ -11,14 +11,18 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 
 
 public class AdoptionForm9 extends Fragment
 {
+    Boolean bOwnRent = false, bLandPermission = false, bAcknowledgementOne = false, bAcknowledgementTwo = false;
+
     //User input fields
     private RadioGroup ownOrRent;
     private RadioGroup landlordPermission;
@@ -64,23 +68,23 @@ public class AdoptionForm9 extends Fragment
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm10());
-                ft.commit();
+                if (checkRequiredUserInput() == true)
+                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new AdoptionForm10());
+                    ft.commit();
+                }
             }
         });
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (checkRequiredUserInput() == true)
-                {
-                    checkOtherUserInputs();
-                    saveUserInput();
 
-
-                }
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new AdoptionForm8());
@@ -91,8 +95,30 @@ public class AdoptionForm9 extends Fragment
 
     private boolean checkRequiredUserInput()
     {
+        if (ownOrRent.getCheckedRadioButtonId() == -1 || landlordPermission.getCheckedRadioButtonId() == -1
+            || acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId() == -1 || acknowledgementOf_sterilisation.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "Please fill any left of answers!", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            // radio button is checked
+            bOwnRent = true;
+            bLandPermission = true;
+            bAcknowledgementOne = true;
+            bAcknowledgementTwo = true;
+        }
 
-        return true;
+
+        if (bOwnRent == true && bLandPermission == true && bAcknowledgementOne == true && bAcknowledgementTwo == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void checkOtherUserInputs()
@@ -102,6 +128,20 @@ public class AdoptionForm9 extends Fragment
 
     private void saveUserInput()
     {
+        int ownRent = ownOrRent.getCheckedRadioButtonId();
+        RadioButton ownRentButton = (RadioButton) getView().findViewById(ownRent); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg8_yardSize(ownRentButton.getText().toString().trim());
 
+        int yesNo = landlordPermission.getCheckedRadioButtonId();
+        RadioButton yesNoRadioButton = (RadioButton) getView().findViewById(yesNo); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg8_typeOfHousing(yesNoRadioButton.getText().toString().trim());
+
+        int ackOne = acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId();
+        RadioButton ackOneRadioButton = (RadioButton) getView().findViewById(ackOne); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg8_typeOfHousing(ackOneRadioButton.getText().toString().trim());
+
+        int ackTwo = acknowledgementOf_sterilisation.getCheckedRadioButtonId();
+        RadioButton ackTwoRadioButton = (RadioButton) getView().findViewById(ackTwo); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg8_typeOfHousing(ackTwoRadioButton.getText().toString().trim());
     }
 }

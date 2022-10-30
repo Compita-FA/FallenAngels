@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 
@@ -74,23 +75,23 @@ public class AdoptionForm6 extends Fragment
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm7());
-                ft.commit();
+                if (checkRequiredUserInput() == true)
+                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new AdoptionForm7());
+                    ft.commit();
+                }
             }
         });
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (checkRequiredUserInput() == true)
-                {
-                    checkOtherUserInputs();
-                    saveUserInput();
 
-
-                }
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new AdoptionForm5());
@@ -101,17 +102,61 @@ public class AdoptionForm6 extends Fragment
 
     private boolean checkRequiredUserInput()
     {
-
-        return true;
+        if (permanentHome.getText().toString().trim().isEmpty() || teachingWillingness.getText().toString().trim().isEmpty() ||
+                petResponsibility_whenOnHoliday.getText().toString().trim().isEmpty() || onCircumstanceChange.getText().toString().trim().isEmpty())
+        {
+            Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            if (petSleepingSituation_Inside.isChecked() == false && petSleepingSituation_OnBed.isChecked() == false &&
+                    petSleepingSituation_Outside.isChecked() == false)
+            {
+                Toast.makeText(getActivity(), "Please tell us where they will sleep.", Toast.LENGTH_LONG).show();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 
     private void checkOtherUserInputs()
     {
-
+        //Not needed here
     }
 
     private void saveUserInput()
     {
+        AdoptionForm1.newForm.setPg6_permanentHome(permanentHome.getText().toString().trim());
+        AdoptionForm1.newForm.setPg6_teachingWillingness(teachingWillingness.getText().toString().trim());
+        AdoptionForm1.newForm.setPg6_petResponsibility_whenOnHoliday(petResponsibility_whenOnHoliday.getText().toString().trim());
+        AdoptionForm1.newForm.setPg6_onCircumstanceChange(onCircumstanceChange.getText().toString().trim());
+        AdoptionForm1.newForm.setPg6_petSleepingSituation(getSleepingLocation());
+    }
 
+    private String getSleepingLocation()
+    {
+        String reason;
+        String r1 = "", r2 = "", r3 = "";
+
+        if (petSleepingSituation_Inside.isChecked() == true)
+        {
+            r1 = petSleepingSituation_Inside.getText().toString().trim();
+        }
+        if (petSleepingSituation_OnBed.isChecked() == true)
+        {
+            r2 = petSleepingSituation_OnBed.getText().toString().trim();
+        }
+        if (petSleepingSituation_Outside.isChecked() == true)
+        {
+            r3 = petSleepingSituation_Outside.getText().toString().trim();
+        }
+
+        reason = r1 + " " + r2 + " " + r3 + " ";
+
+        return reason;
     }
 }

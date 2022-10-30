@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 
@@ -76,24 +77,25 @@ public class AdoptionForm7 extends Fragment
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm8());
-                ft.commit();
+            public void onClick(View view)
+            {
+                if (checkRequiredUserInput() == true)
+                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new AdoptionForm8());
+                    ft.commit();
+                }
             }
         });
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (checkRequiredUserInput() == true)
-                {
-                    checkOtherUserInputs();
-                    saveUserInput();
 
-
-                }
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new AdoptionForm6());
@@ -104,17 +106,72 @@ public class AdoptionForm7 extends Fragment
 
     private boolean checkRequiredUserInput()
     {
-
-        return true;
+        if (petInsideOutside.getText().toString().trim().isEmpty() || petOutsideShelter.getText().toString().trim().isEmpty() ||
+                yardStatus.getText().toString().trim().isEmpty() || numberOfFeedings.getText().toString().trim().isEmpty())
+        {
+            Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     private void checkOtherUserInputs()
     {
-
+        if (poolFencing_fence.getText().toString().trim().isEmpty() )
+        {
+            poolFencing_fence.setText("N/A");
+        }
+        if (poolFencing_fenceType.getText().toString().trim().isEmpty())
+        {
+            poolFencing_fenceType.setText("N/A");
+        }
+        if (poolFencing_Cover.getText().toString().trim().isEmpty())
+        {
+            poolFencing_Cover.setText("N/A");
+        }
+        if (poolFencing_CoverType.getText().toString().trim().isEmpty())
+        {
+            poolFencing_CoverType.setText("N/A");
+        }
     }
 
     private void saveUserInput()
     {
+        AdoptionForm1.newForm.setPg7_petInsideOutside(petInsideOutside.getText().toString().trim());
+        AdoptionForm1.newForm.setPg7_petOutsideShelter(petOutsideShelter.getText().toString().trim());
+        AdoptionForm1.newForm.setPg7_yardStatus(yardStatus.getText().toString().trim());
+        AdoptionForm1.newForm.setPg7_poolFencing(getPoolFencing());
+        AdoptionForm1.newForm.setPg7_numberOfFeedings(numberOfFeedings.getText().toString().trim());
+    }
 
+    private String getPoolFencing()
+    {
+        String reason;
+        String r1 = "", r2 = "";
+        if(poolFencing_fence.getText().toString().trim().isEmpty() == false && poolFencing_fence.getText().toString().trim().isEmpty() == false)
+        {
+            r1 = "Fence:" + poolFencing_fence.getText().toString().trim() + ", of type" + poolFencing_fenceType.getText().toString().trim();
+            r2 = "Cover:" + poolFencing_Cover.getText().toString().trim() + ", of type" + poolFencing_CoverType.getText().toString().trim();
+        }
+        else
+        {
+            if (poolFencing_fence.getText().toString().trim().isEmpty() == false)
+            {
+                r1 = poolFencing_fence.getText().toString().trim();
+                r2 = poolFencing_fenceType.getText().toString().trim();
+            }
+            else if(poolFencing_Cover.getText().toString().trim().isEmpty() == false)
+            {
+                r1 = poolFencing_Cover.getText().toString().trim();
+                r2 = poolFencing_CoverType.getText().toString().trim();
+            }
+        }
+
+        reason = r1 + " " + r2;
+
+        return reason;
     }
 }
