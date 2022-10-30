@@ -13,21 +13,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
 
 
-public class FosterForm1 extends Fragment {
+public class FosterForm3 extends Fragment {
 
     private AppCompatButton btnNext;
+    private AppCompatButton btnBack;
 
-    public FosterForm1() {
+    public FosterForm3() {
         // Required empty public constructor
     }
 
-    public static FosterForm1 newInstance(String param1, String param2) {
-        FosterForm1 fragment = new FosterForm1();
+    public static FosterForm3 newInstance(String param1, String param2) {
+        FosterForm3 fragment = new FosterForm3();
         Bundle args = new Bundle();
-        args.putString("FosterForm1", param1);
+        args.putString("FosterForm3", param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -37,18 +37,28 @@ public class FosterForm1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_foster_form1, container, false);
+        return inflater.inflate(R.layout.fragment_foster_form3, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-
         //Finding ID's
-        btnNext = getView().findViewById(R.id.f_btnNext2);
+        btnNext = getView().findViewById(R.id.f_btnNext4);
+        btnBack = getView().findViewById(R.id.f_btnBack2);
 
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new FosterForm4());
+                ft.commit();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fm = getFragmentManager();

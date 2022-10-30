@@ -258,7 +258,7 @@
 
     <!-- Terms and conditions (Foster) -->
     <string name="I">I,</string>
-    <string name="name_of_applicant">(name of foster applicant),</string>
+    <string name="name_of_applicant">(name of foster applicant)</string>
     <string name="make_following_statements">make the following statements and voluntarily enter into this agreement to provide temporary care and custody and necessary sustenance as a foster caregiver to rescued animals in the care of Fallen Angels Pet Rescue. </string>
     <string name="pre_cursor">I take cognisance of the following with regards to the care and wellbeing of the foster animals for which I am responsible: </string>
     <string name="f_1">1. That I am over the age of 21 years of age. </string>
@@ -279,14 +279,8 @@
     <string name="f_16">16. All foster animals will be fed daily and will at all times have access to fresh clean water and  shaded shelter against the environmental elements. Animals under the age of 4 months will  be kept inside during the day and will sleep inside my home at night. Young animals are not to be left unattended outside for long periods of time.</string>
     <string name="f_17">17. I agree that I will send photos of my foster within one week from the date that they come into my care, provided that they are in the condition to be rehomed. If not, I agree that I will bring this under the attention of one of the organisation’s representatives.</string>
     <string name="f_18">18. I agree that I am not allowed to rehome any animal without the consent of the organisation’s representative. </string>
-    <string name="f_19">19.  If you have any queries or concerns please email info@fallenangels.org.za or call Stefanie on 072 931 1102 or Shireen on 076 993 9670.</string>
-    <string name="f_agree">I have read this Agreement in its entirety, and I agree that all statements and stated agreements contained in this document are made by me, and are truthful. </string>
-
-
-
-
-
-
+    <string name="f_19">19.  If you have any queries or concerns please email <b><font fgcolor="#2E46E1">info@fallenangels.org.za</font></b> or call Stefanie on 072 931 1102 or Shireen on 076 993 9670.</string>
+    <string name="f_agree"><b>I have read this Agreement in its entirety, and I agree that all statements and stated agreements contained in this document are made by me, and are truthful.</b></string>
 
 
     <!-- TODO: Foster and Adoption forms -->

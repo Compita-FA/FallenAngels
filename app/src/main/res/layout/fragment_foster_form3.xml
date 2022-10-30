@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_light_grey"
+    android:orientation="vertical"
+    tools:context=".adoption.submissions.foster_pages.FosterForm3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="347dp"
+                android:layout_height="815dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_white_rounded"
+                android:contextClickable="true"
+                android:elevation="10dp">
+
+                <TextView
+                    android:id="@+id/textView148"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Page 3"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="90dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Dogs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Cats"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView134"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView138"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="82dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Dogs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView139"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Cats"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView140"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView184"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="82dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Dogs"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView185"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Cats"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView186"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView122"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/question10"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/f_pageOfOtherAnimals_Dogs"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="e.g., 2 months, 5 weeks, 10 years"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/f_pageOfOtherAnimals_Cats"
+                        android:layout_width="259sp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/f_pagefOtherAnimals_Others"
+                        android:layout_width="259sp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/f_question11"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/breedOfOtherAnimals_Dogs"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="e.g., 2 males, 1 female"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/breedOfOtherAnimals_Cats"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/breedOfOtherAnimals_Others"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView124"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/f_question12"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/f_socialised_Dogs3"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="e.g., yes, no, mostly"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/f_socialised_Cats3"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/f_socialised_Others3"
+                        android:layout_width="259dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/backdrop_form_text"
+                        android:ems="10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:textSize="15sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/animalsSterilised"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/f_btnBack2"
+                            android:layout_width="102dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_black_rounded"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/back"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/textView129"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="2/7"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Space
+                            android:layout_width="29dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/textView125"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="3/7"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/f_btnNext4"
+                            android:layout_width="102dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/btn_orange_rounded"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Next"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <Space
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

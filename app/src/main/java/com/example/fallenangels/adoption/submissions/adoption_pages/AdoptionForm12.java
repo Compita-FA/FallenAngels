@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
@@ -24,7 +25,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.StorageReference;
 
 
 public class AdoptionForm12 extends Fragment
@@ -39,6 +39,8 @@ public class AdoptionForm12 extends Fragment
     private EditText currentYear;
     private EditText currrentTime;
     private EditText signature;
+
+    private TextView txtViewRules;
 
     private AppCompatButton btnBack;
     private AppCompatButton btnSubmit;
@@ -79,6 +81,7 @@ public class AdoptionForm12 extends Fragment
         btnBack = getView().findViewById(R.id.btnBack11);
         btnSubmit = getView().findViewById(R.id.btnSubmit);
         btnCancel = getView().findViewById(R.id.btnCancel);
+        txtViewRules = getView().findViewById(R.id.txtViewTerms);
 
         //Listeners
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +101,13 @@ public class AdoptionForm12 extends Fragment
             public void onClick(View view)
             {
                 //Implement Cancel feature
+            }
+        });
+
+        txtViewRules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ViewTermsConditions(view);
             }
         });
 
@@ -127,6 +137,25 @@ public class AdoptionForm12 extends Fragment
             }
         });
     }
+
+    //------------------------------ Show terms & conditions dialogue ------------------------------
+    public void ViewTermsConditions(View view) {
+        Dialog dialog = new Dialog(getContext(), R.style.DialogStyle);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setContentView(R.layout.dialogue_ts_and_cs_adoption);
+
+        AppCompatButton btnClose = dialog.findViewById(R.id.btnCloseRules);
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+    //----------------------------------------------------------------------------------------------
 
     private void saveUserInput()
     {

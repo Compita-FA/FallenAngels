@@ -13,21 +13,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
 
 
-public class FosterForm1 extends Fragment {
+public class FosterForm2 extends Fragment {
 
     private AppCompatButton btnNext;
+    private AppCompatButton btnBack;
 
-    public FosterForm1() {
+    public FosterForm2() {
         // Required empty public constructor
     }
 
-    public static FosterForm1 newInstance(String param1, String param2) {
-        FosterForm1 fragment = new FosterForm1();
+    public static FosterForm2 newInstance(String param1, String param2) {
+        FosterForm2 fragment = new FosterForm2();
         Bundle args = new Bundle();
-        args.putString("FosterForm1", param1);
+        args.putString("FosterForm2", param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -37,7 +37,7 @@ public class FosterForm1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_foster_form1, container, false);
+        return inflater.inflate(R.layout.fragment_foster_form2, container, false);
     }
 
     @Override
@@ -45,7 +45,8 @@ public class FosterForm1 extends Fragment {
     {
 
         //Finding ID's
-        btnNext = getView().findViewById(R.id.f_btnNext2);
+        btnNext = getView().findViewById(R.id.f_btnNext3);
+        btnBack = getView().findViewById(R.id.f_btnBack1);
 
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +54,17 @@ public class FosterForm1 extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new FosterForm2());
+                ft.replace(R.id.frag_layout, new FosterForm3());
+                ft.commit();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new FosterForm1());
                 ft.commit();
             }
         });
