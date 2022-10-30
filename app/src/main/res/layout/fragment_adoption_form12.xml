@@ -80,7 +80,7 @@
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName6"
+                    android:id="@+id/edt_currentDay"
                     android:layout_width="153dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="150dp"
@@ -105,7 +105,7 @@
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName7"
+                    android:id="@+id/edt_currentMonth"
                     android:layout_width="194dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="110dp"
@@ -130,7 +130,7 @@
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName8"
+                    android:id="@+id/edt_currentYear"
                     android:layout_width="75dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="90dp"
@@ -145,7 +145,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName9"
+                    android:id="@+id/edt_currentTime"
                     android:layout_width="79dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="225dp"
@@ -192,7 +192,7 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName10"
+                android:id="@+id/edt_Signature"
                 android:layout_width="266dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="40dp"
@@ -233,7 +233,7 @@
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnBack10"
+                    android:id="@+id/btnCancel"
                     android:layout_width="118dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -251,7 +251,7 @@
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnNext11"
+                    android:id="@+id/btnSubmit"
                     android:layout_width="147dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_pink_rounded"
@@ -276,7 +276,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnBack11"
+                    android:id="@+id/btnBack"
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"

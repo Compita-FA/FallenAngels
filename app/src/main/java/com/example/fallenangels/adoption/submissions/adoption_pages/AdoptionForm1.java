@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +28,6 @@ public class AdoptionForm1 extends Fragment
     static AdoptionFormTemplete newForm = new AdoptionFormTemplete();
 
     //User input fields
-    private RadioButton rb_Canine;
-    private RadioButton rb_Feline;
     private RadioGroup animalChoice;
 
     private EditText edt_dogNameOne;
@@ -56,17 +55,27 @@ public class AdoptionForm1 extends Fragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_adoption_form1, container, false);
+
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        try
+        {
+            loadPreviousData();
+        }
+        catch (Exception e)
+        {
+            //Toast.makeText(getActivity(), "Exception: " + e, Toast.LENGTH_LONG).show();
+        }
+
         //Finding ID's
-        rb_Canine = getView().findViewById(R.id.rb_Canine);
-        rb_Feline = getView().findViewById(R.id.rb_Feline);
+        animalChoice = getView().findViewById(R.id.rg_animalChoice);
 
         edt_dogNameOne = getView().findViewById(R.id.edt_dogNameOne);
         edt_dogNameTwo = getView().findViewById(R.id.edt_dogNameTwo);
@@ -81,13 +90,11 @@ public class AdoptionForm1 extends Fragment
             @Override
             public void onClick(View view)
             {
-                if (edt_dogNameOne.getText().toString().isEmpty() || edt_dogNameTwo.getText().toString().isEmpty() ||
-                    edt_NameSurname.getText().toString().isEmpty() || edt_address.getText().toString().isEmpty() || rb_Canine.isChecked() == false)
+                if (checkRequiredUserInput() == true)
                 {
-                    Toast.makeText(getActivity(), "Please ensure all fields are filled in!", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
+                    checkOtherUserInputs();
+                    saveUserInput();
+
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.frag_layout, new AdoptionForm2());
@@ -95,22 +102,50 @@ public class AdoptionForm1 extends Fragment
                 }
             }
         });
+    }
 
-        rb_Canine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-
-            }
-        });
-
-        rb_Feline.setOnClickListener(new View.OnClickListener()
+    private boolean checkRequiredUserInput()
+    {
+        if (edt_address.getText().toString().isEmpty() || edt_NameSurname.getText().toString().isEmpty())
         {
-            @Override
-            public void onClick(View view)
-            {
+            Toast.makeText(getActivity(), "Address or Name cannot be empty!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
-            }
-        });
+    private void checkOtherUserInputs()
+    {
+        //Not needed here
+    }
+
+    private void saveUserInput()
+    {
+        if (animalChoice.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "You need to select Canine or Feline!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else
+        {
+            // radio button is checked
+            int selectedId = animalChoice.getCheckedRadioButtonId();
+            RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
+
+            newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
+        }
+
+        newForm.setPg1_animalName(edt_dogNameOne.getText().toString());
+        newForm.setPg1_ownerNameAndSurname(edt_NameSurname.getText().toString());
+        newForm.setPg1_ownerAddress(edt_address.getText().toString());
+    }
+
+    public void loadPreviousData()
+    {
+
     }
 }

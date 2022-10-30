@@ -12,8 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 
@@ -68,6 +70,8 @@ public class AdoptionForm4 extends Fragment
         btnNext = getView().findViewById(R.id.btnNext4);
         btnBack = getView().findViewById(R.id.btnBack3);
 
+        checkInformation();
+
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener()
         {
@@ -98,23 +102,55 @@ public class AdoptionForm4 extends Fragment
                 ft.commit();
             }
         });
+    }
 
+    private void checkInformation()
+    {
+        String sterilized = AdoptionForm1.newForm.getPg3_animalsSterilised();
+
+        if(sterilized.equals("All of them"))
+        {
+            reasonForNonSterilisation.setText("N/A");
+            reasonForNonSterilisation.setEnabled(false);
+        }
     }
 
     private boolean checkRequiredUserInput()
     {
-
-        return true;
+        if (reasonForNonSterilisation.getText().toString().trim().isEmpty() || litterBeforeSterilisation.getText().toString().trim().isEmpty() ||
+                petsDiet.getText().toString().trim().isEmpty() || hoursAlone.getText().toString().trim().isEmpty())
+        {
+            Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
+            return false;
+        }else
+        {
+            return true;
+        }
     }
 
     private void checkOtherUserInputs()
     {
-
+        // Not needed here
     }
 
     private void saveUserInput()
     {
-
+        AdoptionForm1.newForm.setPg4_reasonForNonSterilisation(reasonForNonSterilisation.getText().toString());
+        AdoptionForm1.newForm.setPg4_litterBeforeSterilisation(litterBeforeSterilisation.getText().toString());
+        if (fullyVaccinatedStatus.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "Missing Checklist!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        else
+        {
+            // radio button is checked
+            int selectedId = fullyVaccinatedStatus.getCheckedRadioButtonId();
+            RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
+            AdoptionForm1.newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
+        }
+        AdoptionForm1.newForm.setPg4_petsDiet(petsDiet.getText().toString());
+        AdoptionForm1.newForm.setPg4_hoursAlone(hoursAlone.getText().toString());
     }
-
 }
