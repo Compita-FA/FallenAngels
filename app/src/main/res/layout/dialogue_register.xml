@@ -19,8 +19,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Success!"
-            android:textColor="@color/custom19"
+            android:text="Thank you so much!"
+            android:textColor="@color/custom10"
             android:textSize="17sp" />
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:background="@drawable/btn_blue_rounded"
-            android:backgroundTint="@color/custom5"
+            android:backgroundTint="@color/custom10"
             android:fontFamily="@font/poppins_regular"
             android:text="@android:string/ok"
             android:textAllCaps="false"
