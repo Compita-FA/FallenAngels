@@ -11,11 +11,21 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.fallenangels.R;
 
 
-public class AdoptionForm11 extends Fragment {
+public class AdoptionForm11 extends Fragment
+{
+    //User input fields
+    private EditText refTwo_Name;
+    private EditText refTwo_Relationship;
+    private EditText refTwo_Address;
+    private EditText refTwo_Cell;
+    private EditText refTwo_Landline;
+    private EditText refTwo_Email;
+    //User input fields
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
@@ -41,7 +51,14 @@ public class AdoptionForm11 extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        refTwo_Name = getView().findViewById(R.id.refTwo_Name);
+        refTwo_Relationship = getView().findViewById(R.id.refTwo_Relationship);
+        refTwo_Address = getView().findViewById(R.id.refTwo_Address);
+        refTwo_Cell = getView().findViewById(R.id.refTwo_Cell);
+        refTwo_Landline = getView().findViewById(R.id.refTwo_Landline);
+        refTwo_Email = getView().findViewById(R.id.refTwo_Email);
 
         //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext11);

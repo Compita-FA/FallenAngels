@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/pg9_acknowledgementOf_sterilisation">
+                        android:id="@+id/acknowledgementOf_sterilisation">
                         <RadioButton
                             android:id="@+id/pg9_acknowledgementOf_sterilisation_Yes"
                             android:layout_width="wrap_content"

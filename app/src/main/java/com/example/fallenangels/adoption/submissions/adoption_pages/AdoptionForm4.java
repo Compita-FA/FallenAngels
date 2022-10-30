@@ -79,12 +79,11 @@ public class AdoptionForm4 extends Fragment
                     checkOtherUserInputs();
                     saveUserInput();
 
-
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.frag_layout, new AdoptionForm5());
+                    ft.commit();
                 }
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm5());
-                ft.commit();
             }
         });
 
