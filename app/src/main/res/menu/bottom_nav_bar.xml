@@ -13,4 +13,10 @@
         android:id="@+id/bttm_item_volunteer"
         android:icon="@drawable/icon_volun"
         android:title="Volunteer" />
+
+    <!-- Invisible item -->
+    <item
+        android:id="@+id/bttm_invisible"
+        android:visible="false"
+        android:title="Account" />
 </menu>

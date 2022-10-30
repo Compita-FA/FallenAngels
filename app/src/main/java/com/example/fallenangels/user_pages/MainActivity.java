@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Type variables
     private String userID;
-    private String currentEmail;
-    private String currentName;
+    public static String currentEmail = "Please sign in or create an account";
+    public static String currentName = "Guest User";
 
     //Firebase variables
     private FirebaseAuth mAuth;
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         bottomView.setSelectedItemId(R.id.bttm_item_home);
                         return true;
                     case R.id.item_adopt:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, homeFrag).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, adoptFrag).commit();
                         bottomView.setSelectedItemId(R.id.bttm_item_adopt);
                         SetTopBar("Adopt a Fur Angel");
                         closeDrawer(mainDrawer);
@@ -150,31 +150,37 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, missFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("Our Mission");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_gallery:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, gallFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("Gallery");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_events:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, eventsFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("Events");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_contact:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, conFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("Contact");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_aboutus:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, aboutFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("About Us");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_account:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frag_layout, accFrag).commit();
                         closeDrawer(mainDrawer);
                         SetTopBar("Account");
+                        bottomView.getMenu().findItem(R.id.bttm_invisible).setChecked(true);
                         return true;
                     case R.id.item_logout:
                         if (!userID.equals("NO_USER")) {

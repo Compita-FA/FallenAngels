@@ -199,12 +199,10 @@ public class MainAdoptFragment extends Fragment {
 
         //Disable buttons if no user is logged in
         if (userID.equals("NO_USER")) {
-            Toast.makeText(getContext(), userID, Toast.LENGTH_SHORT).show();
             btnAdopt.setEnabled(false);
             btnFoster.setEnabled(false);
             ChangeEnabled(btnAdopt, btnFoster);
         } else {
-            Toast.makeText(getContext(), userID, Toast.LENGTH_SHORT).show();
             btnAdopt.setEnabled(true);
             btnFoster.setEnabled(true);
             ChangeEnabled(btnAdopt, btnFoster);
@@ -276,6 +274,8 @@ public class MainAdoptFragment extends Fragment {
     }
     //----------------------------------------------------------------------------------------------
 
+
+    //------------------------------- Change button colours accordingly ----------------------------
     private void ChangeEnabled(AppCompatButton btnAdopt, AppCompatButton btnFoster) {
 
         if (btnAdopt.isEnabled() && btnFoster.isEnabled()) {
@@ -286,6 +286,7 @@ public class MainAdoptFragment extends Fragment {
             btnFoster.setBackgroundResource(R.drawable.btn_gray_rounded);
         }
     }
+    //----------------------------------------------------------------------------------------------
 
 
     //------------------------------ Returns bitmap for each dog profile ---------------------------
@@ -317,7 +318,7 @@ public class MainAdoptFragment extends Fragment {
         }
         catch (Exception e)
         {
-            Toast.makeText(getView().getContext(), "Major Error: retrieving dog image" + e, Toast.LENGTH_LONG).show();
+            Log.e("Major Error: retrieving dog image", e.getMessage());
         }
 
 

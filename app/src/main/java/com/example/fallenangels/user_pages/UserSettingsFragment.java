@@ -2,59 +2,42 @@ package com.example.fallenangels.user_pages;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.startup.Login;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link UserSettingsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import org.w3c.dom.Text;
+
+
 public class UserSettingsFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    //Type variables
+    private String userID;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    //Component Variables
+    private TextView txtName;
+    private TextView txtEmail;
+    private AppCompatButton btnChangeEmail;
+    private AppCompatButton btnUpdatePassword;
 
     public UserSettingsFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UserSettingsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static UserSettingsFragment newInstance(String param1, String param2) {
         UserSettingsFragment fragment = new UserSettingsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("Settings", param1);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -63,4 +46,48 @@ public class UserSettingsFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_user_settings, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        //Finding ID's
+        txtName = getView().findViewById(R.id.txtAccName);
+        txtEmail = getView().findViewById(R.id.txtAccEmail);
+        btnChangeEmail = getView().findViewById(R.id.btnChangeEmail);
+        btnUpdatePassword = getView().findViewById(R.id.btnChangePass);
+
+        //Default operations
+        MainActivity mainAct = new MainActivity();
+        Login login = new Login();
+        userID = login.userID;
+
+        //--> Updating name and email
+        txtName.setText(mainAct.currentName);
+        txtEmail.setText(mainAct.currentEmail);
+
+        if (!userID.equals("NO_USER")) {
+            btnChangeEmail.setEnabled(true);
+            btnUpdatePassword.setEnabled(true);
+            ChangeEnabled(btnChangeEmail, btnUpdatePassword);
+        } else {
+            btnChangeEmail.setEnabled(false);
+            btnUpdatePassword.setEnabled(false);
+            ChangeEnabled(btnChangeEmail, btnUpdatePassword);
+        }
+
+    }
+
+
+    //------------------------------- Change button colours accordingly ----------------------------
+    private void ChangeEnabled(AppCompatButton btnChangeEmail, AppCompatButton btnUpdatePassword) {
+
+        if (btnChangeEmail.isEnabled() && btnUpdatePassword.isEnabled()) {
+            btnChangeEmail.setBackgroundResource(R.drawable.btn_pink_rounded);
+            btnUpdatePassword.setBackgroundResource(R.drawable.btn_black_rounded);
+        } else {
+            btnChangeEmail.setBackgroundResource(R.drawable.btn_gray_rounded);
+            btnUpdatePassword.setBackgroundResource(R.drawable.btn_gray_rounded);
+        }
+    }
+    //----------------------------------------------------------------------------------------------
 }
