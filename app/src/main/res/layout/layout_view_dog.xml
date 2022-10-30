@@ -315,7 +315,7 @@
             android:layout_marginStart="70dp"
             android:layout_marginTop="450dp"
             android:background="@drawable/btn_pink_rounded"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_medium"
             android:text="Adopt Me!"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -329,10 +329,10 @@
             android:layout_marginStart="70dp"
             android:layout_marginTop="505dp"
             android:background="@drawable/btn_orange_rounded"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_medium"
             android:text="Foster Me!"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
     </FrameLayout>

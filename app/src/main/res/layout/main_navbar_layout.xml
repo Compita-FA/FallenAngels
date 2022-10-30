@@ -16,16 +16,44 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/mainNavView"
-            android:layout_width="wrap_content"
+            android:layout_width="292dp"
             android:layout_height="match_parent"
             android:background="@drawable/background_main_nav_bar"
-            android:paddingTop="123dp"
+            android:paddingTop="40dp"
             android:theme="@style/MainBarStyle"
             app:itemHorizontalPadding="30dp"
             app:itemIconTint="@color/white"
             app:itemTextAppearance="@style/MainNavigationViewTextStyle"
             app:itemTextColor="@color/white"
-            app:menu="@menu/main_nav_bar" />
+            app:menu="@menu/main_nav_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNav_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Guest User"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtNav_Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Not signed in"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
     </com.google.android.material.appbar.AppBarLayout>
 
 

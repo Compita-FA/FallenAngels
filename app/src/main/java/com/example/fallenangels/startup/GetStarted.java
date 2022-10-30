@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.fallenangels.user_pages.MainActivity;
 import com.example.fallenangels.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class GetStarted extends AppCompatActivity {
 
@@ -21,6 +22,11 @@ public class GetStarted extends AppCompatActivity {
 
         //Finding Id's
         btnStart = findViewById(R.id.btnStart);
+
+        //by default, sign out user from firebase authentication
+        FirebaseAuth auth;
+        auth = FirebaseAuth.getInstance();
+        auth.signOut();
 
         //Listeners
         btnStart.setOnClickListener(new View.OnClickListener() {

@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm8;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm9;
 import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
+import com.example.fallenangels.startup.Login;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -70,6 +72,7 @@ public class MainAdoptFragment extends Fragment {
     private String suit;
     private String imageURL;
     private String cardImageURL;
+    private String userID;
 
 
     public MainAdoptFragment() {
@@ -96,6 +99,10 @@ public class MainAdoptFragment extends Fragment {
 
         //Finding ID's
         layout = getView().findViewById(R.id.container);
+
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
 
         RetrieveDogData();
     }
@@ -190,6 +197,21 @@ public class MainAdoptFragment extends Fragment {
         AppCompatButton btnAdopt = dialog.findViewById(R.id.btnAdopt);
         AppCompatButton btnFoster = dialog.findViewById(R.id.btnFoster);
 
+        //Disable buttons if no user is logged in
+        if (userID.equals("NO_USER")) {
+            Toast.makeText(getContext(), userID, Toast.LENGTH_SHORT).show();
+            btnAdopt.setEnabled(false);
+            btnFoster.setEnabled(false);
+            ChangeEnabled(btnAdopt, btnFoster);
+        } else {
+            Toast.makeText(getContext(), userID, Toast.LENGTH_SHORT).show();
+            btnAdopt.setEnabled(true);
+            btnFoster.setEnabled(true);
+            ChangeEnabled(btnAdopt, btnFoster);
+
+        }
+
+
         Query query = FirebaseDatabase.getInstance().getReference("Dogs").orderByChild("ID").equalTo(ID);
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -254,6 +276,18 @@ public class MainAdoptFragment extends Fragment {
     }
     //----------------------------------------------------------------------------------------------
 
+    private void ChangeEnabled(AppCompatButton btnAdopt, AppCompatButton btnFoster) {
+
+        if (btnAdopt.isEnabled() && btnFoster.isEnabled()) {
+            btnAdopt.setBackgroundResource(R.drawable.btn_pink_rounded);
+            btnFoster.setBackgroundResource(R.drawable.btn_orange_rounded);
+        } else {
+            btnAdopt.setBackgroundResource(R.drawable.btn_gray_rounded);
+            btnFoster.setBackgroundResource(R.drawable.btn_gray_rounded);
+        }
+    }
+
+
     //------------------------------ Returns bitmap for each dog profile ---------------------------
     private void RetrieveImage(String link, ImageView img) {
 
@@ -261,7 +295,7 @@ public class MainAdoptFragment extends Fragment {
         StorageReference fileRef = FirebaseStorage.getInstance().getReference().getStorage().getReferenceFromUrl(link);
         try
         {
-            final File localFile = File.createTempFile("DogImage", "jpeg");
+            final File localFile = File.createTempFile("DogImages", "jpeg");
 
             fileRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>()
             {
@@ -277,8 +311,7 @@ public class MainAdoptFragment extends Fragment {
                 @Override
                 public void onFailure(@NonNull Exception e)
                 {
-                   // Log.e("error_retrieving_img", e.getMessage());
-                    Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("error_retrieving_img", e.getMessage());
                 }
             });
         }

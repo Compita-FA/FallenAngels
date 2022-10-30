@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.startup.Login;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,8 +31,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AdoptionForm12 extends Fragment
 {
     private DatabaseReference dbRef;
-    private FirebaseUser fUser;
-    private FirebaseAuth mAuth;
     private String userID;
 
     private EditText currentDay;
@@ -68,9 +67,9 @@ public class AdoptionForm12 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        mAuth = FirebaseAuth.getInstance();
-        fUser = mAuth.getCurrentUser();
-        //userID = fUser.getUid();
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
 
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
@@ -124,15 +123,6 @@ public class AdoptionForm12 extends Fragment
                 else
                 {
                     saveUserInput();
-                    if (mAuth != null)
-                    {
-                        //They ARE logged in
-
-                    }
-                    else
-                    {
-
-                    }
                     submitApplicationDialog();
                 }
             }

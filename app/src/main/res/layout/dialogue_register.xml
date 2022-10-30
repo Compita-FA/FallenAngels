@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="@color/custom_light_grey"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="307dp"
         android:layout_height="224dp"
-        android:background="@drawable/dialogue_logout_background"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/backdrop_form_text"
         android:orientation="vertical">
 
         <TextView

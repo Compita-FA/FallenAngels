@@ -206,6 +206,7 @@
     <string name="full_name">Full name:</string>
     <string name="thank_you"><b><font fgcolor='#EA2F69'>THANK YOU FOR CHANGING THIS FUR ANGEL"'"S WORLD!!</font></b></string>
     <string name="congrats"><u>CONGRATULATIONS ON YOUR SUCCESSFUL APPLICATION!</u></string>
+    <string name="logout">Are you sure you want to logout? Your progress will be saved.</string>
 
     <!-- Terms and conditions (Adoption) -->
     <string name="view_tc"><u>View Terms and Conditions</u></string>
