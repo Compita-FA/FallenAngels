@@ -30,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AdoptionForm12 extends Fragment
 {
     private DatabaseReference dbRef;
-    private FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
+    private FirebaseUser fUser;
     private FirebaseAuth mAuth;
     private String userID;
 
@@ -68,8 +68,9 @@ public class AdoptionForm12 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        //userID = fUser.getUid();
         mAuth = FirebaseAuth.getInstance();
+        fUser = mAuth.getCurrentUser();
+        //userID = fUser.getUid();
 
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
@@ -183,8 +184,8 @@ public class AdoptionForm12 extends Fragment
                         pd.setTitle("Uploading Submission...");
                         pd.show();
 
-                        dbRef = FirebaseDatabase.getInstance().getReference("Documents").child("userID_placeholder").child("AdoptionForm").child("Form1");
-                        dbRef.setValue(AdoptionForm1.newForm);
+                        dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("AdoptionForms");
+                        dbRef.push().setValue(AdoptionForm1.newForm);
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();
