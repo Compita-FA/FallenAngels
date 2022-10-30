@@ -206,7 +206,7 @@
     <string name="thank_you"><b><font fgcolor='#EA2F69'>THANK YOU FOR CHANGING THIS FUR ANGEL"'"S WORLD!!</font></b></string>
     <string name="congrats"><u>CONGRATULATIONS ON YOUR SUCCESSFUL APPLICATION!</u></string>
 
-    <!-- Terms and conditions -->
+    <!-- Terms and conditions (Adoption) -->
     <string name="view_tc"><u>View Terms and Conditions</u></string>
     <string name="tc_instructions"><u>PLEASE READ THROUGH CAREFULLY BEFORE TAKING YOUR COMPANION HOME THIS IS A LEGAL DOCUMENT</u></string>
     <string name="a_1">1. AT HOME:</string>
@@ -225,45 +225,68 @@
     <string name="a_5"><u>5. Please be aware:</u> You are adopting a rescued animal, of which we have no idea of their history and we cannot anticipate any medical conditions. We do quarantine all animals on arrival but some conditions cannot be foreseen. We do take every precaution to ensure the animal is healthy and you are made aware of any pre-existing conditions. <b>We cannot be held liable or responsible for any health issues or related expenses that do arise after adoption.</b></string>
     <string name="read_understand">I have read and understand this document.</string>
 
-
-
-
     <!-- TODO: Foster Form -->
-    <string name="f_question1"></string>
-    <string name="f_question2"></string>
-    <string name="f_question3"></string>
-    <string name="f_question4"></string>
-    <string name="f_question5"></string>
-    <string name="f_question6"></string>
-    <string name="f_question7"></string>
-    <string name="f_question8"></string>
-    <string name="f_question9"></string>
-    <string name="f_question10"></string>
-    <string name="f_question11"></string>
-    <string name="f_question12"></string>
-    <string name="f_question13"></string>
-    <string name="f_question14"></string>
-    <string name="f_question15"></string>
-    <string name="f_question16"></string>
-    <string name="f_question17"></string>
-    <string name="f_question18"></string>
-    <string name="f_question19"></string>
-    <string name="f_question20"></string>
-    <string name="f_question21"></string>
-    <string name="f_question22"></string>
-    <string name="f_question23"></string>
-    <string name="f_question24"></string>
-    <string name="f_question25"></string>
-    <string name="f_question26"></string>
-    <string name="f_question27"></string>
-    <string name="f_question28"></string>
-    <string name="f_question29"></string>
-    <string name="f_question30"></string>
-    <string name="f_question31"></string>
-    <string name="f_question32"></string>
-    <string name="f_question33"></string>
-    <string name="f_question34"></string>
-    <string name="f_question35"></string>
+    <string name="f_question1">Fur Angel"'"s Name FIRST/SECOND CHOICE</string>
+    <string name="f_question2">Your Name and Surname</string>
+    <string name="f_question3">Address where pet will live (Address)</string>
+    <string name="f_question4">Contact Number</string>
+    <string name="f_question5">Contact Email Address</string>
+    <string name="f_question6">I.D. Number</string>
+    <string name="f_question7">Would you like to be on our mailing list?</string>
+    <string name="f_question8">Ages of children staying in your home?</string>
+    <string name="f_question9">Do you have any other Animals? How Many?</string>
+    <string name="f_question10">Age(s) of your other animals</string>
+    <string name="f_question11">Breed(s) of animals at home</string>
+    <string name="f_question12">Socialised and friendly towards others?</string>
+    <string name="f_question13">Sterilised YES or NO?</string>
+    <string name="f_question14">Are your pets fully vaccinated?</string>
+    <string name="f_question15">If not sterilised please provide a reason?</string>
+    <string name="f_question16">What diet are your pets on?</string>
+    <string name="f_question17">Quantity hours pet would be alone for during the day?</string>
+    <string name="f_question18">Where will your foster sleep?</string>
+    <string name="f_question19">Have you ever surrendered your animal to a rescue org or given a pet away? If so, why?</string>
+    <string name="f_question20">What happened with your previous pets?</string>
+    <string name="f_question21">Have any of your companions gone missing?</string>
+    <string name="f_question22">Have you ever surrendered your animal to a rescue org or given a pet away? If so, why?</string>
+    <string name="f_question23">What happened with your previous pets?</string>
+    <string name="f_question24">Have any of your companions gone missing?</string>
+    <string name="f_question25">Are you prepared to provide a PERMANENT home for the duration of this animal"'"s life?</string>
+    <string name="f_question26">Are you willing to teach your pet about digging, chewing, potty training, etc?</string>
+    <string name="f_question27">Who is responsible for your pets when you go on holiday?</string>
+    <string name="f_question28">TYPE OF FOSTERING OFFERED</string>
+
+    <!-- Terms and conditions (Foster) -->
+    <string name="I">I,</string>
+    <string name="name_of_applicant">(name of foster applicant),</string>
+    <string name="make_following_statements">make the following statements and voluntarily enter into this agreement to provide temporary care and custody and necessary sustenance as a foster caregiver to rescued animals in the care of Fallen Angels Pet Rescue. </string>
+    <string name="pre_cursor">I take cognisance of the following with regards to the care and wellbeing of the foster animals for which I am responsible: </string>
+    <string name="f_1">1. That I am over the age of 21 years of age. </string>
+    <string name="f_2">2. I have my own transport and am able to take my foster animal to the vet when necessary.</string>
+    <string name="f_3">3. I understand that the organisation provides no guarantee as to the health of my foster animal, and that my foster animal may have medical needs, socialization problems, and not be housebroken. </string>
+    <string name="f_4">4. I will not arrange or pay for, or otherwise cause, any elective veterinary procedure to be  performed on my foster animal during the period covered by this agreement, without the express verbal consent and vet booking of a senior organisation member.</string>
+    <string name="f_5"> 5. I understand that Fallen Angels is a non profit organisation and relies entirely on donations. To this end, I agree, when taking my foster animal to the Fallen Angels vet for necessary medical treatment, that I will be responsible for the bill. </string>
+    <string name="f_6">6. I understand that, once my foster has been adopted and the adoption fee paid, I may claim back veterinary expenses up to the value of the adoption fee, against proof of expenditure. </string>
+    <string name="f_7">7. I agree to send photos to Fallen Angels when requested and bring my foster animal to adoption  days when requested.</string>
+    <string name="f_8">8. I understand that I may only have my foster animal temporarily, if I decide to adopt the animal, I  will inform Fallen Angels immediately, complete the correct paperwork and pay the adoption fee. </string>
+    <string name="f_9">9. I agree that I am fostering this animal for the organisation, and that I do not have any right of  ownership over my foster animal. I further agree that the organisation’s rights in and to my foster animal are superior to mine. I also agree to provide the organisations representatives, access to my home and property to check on my foster animal, at any time that I am in possession of my foster animal. </string>
+    <string name="f_10">10. I agree to immediately return any foster animal in my care to the organisation, at the request of  the organisation at any time and for any reason. If the organisation is forced to undertake any  action to force this provision of the agreement, I agree to indemnify the organisation for all court costs and attorneys’ fees connected with such an action. </string>
+    <string name="f_11">11. If I am planning to move at any time during the period covered by this agreement, I agree to  contact the organisation prior to my move, with new contact information. I understand that  the organisation has the right to request return of my foster animal based on such a change of residence, and agree that I will surrender my foster animal to the organisation immediately  upon request. </string>
+    <string name="f_12">12. If at any point I can no longer, or do not want to continue to, provide care, food and shelter for my foster animal, I agree to contact the organisation Representative and arrange for surrender and return of my foster animal back to the organisation. </string>
+    <string name="f_13">13. I agree to contact the organisation Representative with any and all questions or concerns about  my foster animal or the fostering program, as well as with updated contact information. I also  agree to contact the Representative with regular updates on the health status of my foster  animal. I agree that the foster animal will be taken to vets specified by the Organisation or  only to alternative vets only if I received verbal agreement to do so. I have no right to make  any medical decisions related to the animals health ,wellbeing or veterinary care without the consent of the organisations representative. </string>
+    <string name="f_14">14. I agree that if I refuse to comply with any provision of this agreement, the organisation has the  right to terminate this agreement and also has the right to the immediate surrender and return of my foster animals. I further consent to provide the organisation representatives with access to my premises if necessary to facilitate the return.</string>
+    <string name="f_15">15. I agree to do everything in my power to supply a safe environment for the foster animal and will   not at any time put the animal in harm’s way. If this is done I agree that the organisation has a right to claim negligence on my part. </string>
+    <string name="f_16">16. All foster animals will be fed daily and will at all times have access to fresh clean water and  shaded shelter against the environmental elements. Animals under the age of 4 months will  be kept inside during the day and will sleep inside my home at night. Young animals are not to be left unattended outside for long periods of time.</string>
+    <string name="f_17">17. I agree that I will send photos of my foster within one week from the date that they come into my care, provided that they are in the condition to be rehomed. If not, I agree that I will bring this under the attention of one of the organisation’s representatives.</string>
+    <string name="f_18">18. I agree that I am not allowed to rehome any animal without the consent of the organisation’s representative. </string>
+    <string name="f_19">19.  If you have any queries or concerns please email info@fallenangels.org.za or call Stefanie on 072 931 1102 or Shireen on 076 993 9670.</string>
+    <string name="f_agree">I have read this Agreement in its entirety, and I agree that all statements and stated agreements contained in this document are made by me, and are truthful. </string>
+
+
+
+
+
+
+
 
     <!-- TODO: Foster and Adoption forms -->
 

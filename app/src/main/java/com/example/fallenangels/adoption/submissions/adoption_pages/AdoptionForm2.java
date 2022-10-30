@@ -15,11 +15,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormModel.AdoptionFormTemplete;
 
 
 public class AdoptionForm2 extends Fragment

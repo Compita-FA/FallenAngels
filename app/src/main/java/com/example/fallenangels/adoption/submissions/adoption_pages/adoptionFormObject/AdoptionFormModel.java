@@ -1,9 +1,9 @@
-package com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormModel;
+package com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject;
 
-public class AdoptionFormTemplete
+public class AdoptionFormModel
 {
     //default constructor
-    public AdoptionFormTemplete()
+    public AdoptionFormModel()
     {
 
     }

@@ -1,6 +1,5 @@
 package com.example.fallenangels.adoption.submissions.adoption_pages;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,13 +17,12 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormModel.AdoptionFormTemplete;
-import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
+import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject.AdoptionFormModel;
 
 
 public class AdoptionForm1 extends Fragment
 {
-    static AdoptionFormTemplete newForm = new AdoptionFormTemplete();
+    static AdoptionFormModel newForm = new AdoptionFormModel();
 
     //User input fields
     private RadioGroup animalChoice;
