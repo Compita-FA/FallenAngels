@@ -322,7 +322,12 @@ public class MainAdoptFragment extends Fragment {
                     btnAdopt.setEnabled(false);
                     btnFoster.setEnabled(false);
                     ChangeEnabled(btnAdopt, btnFoster);
-                    txtViewDog.setText(getResources().getString(R.string.already_submitted_view_dog));
+                    try {
+                        txtViewDog.setText(getResources().getString(R.string.already_submitted_view_dog));
+                    }catch (Exception e)
+                    {
+
+                    }
                 }
                 else
                 {
