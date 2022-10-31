@@ -96,9 +96,6 @@ public class FosterForm7 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        //Default operations
-        Login login = new Login();
-        userID = login.userID;
 
         untilAdoption = getView().findViewById(R.id.f_checkAdoption);
         holiday = getView().findViewById(R.id.f_checkHoliday);

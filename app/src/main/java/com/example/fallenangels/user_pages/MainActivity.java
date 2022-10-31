@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Change appearance of top bar if any other page is open
-    private void SetTopBar(String heading) {
+    public void SetTopBar(String heading) {
         txtHeading.setText(heading);
     }
 
