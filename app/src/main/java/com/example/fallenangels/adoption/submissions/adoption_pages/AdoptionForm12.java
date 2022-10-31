@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.startup.Login;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -215,6 +216,7 @@ public class AdoptionForm12 extends Fragment
     }
     //----------------------------------------------------------------------------------------------
 
+
     private void saveUserInput()
     {
         AdoptionForm1.newForm.setPg12_CurrentDay(currentDay.getText().toString());
@@ -224,6 +226,8 @@ public class AdoptionForm12 extends Fragment
         AdoptionForm1.newForm.setPg12_Signature(signature.getText().toString().trim());
     }
 
+
+    //----------------------------- Method to save submission to DB --------------------------------
     private void submitApplicationDialog()
     {
         AlertDialog.Builder builder;
@@ -274,7 +278,10 @@ public class AdoptionForm12 extends Fragment
         alert.setTitle("Adoption Form");
         alert.show();
     }
+    //----------------------------------------------------------------------------------------------
 
+
+    /*
     public void testStorage()
     {
         Toast.makeText(getActivity(), "All data collect: \n"
@@ -378,4 +385,6 @@ public class AdoptionForm12 extends Fragment
                 + "Time: " + AdoptionForm1.newForm.getPg12_CurrentTime()
                 + "Signature: " + AdoptionForm1.newForm.getPg12_Signature(), Toast.LENGTH_LONG).show();
     }
+
+     */
 }

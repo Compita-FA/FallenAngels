@@ -15,7 +15,7 @@
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form1.xml" value="0.18085106382978725" />
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form10.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form11.xml" value="0.2586050724637681" />
-        <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form12.xml" value="0.33" />
+        <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form12.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form2.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form3.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/Storm/AndroidStudioProjects/FallenAngels/app/src/main/res/layout/fragment_adoption_form4.xml" value="0.2586050724637681" />
@@ -47,6 +47,7 @@
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/cardview_dog_profile.xml" value="0.9169960474308301" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/dialogue_logout.xml" value="0.335" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/dialogue_register.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/dialogue_reset_password.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adopt_submission_form.xml" value="0.33" />

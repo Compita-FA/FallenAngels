@@ -64,7 +64,7 @@ public class FosterForm1 extends Fragment {
         //Finding ID's
         animalChoice = getView().findViewById(R.id.rg_animalChoice);
         edt_dogNameOne = getView().findViewById(R.id.edt_f_dogNameOne);
-        edt_dogNameTwo = getView().findViewById(R.id.edt_f_dogNameTwo);
+        //edt_dogNameTwo = getView().findViewById(R.id.edt_f_dogNameTwo);
         edt_NameSurname = getView().findViewById(R.id.edt_f_NameSurname);
         edt_address = getView().findViewById(R.id.edt_f_address);
         btnNext = getView().findViewById(R.id.f_btnNext2);

@@ -41,8 +41,6 @@ public class AdoptionForm1 extends Fragment
     private AppCompatButton btnBack;
 
     public static String dogName1;
-    public static String dogName2;
-
 
     //Button to go to next page
     private AppCompatButton btnNext;
@@ -82,11 +80,10 @@ public class AdoptionForm1 extends Fragment
             //Toast.makeText(getActivity(), "Exception: " + e, Toast.LENGTH_LONG).show();
         }
 
-
         //Finding ID's
         animalChoice = getView().findViewById(R.id.rg_animalChoice);
         edt_dogNameOne = getView().findViewById(R.id.edt_dogNameOne);
-        edt_dogNameTwo = getView().findViewById(R.id.edt_dogNameTwo);
+        //edt_dogNameTwo = getView().findViewById(R.id.edt_dogNameTwo);
         edt_NameSurname = getView().findViewById(R.id.edt_NameSurname);
         edt_address = getView().findViewById(R.id.edt_address);
         btnNext = getView().findViewById(R.id.btnNext1);
