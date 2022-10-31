@@ -199,9 +199,9 @@ public class FosterForm2 extends Fragment {
         String otherAnimalsDogsT = otherAnimal_Dogs.getText().toString().trim();
         String otherAnimalsCatsT = otherAnimal_Dogs.getText().toString().trim();
         String otherAnimalsOtherT = otherAnimal_Dogs.getText().toString().trim();
-        if (otherAnimalsDogsT.matches("[0-9]+") || otherAnimalsDogsT.matches("")
-                && otherAnimalsCatsT.matches("[0-9]+") || otherAnimalsCatsT.matches("")
-                && otherAnimalsOtherT.matches("[0-9]+") || otherAnimalsOtherT.matches(""))
+        if (otherAnimalsDogsT.matches("[0-9]+") || !otherAnimalsDogsT.isEmpty()
+                && otherAnimalsCatsT.matches("[0-9]+") || !otherAnimalsCatsT.isEmpty()
+                && otherAnimalsOtherT.matches("[0-9]+") || !otherAnimalsOtherT.isEmpty())
         {
             OtherAnimalFormat = true;
         }

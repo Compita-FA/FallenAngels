@@ -86,7 +86,6 @@ public class AdoptionForm5 extends Fragment
                     checkOtherUserInputs();
                     saveUserInput();
 
-                    Toast.makeText(getActivity(), "Reason: " + getReason(), Toast.LENGTH_LONG).show();
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.frag_layout, new AdoptionForm6());

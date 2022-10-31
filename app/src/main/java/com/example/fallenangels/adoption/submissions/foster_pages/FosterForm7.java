@@ -133,7 +133,7 @@ public class FosterForm7 extends Fragment
             public void onClick(View view)
             {
                 if(signature.getText().toString().trim().isEmpty() || nameOfFoster.getText().toString().trim().isEmpty()
-                        || untilAdoption.isChecked() == false || holiday.isChecked() == false)
+                        || untilAdoption.isChecked() == false && holiday.isChecked() == false)
                 {
                     Toast.makeText(getActivity(), "Name of Foster and Signature is required to Submit!", Toast.LENGTH_LONG).show();
                 }
