@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
@@ -22,14 +21,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AdoptionForm9 extends Fragment
 {
-    Boolean bOwnRent = false, bLandPermission = false, bAcknowledgementOne = false, bAcknowledgementTwo = false;
-
     //User input fields
     private RadioGroup ownOrRent;
     private RadioGroup landlordPermission;
     private RadioGroup acknowledgementOf_dewormTicksFleas;
     private RadioGroup acknowledgementOf_sterilisation;
     //User input fields
+
+    Boolean landlordPerm = false;
 
     private AppCompatButton btnNext;
     private AppCompatButton btnBack;
@@ -81,7 +80,6 @@ public class AdoptionForm9 extends Fragment
 
                 if (checkRequiredUserInput() == true)
                 {
-                    checkOtherUserInputs();
                     saveUserInput();
 
                     FragmentManager fm = getFragmentManager();
@@ -108,25 +106,16 @@ public class AdoptionForm9 extends Fragment
 
     private boolean checkRequiredUserInput()
     {
-        if (ownOrRent.getCheckedRadioButtonId() == -1 || landlordPermission.getCheckedRadioButtonId() == -1
-            || acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId() == -1 || acknowledgementOf_sterilisation.getCheckedRadioButtonId() == -1)
+        if (ownOrRent() == true && ensureAcknowledgements() == true)
         {
-            // no radio buttons are checked
-            Toast.makeText(getActivity(), "Please fill any left of answers!", Toast.LENGTH_LONG).show();
-        }
-        else
-        {
-            // radio button is checked
-            bOwnRent = true;
-            bLandPermission = true;
-            bAcknowledgementOne = true;
-            bAcknowledgementTwo = true;
-        }
-
-
-        if (bOwnRent == true && bLandPermission == true && bAcknowledgementOne == true && bAcknowledgementTwo == true)
-        {
-            return true;
+            if (landLord() == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         else
         {
@@ -134,9 +123,61 @@ public class AdoptionForm9 extends Fragment
         }
     }
 
-    private void checkOtherUserInputs()
+    private boolean landLord()
     {
+        if (landlordPermission.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "You forgot about landlord permission!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
+    private boolean ownOrRent()
+    {
+        if (ownOrRent.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "Rent or Own cant be left blank!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private boolean ensureAcknowledgements()
+    {
+        if (acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId() == -1 && acknowledgementOf_sterilisation.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "To proceed you must acknowledge the last two options!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else
+        {
+            // radio button is checked
+            int selectedId1 = acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId();
+            RadioButton selectedAcknowledgementOne = (RadioButton) getView().findViewById(selectedId1); // find the radiobutton by returned id
+
+            int selectedId2 = acknowledgementOf_sterilisation.getCheckedRadioButtonId();
+            RadioButton selectedAcknowledgementTwo = (RadioButton) getView().findViewById(selectedId2); // find the radiobutton by returned id
+
+            if (selectedAcknowledgementOne.getText().toString().trim().equals("Yes") && selectedAcknowledgementTwo.getText().toString().trim().equals("Yes"))
+            {
+                return true;
+            }
+            else
+            {
+                Toast.makeText(getActivity(), "To proceed you must acknowledge both as Yes!", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        }
     }
 
     private void saveUserInput()
@@ -145,9 +186,16 @@ public class AdoptionForm9 extends Fragment
         RadioButton ownRentButton = (RadioButton) getView().findViewById(ownRent); // find the radiobutton by returned id
         AdoptionForm1.newForm.setPg9_ownOrRent(ownRentButton.getText().toString().trim());
 
-        int yesNo = landlordPermission.getCheckedRadioButtonId();
-        RadioButton yesNoRadioButton = (RadioButton) getView().findViewById(yesNo); // find the radiobutton by returned id
-        AdoptionForm1.newForm.setPg9_landlordPermission(yesNoRadioButton.getText().toString().trim());
+        if (landlordPermission.getCheckedRadioButtonId() == -1)
+        {
+            AdoptionForm1.newForm.setPg9_landlordPermission("N/A");
+        }
+        else
+        {
+            int yesNo = landlordPermission.getCheckedRadioButtonId();
+            RadioButton yesNoRadioButton = (RadioButton) getView().findViewById(yesNo); // find the radiobutton by returned id
+            AdoptionForm1.newForm.setPg9_landlordPermission(yesNoRadioButton.getText().toString().trim());
+        }
 
         int ackOne = acknowledgementOf_dewormTicksFleas.getCheckedRadioButtonId();
         RadioButton ackOneRadioButton = (RadioButton) getView().findViewById(ackOne); // find the radiobutton by returned id

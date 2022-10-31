@@ -84,6 +84,7 @@ public class FosterForm4 extends Fragment
             @Override
             public void onClick(View view) {
                 setUserInputs();
+                checkOtherUserInputs();
                 saveUserInput();
 
                 FragmentManager fm = getFragmentManager();
@@ -171,8 +172,25 @@ public class FosterForm4 extends Fragment
         }
     }
 
+    private void checkOtherUserInputs()
+    {
+        if (steriReasonOtherAnimals_Dogs.getText().toString().trim().isEmpty())
+        {
+            steriReasonOtherAnimals_Dogs.setText("N/A");
+        }
+        if (steriReasonOtherAnimals_Cats.getText().toString().trim().isEmpty())
+        {
+            steriReasonOtherAnimals_Cats.setText("N/A");
+        }
+        if (steriReasonOtherAnimals_Others.getText().toString().trim().isEmpty())
+        {
+            steriReasonOtherAnimals_Others.setText("N/A");
+        }
+    }
+
     private void saveUserInput()
     {
+
         FosterForm1.newForm.setPg4_sterilizedOtherAnimals_Dogs(sterilizedOtherAnimals_Dogs.getText().toString());
         FosterForm1.newForm.setPg4_sterilizedOtherAnimals_Cats(sterilizedOtherAnimals_Cats.getText().toString());
         FosterForm1.newForm.setPg4_sterilizedOtherAnimals_Others(sterilizedOtherAnimals_Others.getText().toString());

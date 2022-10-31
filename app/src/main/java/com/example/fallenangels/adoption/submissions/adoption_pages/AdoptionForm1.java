@@ -23,6 +23,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class AdoptionForm1 extends Fragment
 {
@@ -77,6 +81,7 @@ public class AdoptionForm1 extends Fragment
         {
             //Toast.makeText(getActivity(), "Exception: " + e, Toast.LENGTH_LONG).show();
         }
+
 
         //Finding ID's
         animalChoice = getView().findViewById(R.id.rg_animalChoice);

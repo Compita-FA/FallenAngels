@@ -157,8 +157,8 @@ public class AdoptionForm7 extends Fragment
         String r1 = "", r2 = "";
         if(poolFencing_fence.getText().toString().trim().isEmpty() == false && poolFencing_fence.getText().toString().trim().isEmpty() == false)
         {
-            r1 = "Fence:" + poolFencing_fence.getText().toString().trim() + ", of type" + poolFencing_fenceType.getText().toString().trim();
-            r2 = "Cover:" + poolFencing_Cover.getText().toString().trim() + ", of type" + poolFencing_CoverType.getText().toString().trim();
+            r1 = "Fence: " + poolFencing_fence.getText().toString().trim() + ", of type " + poolFencing_fenceType.getText().toString().trim();
+            r2 = "Cover: " + poolFencing_Cover.getText().toString().trim() + ", of type " + poolFencing_CoverType.getText().toString().trim();
         }
         else
         {

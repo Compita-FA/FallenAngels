@@ -84,7 +84,6 @@ public class AdoptionForm4 extends Fragment
             {
                 if (checkRequiredUserInput() == true)
                 {
-                    checkOtherUserInputs();
                     saveUserInput();
 
                     FragmentManager fm = getFragmentManager();
@@ -121,39 +120,49 @@ public class AdoptionForm4 extends Fragment
 
     private boolean checkRequiredUserInput()
     {
+        Boolean inputFields, radioField;
+
         if (reasonForNonSterilisation.getText().toString().trim().isEmpty() || litterBeforeSterilisation.getText().toString().trim().isEmpty() ||
                 petsDiet.getText().toString().trim().isEmpty() || hoursAlone.getText().toString().trim().isEmpty())
         {
             Toast.makeText(getActivity(), "Please fill in all fields!", Toast.LENGTH_LONG).show();
-            return false;
+            inputFields = false;
         }else
+        {
+            inputFields = true;
+        }
+
+        if (fullyVaccinatedStatus.getCheckedRadioButtonId() == -1)
+        {
+            // no radio buttons are checked
+            Toast.makeText(getActivity(), "Missing Checklist!", Toast.LENGTH_SHORT).show();
+            radioField = false;
+        }
+        else
+        {
+            // radio button is checked
+            radioField = true;
+        }
+
+        if (inputFields == true && radioField == true)
         {
             return true;
         }
-    }
-
-    private void checkOtherUserInputs()
-    {
-        // Not needed here
+        else
+        {
+            return false;
+        }
     }
 
     private void saveUserInput()
     {
         AdoptionForm1.newForm.setPg4_reasonForNonSterilisation(reasonForNonSterilisation.getText().toString());
         AdoptionForm1.newForm.setPg4_litterBeforeSterilisation(litterBeforeSterilisation.getText().toString());
-        if (fullyVaccinatedStatus.getCheckedRadioButtonId() == -1)
-        {
-            // no radio buttons are checked
-            Toast.makeText(getActivity(), "Missing Checklist!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        else
-        {
-            // radio button is checked
-            int selectedId = fullyVaccinatedStatus.getCheckedRadioButtonId();
-            RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
-            AdoptionForm1.newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
-        }
+
+        int selectedId = fullyVaccinatedStatus.getCheckedRadioButtonId();
+        RadioButton selectedRadioButton = (RadioButton) getView().findViewById(selectedId); // find the radiobutton by returned id
+        AdoptionForm1.newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
+
         AdoptionForm1.newForm.setPg4_petsDiet(petsDiet.getText().toString());
         AdoptionForm1.newForm.setPg4_hoursAlone(hoursAlone.getText().toString());
     }
