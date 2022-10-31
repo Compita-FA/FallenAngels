@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
+import com.example.fallenangels.others.HomeFragment;
 import com.example.fallenangels.startup.Login;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.fallenangels.startup.Login;
@@ -249,6 +250,7 @@ public class FosterForm7 extends Fragment
                         dbRef.push().setValue(FosterForm1.newForm);
 
                         dbRefDog.setValue(dog1ID);
+
                        // dbRefDog.push().setValue(dog2ID);
 
                         pd.dismiss();
@@ -258,8 +260,9 @@ public class FosterForm7 extends Fragment
                         //Go back to main adoption page
                         FragmentManager fm = getFragmentManager();
                         FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                        ft.replace(R.id.frag_layout, new HomeFragment());
                         ft.commit();
+
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener()

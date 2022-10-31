@@ -80,8 +80,10 @@ public class FosterForm1 extends Fragment {
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener()
         {
+
             @Override
             public void onClick(View view) {
+
                 if (checkRequiredUserInput() == true)
                 {
                     saveUserInput();

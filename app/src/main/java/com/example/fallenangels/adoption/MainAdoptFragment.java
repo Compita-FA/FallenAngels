@@ -299,8 +299,6 @@ public class MainAdoptFragment extends Fragment {
 
             }
 
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
