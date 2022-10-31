@@ -63,7 +63,6 @@ public class UserSettingsFragment extends Fragment {
         txtName = getView().findViewById(R.id.txtAccName);
         txtEmail = getView().findViewById(R.id.txtAccEmail);
         btnChangeEmail = getView().findViewById(R.id.btnChangeEmail);
-        btnUpdatePassword = getView().findViewById(R.id.btnChangePass);
 
         //Default operations
         MainActivity mainAct = new MainActivity();
@@ -81,12 +80,10 @@ public class UserSettingsFragment extends Fragment {
 
         if (!userID.equals("NO_USER")) {
             btnChangeEmail.setEnabled(true);
-            btnUpdatePassword.setEnabled(true);
-            ChangeEnabled(btnChangeEmail, btnUpdatePassword);
+            ChangeEnabled(btnChangeEmail);
         } else {
             btnChangeEmail.setEnabled(false);
-            btnUpdatePassword.setEnabled(false);
-            ChangeEnabled(btnChangeEmail, btnUpdatePassword);
+            ChangeEnabled(btnChangeEmail);
         }
 
     }
@@ -94,14 +91,12 @@ public class UserSettingsFragment extends Fragment {
 
 
     //------------------------------- Change button colours accordingly ----------------------------
-    private void ChangeEnabled(AppCompatButton btnChangeEmail, AppCompatButton btnUpdatePassword) {
+    private void ChangeEnabled(AppCompatButton btnChangeEmail) {
 
-        if (btnChangeEmail.isEnabled() && btnUpdatePassword.isEnabled()) {
+        if (btnChangeEmail.isEnabled()) {
             btnChangeEmail.setBackgroundResource(R.drawable.btn_pink_rounded);
-            btnUpdatePassword.setBackgroundResource(R.drawable.btn_black_rounded);
         } else {
             btnChangeEmail.setBackgroundResource(R.drawable.btn_gray_rounded);
-            btnUpdatePassword.setBackgroundResource(R.drawable.btn_gray_rounded);
         }
     }
     //----------------------------------------------------------------------------------------------
