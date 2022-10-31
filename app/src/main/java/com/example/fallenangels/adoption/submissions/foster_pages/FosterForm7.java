@@ -40,14 +40,14 @@ import java.util.Calendar;
 public class FosterForm7 extends Fragment
 {
     //Date
-    private Calendar calendar = Calendar.getInstance();
-    private SimpleDateFormat DateFormat;
-    private String Date;
+    Calendar calendar = Calendar.getInstance();
+    SimpleDateFormat DateFormat;
+    String Date;
 
     private DatabaseReference dbRef;
+    private String userID;
     private FirebaseUser fUser;
     private FirebaseAuth mAuth;
-    private String userID;
 
     public static String dog1ID;
     public static String dog2ID;
@@ -96,6 +96,10 @@ public class FosterForm7 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
+
         untilAdoption = getView().findViewById(R.id.f_checkAdoption);
         holiday = getView().findViewById(R.id.f_checkHoliday);
         nameOfFoster = getView().findViewById(R.id.f_name_foster_applicant);
@@ -145,14 +149,18 @@ public class FosterForm7 extends Fragment
             @Override
             public void onClick(View view)
             {
-                if(signature.getText().toString().trim().isEmpty())
+                if(signature.getText().toString().trim().isEmpty() || nameOfFoster.getText().toString().trim().isEmpty()
+                        || untilAdoption.isChecked() == false && holiday.isChecked() == false)
                 {
-                    Toast.makeText(getActivity(), "Signature is required to Submit!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Name of Foster and Signature is required to Submit!", Toast.LENGTH_LONG).show();
                 }
-                else {
-                    if (untilAdoption.isChecked() == false && holiday.isChecked() == false) {
+                else
+                {
+                    if(untilAdoption.isChecked() == false && holiday.isChecked() == false)
+                    {
                         Toast.makeText(getActivity(), "Type of foster cant be blank, sorry", Toast.LENGTH_LONG).show();
-                    } else {
+                    }else
+                    {
                         saveUserInput();
                         submitApplicationDialog();
                     }
@@ -229,7 +237,7 @@ public class FosterForm7 extends Fragment
         DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs").push().child("dogID");
 
         //Setting message manually and performing action on button click
-        builder.setMessage("Would you like to submit this Adoption Application?")
+        builder.setMessage("Would you like to submit this Foster Application?")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener()
                 {

@@ -71,14 +71,21 @@ public class AdoptionForm2 extends Fragment
         //Finding ID's
         ownerContactNumber1 = getView().findViewById(R.id.ownerContactNumber1);
         ownerContactNumber2 = getView().findViewById(R.id.ownerContactNumber2);
+
         ownerEmail1 = getView().findViewById(R.id.ownerEmail1);
         ownerEmail2 = getView().findViewById(R.id.ownerEmail2);
+
         ownerIDNumber  = getView().findViewById(R.id.ownerIDNumber);
+
         ownerAddToMailingList = getView().findViewById(R.id.ownerAddToMailingList);
+
         childrenAges = getView().findViewById(R.id.childrenAges);
+
         otherAnimal_Dogs = getView().findViewById(R.id.otherAnimal_Dogs);
         otherAnimal_Cats = getView().findViewById(R.id.otherAnimal_Cats);
         otherAnimal_Other = getView().findViewById(R.id.otherAnimal_Other);
+
+        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext2);
         btnBack = getView().findViewById(R.id.btnBack1);
 
@@ -207,8 +214,8 @@ public class AdoptionForm2 extends Fragment
         String otherAnimalsCatsT = otherAnimal_Dogs.getText().toString().trim();
         String otherAnimalsOtherT = otherAnimal_Dogs.getText().toString().trim();
         if (otherAnimalsDogsT.matches("[0-9]+") || !otherAnimalsDogsT.isEmpty()
-                && otherAnimalsCatsT.matches("[0-9]+") || !otherAnimalsCatsT.isEmpty()
-                && otherAnimalsOtherT.matches("[0-9]+") || !otherAnimalsOtherT.isEmpty())
+                && otherAnimalsCatsT.matches("[0-9]+") || !otherAnimalsDogsT.isEmpty()
+                && otherAnimalsOtherT.matches("[0-9]+") || !otherAnimalsDogsT.isEmpty())
         {
             OtherAnimalFormat = true;
         }
