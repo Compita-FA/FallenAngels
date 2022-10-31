@@ -93,12 +93,6 @@ public class AdoptionForm2 extends Fragment
             @Override
             public void onClick(View view)
             {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm3());
-                ft.commit();
-
-                /*
                 if (checkRequiredUserInput() == true)
                 {
                     checkOtherUserInputs();
@@ -109,8 +103,6 @@ public class AdoptionForm2 extends Fragment
                     ft.replace(R.id.frag_layout, new AdoptionForm3());
                     ft.commit();
                 }
-
-                 */
             }
         });
 
