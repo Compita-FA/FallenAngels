@@ -112,7 +112,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="660dp"
+                android:layout_height="620dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -121,10 +121,10 @@
                 android:elevation="10dp">
 
                 <RadioGroup
+                    android:id="@+id/rg_animalChoice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/rg_animalChoice">
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/rb_Canine"
@@ -133,10 +133,10 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="40dp"
                         android:buttonTint="@color/custom_pink"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="Canine"
+                        android:checked="true"
                         android:enabled="true"
-                        android:checked="true"/>
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Canine" />
 
                     <RadioButton
                         android:id="@+id/rb_Feline"
@@ -145,9 +145,9 @@
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="40dp"
                         android:buttonTint="@color/custom_pink"
+                        android:enabled="false"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="Feline"
-                        android:enabled="false"/>
+                        android:text="Feline" />
 
                 </RadioGroup>
 
@@ -158,14 +158,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
                     android:layout_marginEnd="125dp"
-                    android:layout_marginBottom="85dp"
-                    android:text="1/12"
+                    android:layout_marginBottom="50dp"
+                    android:text="2/12"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="626dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -193,21 +193,14 @@
                         android:text="Load Data!"
                         android:textSize="15sp" />
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/edt_dogNameTwo"
                         android:layout_width="318dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/backdrop_form_text"
-                        android:ems="10"
-                        android:fontFamily="@font/poppins_regular"
-                        android:inputType="textPersonName"
-                        android:paddingStart="15dp"
-                        android:text=""
-                        android:textSize="15sp"
-                        android:hint="2."
-                        android:enabled="false"/>
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
                         android:id="@+id/textView123"
@@ -228,10 +221,10 @@
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
+                        android:hint="John Doe"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp"
-                        android:hint="John Doe"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -254,12 +247,12 @@
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="start|top"
+                        android:hint="83 Malcore Road, Table View, Cape Town"
                         android:inputType="textMultiLine|textPersonName"
                         android:lines="6"
                         android:paddingStart="15dp"
                         android:paddingTop="5dp"
                         android:textSize="15sp"
-                        android:hint="83 Malcore Road, Table View, Cape Town"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -276,10 +269,6 @@
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom|center_horizontal" />
                 </LinearLayout>
 
             </FrameLayout>

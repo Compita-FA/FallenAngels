@@ -30,7 +30,7 @@
                 app:srcCompat="@drawable/black_fallenangels_logo" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/txtChangePass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

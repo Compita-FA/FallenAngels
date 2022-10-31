@@ -296,16 +296,17 @@
             app:srcCompat="@drawable/img_dog_demo" />
 
         <TextView
-            android:id="@+id/textView128"
-            android:layout_width="152dp"
+            android:id="@+id/txtViewDog"
+            android:layout_width="166dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="370dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="380dp"
             android:layout_marginEnd="2dp"
             android:fontFamily="@font/poppins_regular"
+            android:gravity="center_horizontal"
             android:text="@string/view_dog"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAdopt"

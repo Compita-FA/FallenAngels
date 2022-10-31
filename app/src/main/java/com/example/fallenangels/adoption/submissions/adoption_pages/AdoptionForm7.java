@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm7 extends Fragment
@@ -59,26 +60,29 @@ public class AdoptionForm7 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         petInsideOutside = getView().findViewById(R.id.petInsideOutside);
         petOutsideShelter = getView().findViewById(R.id.petOutsideShelter);
         yardStatus = getView().findViewById(R.id.yardStatus);
-
         poolFencing_Cover = getView().findViewById(R.id.poolFencing_Cover);
         poolFencing_fence = getView().findViewById(R.id.poolFencing_fence);
         poolFencing_CoverType = getView().findViewById(R.id.poolFencing_CoverType);
         poolFencing_fenceType = getView().findViewById(R.id.poolFencing_fenceType);
-
         numberOfFeedings = getView().findViewById(R.id.numberOfFeedings);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext7);
         btnBack = getView().findViewById(R.id.btnBack6);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
+
                 if (checkRequiredUserInput() == true)
                 {
                     checkOtherUserInputs();

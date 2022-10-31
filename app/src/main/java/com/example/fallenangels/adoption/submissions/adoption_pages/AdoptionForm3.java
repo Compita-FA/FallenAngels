@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm3 extends Fragment
@@ -64,21 +65,22 @@ public class AdoptionForm3 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         ageOfOtherAnimals_Dogs = getView().findViewById(R.id.pageOfOtherAnimals_Dogs);
         ageOfOtherAnimals_Cats = getView().findViewById(R.id.pageOfOtherAnimals_Cats);
         ageOfOtherAnimals_Others = getView().findViewById(R.id.ageOfOtherAnimals_Others);
-
         genderOfOtherAnimals_Dogs = getView().findViewById(R.id.genderOfOtherAnimals_Dogs);
         genderOfOtherAnimals_Cats = getView().findViewById(R.id.genderOfOtherAnimals_Cats);
         genderOfOtherAnimals_Others = getView().findViewById(R.id.genderOfOtherAnimals_Others);
-
         animalsSterilised = getView().findViewById(R.id.animalsSterilised);
-
         animals_Not_Sterilised = getView().findViewById(R.id.animals_Not_Sterilised);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext3);
         btnBack = getView().findViewById(R.id.btnBack2);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         checkInformation();
 

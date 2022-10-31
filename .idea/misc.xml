@@ -48,6 +48,7 @@
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/cardview_dog_profile.xml" value="0.9169960474308301" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/dialogue_register.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/dialogue_reset_password.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adopt_submission_form.xml" value="0.33" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adoption_form1.xml" value="0.25" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adoption_form10.xml" value="0.3625" />
@@ -62,12 +63,17 @@
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adoption_form8.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_adoption_form9.xml" value="0.33" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form1.xml" value="0.25" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form2.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form3.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form4.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form5.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form6.xml" value="0.18342391304347827" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_form7.xml" value="0.25" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_foster_submission_form.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_gallery.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_home.xml" value="0.15633423180592992" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_main_adopt.xml" value="0.33" />
-        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_user_settings.xml" value="0.335" />
+        <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/fragment_user_settings.xml" value="0.25" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/layout_view_dog.xml" value="0.33" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/main_burger_menu.xml" value="0.3625" />
         <entry key="..\:/Users/amber/OneDrive/University/BCAD3/Semester 2/Work Integrated Learning/FA - Source Code/app/src/main/res/layout/main_navbar_layout.xml" value="0.3625" />

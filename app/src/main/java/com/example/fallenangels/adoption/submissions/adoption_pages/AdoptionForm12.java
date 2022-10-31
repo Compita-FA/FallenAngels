@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.startup.Login;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -71,21 +72,25 @@ public class AdoptionForm12 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
-        //Default operations
-        Login login = new Login();
-        userID = login.userID;
-
+        //Finding ID's
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
         currentYear = getView().findViewById(R.id.edt_currentYear);
         currrentTime = getView().findViewById(R.id.edt_currentTime);
         signature = getView().findViewById(R.id.edt_Signature);
-
-        //Finding ID's
         btnBack = getView().findViewById(R.id.btnBack11);
         btnSubmit = getView().findViewById(R.id.btnSubmit);
         btnCancel = getView().findViewById(R.id.btnCancel);
         txtViewRules = getView().findViewById(R.id.txtViewTerms);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
+
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
 
         //Listeners
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -193,7 +198,7 @@ public class AdoptionForm12 extends Fragment
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getActivity());
 
-        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs");
+        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs").push().child("dogID");
 
         //Setting message manually and performing action on button click
         builder.setMessage("Would you like to submit this Adoption Application?")
@@ -211,7 +216,7 @@ public class AdoptionForm12 extends Fragment
                         dbRef.push().setValue(AdoptionForm1.newForm);
 
                         dbRefDog.setValue(dog1ID);
-                        //dbRefDog.setValue(dog2ID);
+                        //dbRefDog.push().setValue(dog2ID);
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();

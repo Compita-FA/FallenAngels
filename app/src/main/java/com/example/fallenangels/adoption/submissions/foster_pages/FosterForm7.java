@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
+import com.example.fallenangels.startup.Login;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -86,6 +88,15 @@ public class FosterForm7 extends Fragment
         btnBack = getView().findViewById(R.id.f_btnBack6);
         btnSubmit = getView().findViewById(R.id.f_btnSubmit);
         btnCancel = getView().findViewById(R.id.btnCancel2);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
+
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
 
         txtViewRules.setOnClickListener(new View.OnClickListener()
         {
@@ -192,7 +203,7 @@ public class FosterForm7 extends Fragment
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getActivity());
 
-        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs");
+        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs").push().child("dogID");
 
         //Setting message manually and performing action on button click
         builder.setMessage("Would you like to submit this Adoption Application?")
@@ -210,7 +221,7 @@ public class FosterForm7 extends Fragment
                         dbRef.push().setValue(FosterForm1.newForm);
 
                         dbRefDog.setValue(dog1ID);
-                       // dbRefDog.setValue(dog2ID);
+                       // dbRefDog.push().setValue(dog2ID);
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();

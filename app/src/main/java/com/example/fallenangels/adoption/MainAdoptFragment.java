@@ -42,8 +42,10 @@ import com.example.fallenangels.startup.Login;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
@@ -76,8 +78,6 @@ public class MainAdoptFragment extends Fragment {
     private String cardImageURL;
     private String userID;
 
-
-
     public MainAdoptFragment() {
         // Required empty public constructor
     }
@@ -106,6 +106,11 @@ public class MainAdoptFragment extends Fragment {
         //Default operations
         Login login = new Login();
         userID = login.userID;
+
+        //Showing the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.VISIBLE);
 
         RetrieveDogData();
     }
@@ -196,21 +201,24 @@ public class MainAdoptFragment extends Fragment {
         TextView txtHistory = dialog.findViewById(R.id.txtHistory);
         TextView txtSuit = dialog.findViewById(R.id.txtSuit);
         ImageView imgDog = dialog.findViewById(R.id.imgViewDog);
+        TextView txtViewDog = dialog.findViewById(R.id.txtViewDog);
 
         AppCompatButton btnAdopt = dialog.findViewById(R.id.btnAdopt);
         AppCompatButton btnFoster = dialog.findViewById(R.id.btnFoster);
 
         //Disable buttons if no user is logged in
         if (userID.equals("NO_USER")) {
+            //No user is logged in
             btnAdopt.setEnabled(false);
             btnFoster.setEnabled(false);
             ChangeEnabled(btnAdopt, btnFoster);
+            txtViewDog.setText(getResources().getString(R.string.login_view_dog));
         } else {
+            //User is logged in
             btnAdopt.setEnabled(true);
             btnFoster.setEnabled(true);
             ChangeEnabled(btnAdopt, btnFoster);
         }
-
 
         Query query = FirebaseDatabase.getInstance().getReference("Dogs").orderByChild("ID").equalTo(ID);
 
@@ -245,19 +253,26 @@ public class MainAdoptFragment extends Fragment {
                     txtSuit.setText(suit);
                     RetrieveImage(imageURL, imgDog);
 
+                    //Disable buttons if no user is logged in
+                    if (!userID.equals("NO_USER")) {
+                        CheckSubmissionForDog(dogID, btnAdopt, btnFoster, txtViewDog);
+                    }
+
+
                     //Listeners
                     btnAdopt.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            //Display new fragment
                             FragmentManager fm = getFragmentManager();
                             FragmentTransaction ft = fm.beginTransaction();
                             ft.replace(R.id.frag_layout, new AdoptionForm1());
                             ft.commit();
                             dialog.dismiss();
 
+                            //Setting strings in adoptions forms
                             AdoptionForm1 adopt1 = new AdoptionForm1();
                             AdoptionForm12 adopt12 = new AdoptionForm12();
-
                             adopt1.dogName1 = dogName;
                             adopt12.dog1ID = dogID;
                         }
@@ -266,15 +281,16 @@ public class MainAdoptFragment extends Fragment {
                     btnFoster.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            //Display new fragment
                             FragmentManager fm = getFragmentManager();
                             FragmentTransaction ft = fm.beginTransaction();
                             ft.replace(R.id.frag_layout, new FosterForm1());
                             ft.commit();
                             dialog.dismiss();
 
+                            //Setting strings in foster forms
                             FosterForm1 form1 = new FosterForm1();
                             FosterForm7 foster7 = new FosterForm7();
-
                             form1.dogName1 = dogName;
                             foster7.dog1ID = dogID;
                         }
@@ -290,6 +306,41 @@ public class MainAdoptFragment extends Fragment {
             }
         });
 
+    }
+    //----------------------------------------------------------------------------------------------
+
+
+    //------------- Method to check if user already submitted form for specified dog ---------------
+    private void CheckSubmissionForDog(String dogID, AppCompatButton btnAdopt, AppCompatButton btnFoster, TextView txtViewDog) {
+
+        Query query = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs").orderByChild("dogID").equalTo(dogID);
+
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists()) {
+                    //If user has already submitted an application for this dog
+                    btnAdopt.setEnabled(false);
+                    btnFoster.setEnabled(false);
+                    ChangeEnabled(btnAdopt, btnFoster);
+                    txtViewDog.setText(getResources().getString(R.string.already_submitted_view_dog));
+                }
+                else
+                {
+                    //If user has not submitted an application for this dog
+                    btnAdopt.setEnabled(true);
+                    btnFoster.setEnabled(true);
+                    ChangeEnabled(btnAdopt, btnFoster);
+                    txtViewDog.setText(getResources().getString(R.string.view_dog));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
     //----------------------------------------------------------------------------------------------
 

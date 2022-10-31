@@ -19,6 +19,9 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject.AdoptionFormModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 
 public class AdoptionForm1 extends Fragment
@@ -85,6 +88,11 @@ public class AdoptionForm1 extends Fragment
         btnBack = getView().findViewById(R.id.btnBackViewDog1);
 
         EnterDog(dogName1);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener()

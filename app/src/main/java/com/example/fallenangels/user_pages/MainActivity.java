@@ -88,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         //Default operations
         Login login = new Login();
         userID = login.userID;
+        bottomView.setVisibility(View.VISIBLE);
+
 
         if (!userID.equals("NO_USER")) {
             //--> Run method that retrieves details of currently logged in user
@@ -202,6 +204,10 @@ public class MainActivity extends AppCompatActivity {
     //Change appearance of top bar if any other page is open
     private void SetTopBar(String heading) {
         txtHeading.setText(heading);
+    }
+
+    public void DisableBottomNav() {
+        bottomView.setVisibility(View.INVISIBLE);
     }
 
     //---------------------------- Getting currently logged in user details ------------------------

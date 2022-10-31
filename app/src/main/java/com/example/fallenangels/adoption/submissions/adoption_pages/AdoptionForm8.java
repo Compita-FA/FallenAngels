@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm8 extends Fragment
@@ -58,21 +59,26 @@ public class AdoptionForm8 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         yardSize = getView().findViewById(R.id.yardSize);
         petExtraActivities  = getView().findViewById(R.id.petExtraActivities);
         deathsOnPremises  = getView().findViewById(R.id.deathsOnPremises);
         deathsOnPremisesPeriod  = getView().findViewById(R.id.deathsOnPremisesPeriod);
         providePetCare  = getView().findViewById(R.id.providePetCare);
         typeOfHousing  = getView().findViewById(R.id.typeOfHousing);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext8);
         btnBack = getView().findViewById(R.id.btnBack7);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (checkRequiredUserInput() == true)
                 {
                     checkOtherUserInputs();

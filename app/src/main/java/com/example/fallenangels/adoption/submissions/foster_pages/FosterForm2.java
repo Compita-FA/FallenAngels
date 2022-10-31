@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class FosterForm2 extends Fragment {
@@ -62,25 +63,24 @@ public class FosterForm2 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         ownerContactNumber1 = getView().findViewById(R.id.owner_f_ContactNumber1);
         ownerContactNumber2 = getView().findViewById(R.id.owner_f_ContactNumber2);
-
         ownerEmail1 = getView().findViewById(R.id.owner_f_Email1);
         ownerEmail2 = getView().findViewById(R.id.owner_f_Email2);
-
         ownerIDNumber  = getView().findViewById(R.id.owner_f_IDNumber);
-
         ownerAddToMailingList = getView().findViewById(R.id.ownerAddToMailingList);
-
         childrenAges = getView().findViewById(R.id.f_childrenAges);
-
         otherAnimal_Dogs = getView().findViewById(R.id.f_otherAnimal_Dogs);
         otherAnimal_Cats = getView().findViewById(R.id.f_otherAnimal_Cats);
         otherAnimal_Other = getView().findViewById(R.id.f_otherAnimal_Other);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.f_btnNext3);
         btnBack = getView().findViewById(R.id.f_btnBack1);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener() {

@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm5;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class FosterForm5 extends Fragment {
@@ -52,14 +53,18 @@ public class FosterForm5 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         petsDiet = getView().findViewById(R.id.f_petsDiet);
         hoursAlone = getView().findViewById(R.id.f_hoursAlone);
         sleepArea = getView().findViewById(R.id.f_fosters_sleep);
         petPast = getView().findViewById(R.id.f_hoursAlone);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.f_btnNext6);
         btnBack = getView().findViewById(R.id.f_btnBack4);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener() {

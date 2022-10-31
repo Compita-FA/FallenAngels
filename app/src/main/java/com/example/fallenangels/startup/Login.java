@@ -3,6 +3,7 @@ package com.example.fallenangels.startup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.example.fallenangels.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.firebase.auth.AuthResult;
@@ -28,7 +31,7 @@ public class Login extends AppCompatActivity
     private EditText txtEmail;
     private EditText txtPassword;
     private TextView txtForgotPassword;
-    private CircularProgressIndicator indicator;
+
 
     // --- Initialisation of Firebase Variables
     private FirebaseAuth mAuth;
@@ -48,11 +51,7 @@ public class Login extends AppCompatActivity
         btnLogin = findViewById(R.id.btnLogin);
         txtEmail = findViewById(R.id.editTextEmail);
         txtPassword = findViewById(R.id.editTextPassword);
-
-
-        //TODO: automatic login (must remove)
-        txtEmail.setText("amber.bruil@gmail.com");
-        txtPassword.setText("amberisawe");
+        txtForgotPassword = findViewById(R.id.txtChangePass);
 
         // --- Firebase Instance
         mAuth = FirebaseAuth.getInstance();
@@ -75,8 +74,16 @@ public class Login extends AppCompatActivity
                 LoginUser();
             }
         });
+
+        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ResetPassword();
+            }
+        });
     }
 
+    //--------------------------------- Log user in implementation ---------------------------------
     private void LoginUser()
     {
         //Retrieving email and password string values
@@ -113,4 +120,66 @@ public class Login extends AppCompatActivity
             });
         }
     }
+    //----------------------------------------------------------------------------------------------
+
+    //-------------------------------- Forgot Password Dialogue ------------------------------------
+    private void ResetPassword()
+    {
+
+        //New dialogue instance
+        Dialog dialog = new Dialog(this, R.style.DialogStyle);
+
+        //Prevent user from click away
+        dialog.setCanceledOnTouchOutside(false);
+        //Show register dialogue layout
+        dialog.setContentView(R.layout.dialogue_reset_password);
+
+        //Finding Id's
+        Button btnChange = dialog.findViewById(R.id.btnChangePass);
+        Button btnCancel = dialog.findViewById(R.id.btnCancelReset);
+        EditText txtChangeEmail = dialog.findViewById(R.id.edtChangeEmail);
+
+        btnChange.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                if (!txtChangeEmail.getText().toString().isEmpty()) {
+
+                    String email = txtChangeEmail.getText().toString();
+
+                    mAuth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>()
+                    {
+                        @Override
+                        public void onSuccess(Void aVoid)
+                        {
+                            dialog.dismiss();
+                            Toast.makeText(Login.this,"A reset link has been sent to your email.", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener()
+                    {
+                        @Override
+                        public void onFailure(@NonNull Exception e)
+                        {
+                            Toast.makeText(Login.this,"Email could not be found. Please make sure this email is registered.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else
+                {
+                    Toast.makeText(Login.this, "Please enter your email",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+
+    }
+    //----------------------------------------------------------------------------------------------
 }

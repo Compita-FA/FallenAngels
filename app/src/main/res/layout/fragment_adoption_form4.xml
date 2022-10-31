@@ -18,7 +18,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="898dp"
+                android:layout_height="852dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -108,26 +108,27 @@
                         android:orientation="vertical">
 
                         <RadioGroup
+                            android:id="@+id/fullyVaccinatedStatus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:id="@+id/fullyVaccinatedStatus">
+                            android:orientation="vertical">
+
                             <RadioButton
                                 android:id="@+id/radioButton5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
                                 android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
                                 android:buttonTint="@color/custom_pink"
-                                android:text="Yes"/>
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Yes" />
 
                             <RadioButton
                                 android:id="@+id/radioButton6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
                                 android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
                                 android:buttonTint="@color/custom_pink"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="No" />
 
                             <RadioButton
@@ -135,8 +136,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
                                 android:layout_marginStart="15dp"
-                                android:fontFamily="@font/poppins_regular"
                                 android:buttonTint="@color/custom_pink"
+                                android:fontFamily="@font/poppins_regular"
                                 android:text="Some of them" />
                         </RadioGroup>
                     </LinearLayout>
@@ -240,7 +241,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:text="4/12"
+                            android:text="5/12"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 

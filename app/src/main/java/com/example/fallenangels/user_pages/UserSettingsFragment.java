@@ -2,6 +2,7 @@ package com.example.fallenangels.user_pages;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
@@ -10,9 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fallenangels.R;
 import com.example.fallenangels.startup.Login;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.w3c.dom.Text;
 
@@ -27,6 +33,9 @@ public class UserSettingsFragment extends Fragment {
     private TextView txtEmail;
     private AppCompatButton btnChangeEmail;
     private AppCompatButton btnUpdatePassword;
+
+    //Firebase variables
+    private FirebaseAuth mAuth;
 
     public UserSettingsFragment() {
         // Required empty public constructor
@@ -61,6 +70,11 @@ public class UserSettingsFragment extends Fragment {
         Login login = new Login();
         userID = login.userID;
 
+        //Showing the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.VISIBLE);
+
         //--> Updating name and email
         txtName.setText(mainAct.currentName);
         txtEmail.setText(mainAct.currentEmail);
@@ -76,6 +90,7 @@ public class UserSettingsFragment extends Fragment {
         }
 
     }
+
 
 
     //------------------------------- Change button colours accordingly ----------------------------

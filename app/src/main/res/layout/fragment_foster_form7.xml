@@ -18,7 +18,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="1002dp"
+                android:layout_height="956dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -316,7 +316,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="160dp"
                             android:layout_marginTop="15dp"
-                            android:text="7/7"
+                            android:text="6/7"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </FrameLayout>

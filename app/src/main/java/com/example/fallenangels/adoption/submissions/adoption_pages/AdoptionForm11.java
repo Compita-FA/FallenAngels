@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm11 extends Fragment
@@ -58,16 +59,20 @@ public class AdoptionForm11 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         refTwo_Name = getView().findViewById(R.id.refTwo_Name);
         refTwo_Relationship = getView().findViewById(R.id.refTwo_Relationship);
         refTwo_Address = getView().findViewById(R.id.refTwo_Address);
         refTwo_Cell = getView().findViewById(R.id.refTwo_Cell);
         refTwo_Landline = getView().findViewById(R.id.refTwo_Landline);
         refTwo_Email = getView().findViewById(R.id.refTwo_Email);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext11);
         btnBack = getView().findViewById(R.id.btnBack10);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
 
         //listeners

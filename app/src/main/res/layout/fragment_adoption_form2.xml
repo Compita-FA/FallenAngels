@@ -17,7 +17,7 @@
 
             <FrameLayout
                 android:layout_width="347dp"
-                android:layout_height="917dp"
+                android:layout_height="880dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
@@ -26,10 +26,10 @@
                 android:elevation="10dp">
 
                 <RadioGroup
+                    android:id="@+id/ownerAddToMailingList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/ownerAddToMailingList">
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/pg2_rbYes"
@@ -38,9 +38,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="500dp"
                         android:buttonTint="@color/custom_pink"
+                        android:checked="true"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="Yes"
-                        android:checked="true"/>
+                        android:text="Yes" />
 
                     <RadioButton
                         android:id="@+id/pg2_rbNo"
@@ -52,7 +52,6 @@
                         android:fontFamily="@font/poppins_regular"
                         android:text="No" />
                 </RadioGroup>
-
 
 
                 <LinearLayout
@@ -166,10 +165,10 @@
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
                         android:fontFamily="@font/poppins_regular"
+                        android:hint="19950502829401"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:textSize="15sp"
-                        android:hint="19950502829401"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -312,7 +311,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:text="2/12"
+                            android:text="3/12"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -328,7 +327,7 @@
                             android:layout_gravity="bottom"
                             android:background="@drawable/btn_orange_rounded"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Next >>"
+                            android:text="Next"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="18sp" />

@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm10 extends Fragment
@@ -62,16 +63,20 @@ public class AdoptionForm10 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         refOne_Name = getView().findViewById(R.id.refOne_Name);
         refOne_Relationship = getView().findViewById(R.id.refOne_Relationship);
         refOne_Address = getView().findViewById(R.id.refOne_Address);
         refOne_Cell = getView().findViewById(R.id.refOne_Cell);
         refOne_Landline = getView().findViewById(R.id.refOne_Landline);
         refOne_Email = getView().findViewById(R.id.refOne_Email);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext10);
         btnBack = getView().findViewById(R.id.btnBack9);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {

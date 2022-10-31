@@ -147,6 +147,8 @@
     <string name="adopt_fee1">ADOPTION FEE FOR ADULT CATS AND DOGS IS R1000</string>
     <string name="adopt_fee2">ADOPTION FEE FOR PUPPIES AND KITTENS 0-12 IS R1250</string>
     <string name="adopt_fee3">TO BE PAID INTO OUR ACCOUNT PRIOR TO THE PET"'"S ARRIVAL</string>
+    <string name="login_view_dog">Please login to proceed to submissions.</string>
+    <string name="already_submitted_view_dog">You have already submitted an application for this fur angel.</string>
 
     <!-- TODO: Adoption Form -->
     <string name="question1">Fur Angel"'"s Name FIRST/SECOND CHOICE</string>

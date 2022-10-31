@@ -19,6 +19,8 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.foster_pages.FostorFormObject.FostorFormModel;
+import com.example.fallenangels.user_pages.MainActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class FosterForm1 extends Fragment {
@@ -67,6 +69,11 @@ public class FosterForm1 extends Fragment {
         edt_address = getView().findViewById(R.id.edt_f_address);
         btnNext = getView().findViewById(R.id.f_btnNext2);
         btnBack = getView().findViewById(R.id.btnBackViewDog2);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         EnterDog(dogName1);
 

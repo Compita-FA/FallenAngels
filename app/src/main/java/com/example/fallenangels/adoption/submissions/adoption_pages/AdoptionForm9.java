@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm9 extends Fragment
@@ -55,19 +56,29 @@ public class AdoptionForm9 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         ownOrRent = getView().findViewById(R.id.ownOrRent);
         landlordPermission = getView().findViewById(R.id.landlordPermission);
         acknowledgementOf_dewormTicksFleas = getView().findViewById(R.id.acknowledgementOf_dewormTicksFleas);
         acknowledgementOf_sterilisation = getView().findViewById(R.id.acknowledgementOf_sterilisation);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext9);
         btnBack = getView().findViewById(R.id.btnBack8);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new AdoptionForm10());
+                ft.commit();
+                /*
+
                 if (checkRequiredUserInput() == true)
                 {
                     checkOtherUserInputs();
@@ -78,6 +89,8 @@ public class AdoptionForm9 extends Fragment
                     ft.replace(R.id.frag_layout, new AdoptionForm10());
                     ft.commit();
                 }
+
+                 */
             }
         });
 

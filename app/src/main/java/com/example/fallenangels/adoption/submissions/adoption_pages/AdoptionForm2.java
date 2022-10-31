@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AdoptionForm2 extends Fragment
@@ -67,25 +68,24 @@ public class AdoptionForm2 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         ownerContactNumber1 = getView().findViewById(R.id.ownerContactNumber1);
         ownerContactNumber2 = getView().findViewById(R.id.ownerContactNumber2);
-
         ownerEmail1 = getView().findViewById(R.id.ownerEmail1);
         ownerEmail2 = getView().findViewById(R.id.ownerEmail2);
-
         ownerIDNumber  = getView().findViewById(R.id.ownerIDNumber);
-
         ownerAddToMailingList = getView().findViewById(R.id.ownerAddToMailingList);
-
         childrenAges = getView().findViewById(R.id.childrenAges);
-
         otherAnimal_Dogs = getView().findViewById(R.id.otherAnimal_Dogs);
         otherAnimal_Cats = getView().findViewById(R.id.otherAnimal_Cats);
         otherAnimal_Other = getView().findViewById(R.id.otherAnimal_Other);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.btnNext2);
         btnBack = getView().findViewById(R.id.btnBack1);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         //listeners
         btnNext.setOnClickListener(new View.OnClickListener()
@@ -93,6 +93,12 @@ public class AdoptionForm2 extends Fragment
             @Override
             public void onClick(View view)
             {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new AdoptionForm3());
+                ft.commit();
+
+                /*
                 if (checkRequiredUserInput() == true)
                 {
                     checkOtherUserInputs();
@@ -103,6 +109,8 @@ public class AdoptionForm2 extends Fragment
                     ft.replace(R.id.frag_layout, new AdoptionForm3());
                     ft.commit();
                 }
+
+                 */
             }
         });
 

@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm4;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class FosterForm3 extends Fragment {
@@ -63,21 +64,23 @@ public class FosterForm3 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         ageOfOtherAnimals_Dogs = getView().findViewById(R.id.f_pageOfOtherAnimals_Dogs);
         ageOfOtherAnimals_Cats = getView().findViewById(R.id.f_pageOfOtherAnimals_Cats);
         ageOfOtherAnimals_Others = getView().findViewById(R.id.f_pagefOtherAnimals_Others);
-
         breedOfOtherAnimals_Dogs = getView().findViewById(R.id.breedOfOtherAnimals_Dogs);
         breedOfOtherAnimals_Cats = getView().findViewById(R.id.breedOfOtherAnimals_Cats);
         breedOfOtherAnimals_Others = getView().findViewById(R.id.breedOfOtherAnimals_Others);
-
         socializedOfOtherAnimals_Dogs = getView().findViewById(R.id.f_socialised_Dogs3);
         socializedOfOtherAnimals_Cats = getView().findViewById(R.id.f_socialised_Cats3);
         socializedOfOtherAnimals_Others = getView().findViewById(R.id.f_socialised_Others3);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.f_btnNext4);
         btnBack = getView().findViewById(R.id.f_btnBack2);
+
+        //Hiding the nav view
+        BottomNavigationView bottomNav;
+        bottomNav = getActivity().findViewById(R.id.bottomNavView);
+        bottomNav.setVisibility(View.INVISIBLE);
 
         checkInformation();
 

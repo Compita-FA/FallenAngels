@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="347dp"
-            android:layout_height="match_parent"
+            android:layout_height="582dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
@@ -31,31 +31,33 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="Landlord's permission"
                 android:textColor="@color/black" />
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/landlordPermission">
-                    <RadioButton
-                        android:id="@+id/radioButton7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="150dp"
-                        android:layout_marginTop="123dp"
-                        android:buttonTint="@color/custom_pink"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="Yes" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="123dp"
-                        android:buttonTint="@color/custom_pink"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="No" />
-                </RadioGroup>
+            <RadioGroup
+                android:id="@+id/landlordPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="123dp"
+                    android:buttonTint="@color/custom_pink"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="123dp"
+                    android:buttonTint="@color/custom_pink"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="No" />
+            </RadioGroup>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,11 +89,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <RadioGroup
+                        android:id="@+id/ownOrRent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:id="@+id/ownOrRent">
+                        android:orientation="vertical">
+
                         <RadioButton
                             android:id="@+id/ownOrRent_Own"
                             android:layout_width="wrap_content"
@@ -127,11 +131,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <RadioGroup
+                        android:id="@+id/acknowledgementOf_dewormTicksFleas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:id="@+id/acknowledgementOf_dewormTicksFleas">
+                        android:orientation="horizontal">
+
                         <RadioButton
                             android:id="@+id/acknowledgementOf_dewormTicksFleas_Yes"
                             android:layout_width="wrap_content"
@@ -166,11 +172,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <RadioGroup
+                        android:id="@+id/acknowledgementOf_sterilisation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:id="@+id/acknowledgementOf_sterilisation">
+                        android:orientation="horizontal">
+
                         <RadioButton
                             android:id="@+id/pg9_acknowledgementOf_sterilisation_Yes"
                             android:layout_width="wrap_content"
@@ -246,7 +254,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
-                        android:text="9/12"
+                        android:text="10/12"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
