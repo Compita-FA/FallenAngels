@@ -49,6 +49,11 @@ public class Login extends AppCompatActivity
         txtEmail = findViewById(R.id.editTextEmail);
         txtPassword = findViewById(R.id.editTextPassword);
 
+
+        //TODO: automatic login (must remove)
+        txtEmail.setText("amber.bruil@gmail.com");
+        txtPassword.setText("amberisawe");
+
         // --- Firebase Instance
         mAuth = FirebaseAuth.getInstance();
 

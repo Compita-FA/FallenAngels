@@ -21,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,6 +36,9 @@ public class FosterForm7 extends Fragment
     private FirebaseAuth mAuth;
     private String userID;
 
+    public static String dog1ID;
+    public static String dog2ID;
+
     private CheckBox untilAdoption;
     private CheckBox holiday;
     private EditText nameOfFoster;
@@ -45,6 +48,7 @@ public class FosterForm7 extends Fragment
     private TextView txtViewRules;
     private AppCompatButton btnBack;
     private AppCompatButton btnSubmit;
+    private AppCompatButton btnCancel;
 
     public FosterForm7()
     {
@@ -72,16 +76,16 @@ public class FosterForm7 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID'
         untilAdoption = getView().findViewById(R.id.f_checkAdoption);
         holiday = getView().findViewById(R.id.f_checkHoliday);
         nameOfFoster = getView().findViewById(R.id.f_name_foster_applicant);
         signature = getView().findViewById(R.id.f_applicant_signature);
         date = getView().findViewById(R.id.edt_f_currentDate);
-
-        //Finding ID's
         txtViewRules = getView().findViewById(R.id.txtViewTerms2);
         btnBack = getView().findViewById(R.id.f_btnBack6);
         btnSubmit = getView().findViewById(R.id.f_btnSubmit);
+        btnCancel = getView().findViewById(R.id.btnCancel2);
 
         txtViewRules.setOnClickListener(new View.OnClickListener()
         {
@@ -90,7 +94,6 @@ public class FosterForm7 extends Fragment
                 ViewTermsConditions(view);
             }
         });
-
 
         //Listeners
         btnBack.setOnClickListener(new View.OnClickListener()
@@ -101,6 +104,7 @@ public class FosterForm7 extends Fragment
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frag_layout, new FosterForm6());
                 ft.commit();
+
             }
         });
 
@@ -116,19 +120,44 @@ public class FosterForm7 extends Fragment
                 else
                 {
                     saveUserInput();
-                    if (mAuth != null)
-                    {
-                        //They ARE logged in
-                        submitApplicationDialog();
-                    }
-                    else
-                    {
-                        //not logged in
-                    }
+                    submitApplicationDialog();
                 }
-
             }
         });
+
+        AlertDialog.Builder builder;
+        builder = new AlertDialog.Builder(getActivity());
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //Setting message manually and performing action on button click
+                    builder.setMessage("Are you sure you want to cancel your progress?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    //User clicks yes
+                                    FragmentManager fm = getFragmentManager();
+                                    FragmentTransaction ft = fm.beginTransaction();
+                                    ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                                    ft.commit();
+                                }
+                            }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            //User clicks no
+                            return;
+                        }
+                    });
+                    //Creating dialog box
+                    AlertDialog alert = builder.create();
+                    //Setting the title manually
+                    alert.setTitle("Cancel form");
+                    alert.show();
+                }
+        });
+
     }
 
     private void saveUserInput()
@@ -163,6 +192,8 @@ public class FosterForm7 extends Fragment
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getActivity());
 
+        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs");
+
         //Setting message manually and performing action on button click
         builder.setMessage("Would you like to submit this Adoption Application?")
                 .setCancelable(false)
@@ -177,6 +208,9 @@ public class FosterForm7 extends Fragment
 
                         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("FosterForms");
                         dbRef.push().setValue(FosterForm1.newForm);
+
+                        dbRefDog.setValue(dog1ID);
+                       // dbRefDog.setValue(dog2ID);
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();

@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button4"
+                    android:id="@+id/btnBackViewDog2"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -151,6 +151,7 @@
                         android:layout_marginTop="45dp"
                         android:background="@drawable/backdrop_form_text"
                         android:ems="10"
+                        android:enabled="false"
                         android:fontFamily="@font/poppins_regular"
                         android:inputType="textPersonName"
                         android:paddingStart="15dp"

@@ -17,9 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
-import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm2;
-import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm3;
-import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject.AdoptionFormModel;
+import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.foster_pages.FostorFormObject.FostorFormModel;
 
 
@@ -27,10 +25,14 @@ public class FosterForm1 extends Fragment {
     static FostorFormModel newForm = new FostorFormModel();
 
     private RadioGroup animalChoice;
-    private EditText edt_dogNameOne;
-    private EditText edt_dogNameTwo;
+    public static EditText edt_dogNameOne;
+    public static EditText edt_dogNameTwo;
     private EditText edt_NameSurname;
     private EditText edt_address;
+    private AppCompatButton btnBack;
+
+    public static String dogName1;
+    public static String dogName2;
 
     private AppCompatButton btnNext;
 
@@ -57,21 +59,22 @@ public class FosterForm1 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Finding ID's
         animalChoice = getView().findViewById(R.id.rg_animalChoice);
         edt_dogNameOne = getView().findViewById(R.id.edt_f_dogNameOne);
         edt_dogNameTwo = getView().findViewById(R.id.edt_f_dogNameTwo);
         edt_NameSurname = getView().findViewById(R.id.edt_f_NameSurname);
         edt_address = getView().findViewById(R.id.edt_f_address);
-
-        //Finding ID's
         btnNext = getView().findViewById(R.id.f_btnNext2);
+        btnBack = getView().findViewById(R.id.btnBackViewDog2);
+
+        EnterDog(dogName1);
 
         //Listeners
         btnNext.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
-
                 if (checkRequiredUserInput() == true)
                 {
                     saveUserInput();
@@ -83,7 +86,23 @@ public class FosterForm1 extends Fragment {
                 }
             }
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                ft.commit();
+            }
+        });
     }
+
+    //-------------------------------- Enters dog name into edit texts -----------------------------
+    public void EnterDog(String dog) {
+        edt_dogNameOne.setText(dog);
+    }
+    //----------------------------------------------------------------------------------------------
 
     private boolean checkRequiredUserInput()
     {

@@ -34,8 +34,8 @@ public class AdoptionForm12 extends Fragment
 {
     private DatabaseReference dbRef;
     private String userID;
-    private String dogName1;
-    private String dogName2;
+    public static String dog1ID;
+    public static String dog2ID;
 
     private EditText currentDay;
     private EditText currentMonth;
@@ -75,12 +75,6 @@ public class AdoptionForm12 extends Fragment
         Login login = new Login();
         userID = login.userID;
 
-        //--> retrieving the dogs
-        AdoptionForm1 adopt1 = new AdoptionForm1();
-        dogName1 = adopt1.edt_dogNameOne.getText().toString();
-        dogName2 = adopt1.edt_dogNameTwo.getText().toString();
-
-
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
         currentYear = getView().findViewById(R.id.edt_currentYear);
@@ -105,14 +99,14 @@ public class AdoptionForm12 extends Fragment
             }
         });
 
+        AlertDialog.Builder builder;
+        builder = new AlertDialog.Builder(getActivity());
+
         btnCancel.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                AlertDialog.Builder builder;
-                builder = new AlertDialog.Builder(getActivity());
-
                 //Setting message manually and performing action on button click
                 builder.setMessage("Are you sure you want to cancel your progress?")
                         .setCancelable(false)
@@ -133,7 +127,11 @@ public class AdoptionForm12 extends Fragment
                         return;
                     }
                 });
-
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Cancel form");
+                alert.show();
             }
         });
 
@@ -197,7 +195,6 @@ public class AdoptionForm12 extends Fragment
 
         DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs");
 
-
         //Setting message manually and performing action on button click
         builder.setMessage("Would you like to submit this Adoption Application?")
                 .setCancelable(false)
@@ -213,8 +210,8 @@ public class AdoptionForm12 extends Fragment
                         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("AdoptionForms");
                         dbRef.push().setValue(AdoptionForm1.newForm);
 
-                        dbRefDog.setValue(dogName1);
-                        dbRefDog.setValue(dogName2);
+                        dbRefDog.setValue(dog1ID);
+                        //dbRefDog.setValue(dog2ID);
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();

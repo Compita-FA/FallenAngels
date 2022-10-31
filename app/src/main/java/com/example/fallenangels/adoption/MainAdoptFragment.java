@@ -37,6 +37,7 @@ import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm8;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm9;
 import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm1;
+import com.example.fallenangels.adoption.submissions.foster_pages.FosterForm7;
 import com.example.fallenangels.startup.Login;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -62,7 +63,8 @@ public class MainAdoptFragment extends Fragment {
 
     private Bitmap dogImage = null;
 
-    private String dogName;
+    private static String dogID;
+    private static String dogName;
     private String breed;
     private String dogDOB;
     private String gender;
@@ -73,6 +75,7 @@ public class MainAdoptFragment extends Fragment {
     private String imageURL;
     private String cardImageURL;
     private String userID;
+
 
 
     public MainAdoptFragment() {
@@ -206,7 +209,6 @@ public class MainAdoptFragment extends Fragment {
             btnAdopt.setEnabled(true);
             btnFoster.setEnabled(true);
             ChangeEnabled(btnAdopt, btnFoster);
-
         }
 
 
@@ -221,6 +223,7 @@ public class MainAdoptFragment extends Fragment {
                     for (DataSnapshot ds : snapshot.getChildren()) {
                         Dogs dog = ds.getValue(Dogs.class);
 
+                        dogID = dog.getID();
                         dogName = dog.getName();
                         breed = dog.getBreed();
                         dogDOB = dog.getDOB();
@@ -241,36 +244,52 @@ public class MainAdoptFragment extends Fragment {
                     txtHistory.setText(history);
                     txtSuit.setText(suit);
                     RetrieveImage(imageURL, imgDog);
+
+                    //Listeners
+                    btnAdopt.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            FragmentManager fm = getFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.frag_layout, new AdoptionForm1());
+                            ft.commit();
+                            dialog.dismiss();
+
+                            AdoptionForm1 adopt1 = new AdoptionForm1();
+                            AdoptionForm12 adopt12 = new AdoptionForm12();
+
+                            adopt1.dogName1 = dogName;
+                            adopt12.dog1ID = dogID;
+                        }
+                    });
+
+                    btnFoster.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            FragmentManager fm = getFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.frag_layout, new FosterForm1());
+                            ft.commit();
+                            dialog.dismiss();
+
+                            FosterForm1 form1 = new FosterForm1();
+                            FosterForm7 foster7 = new FosterForm7();
+
+                            form1.dogName1 = dogName;
+                            foster7.dog1ID = dogID;
+                        }
+                    });
                 }
+
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
 
-        //Listeners
-        btnAdopt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new AdoptionForm1());
-                ft.commit();
-                dialog.dismiss();
-            }
-        });
-
-        btnFoster.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frag_layout, new FosterForm1());
-                ft.commit();
-                dialog.dismiss();
-            }
-        });
     }
     //----------------------------------------------------------------------------------------------
 
