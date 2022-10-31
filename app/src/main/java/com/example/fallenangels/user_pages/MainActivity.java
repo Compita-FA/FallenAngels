@@ -185,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.item_logout:
                         if (!userID.equals("NO_USER")) {
                             LogoutDialogue();
+                            userID = "NO_USER";
+                            login.userID = "NO_USER";
                         } else {
                             startActivity(new Intent(getApplicationContext(), GetStarted.class));
                         }
