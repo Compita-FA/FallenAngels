@@ -21,20 +21,30 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.adoption_pages.AdoptionForm1;
+import com.example.fallenangels.startup.Login;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 public class FosterForm7 extends Fragment
 {
+    //Date
+    Calendar calendar = Calendar.getInstance();
+    SimpleDateFormat DateFormat;
+    String Date;
+
     private DatabaseReference dbRef;
+    private String userID;
     private FirebaseUser fUser;
     private FirebaseAuth mAuth;
-    private String userID;
 
     private CheckBox untilAdoption;
     private CheckBox holiday;
@@ -49,6 +59,13 @@ public class FosterForm7 extends Fragment
     public FosterForm7()
     {
         // Required empty public constructor
+    }
+
+    private void setTimeStampData()
+    {
+        DateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date = DateFormat.format(calendar.getTime());
+        date.setText(Date);
     }
 
     public static FosterForm7 newInstance(String param1, String param2)
@@ -72,6 +89,10 @@ public class FosterForm7 extends Fragment
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
     {
+        //Default operations
+        Login login = new Login();
+        userID = login.userID;
+
         untilAdoption = getView().findViewById(R.id.f_checkAdoption);
         holiday = getView().findViewById(R.id.f_checkHoliday);
         nameOfFoster = getView().findViewById(R.id.f_name_foster_applicant);
@@ -82,6 +103,8 @@ public class FosterForm7 extends Fragment
         txtViewRules = getView().findViewById(R.id.txtViewTerms2);
         btnBack = getView().findViewById(R.id.f_btnBack6);
         btnSubmit = getView().findViewById(R.id.f_btnSubmit);
+
+        setTimeStampData();
 
         txtViewRules.setOnClickListener(new View.OnClickListener()
         {
@@ -109,24 +132,22 @@ public class FosterForm7 extends Fragment
             @Override
             public void onClick(View view)
             {
-                if(signature.getText().toString().trim().isEmpty())
+                if(signature.getText().toString().trim().isEmpty() || nameOfFoster.getText().toString().trim().isEmpty()
+                        || untilAdoption.isChecked() == false || holiday.isChecked() == false)
                 {
-                    Toast.makeText(getActivity(), "Signature is required to Submit!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Name of Foster and Signature is required to Submit!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    saveUserInput();
-                    if (mAuth != null)
+                    if(untilAdoption.isChecked() == false && holiday.isChecked() == false)
                     {
-                        //They ARE logged in
+                        Toast.makeText(getActivity(), "Type of foster cant be blank, sorry", Toast.LENGTH_LONG).show();
+                    }else
+                    {
+                        saveUserInput();
                         submitApplicationDialog();
                     }
-                    else
-                    {
-                        //not logged in
-                    }
                 }
-
             }
         });
     }
@@ -164,7 +185,7 @@ public class FosterForm7 extends Fragment
         builder = new AlertDialog.Builder(getActivity());
 
         //Setting message manually and performing action on button click
-        builder.setMessage("Would you like to submit this Adoption Application?")
+        builder.setMessage("Would you like to submit this Foster Application?")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener()
                 {
@@ -180,6 +201,13 @@ public class FosterForm7 extends Fragment
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();
+                        //TODO: SEND SUBMISSION COMPLETED EMAIL
+
+                        //Go back to main adoption page
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                        ft.commit();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener()
@@ -193,7 +221,7 @@ public class FosterForm7 extends Fragment
         //Creating dialog box
         AlertDialog alert = builder.create();
         //Setting the title manually
-        alert.setTitle("Adoption Form");
+        alert.setTitle("Foster Form");
         alert.show();
     }
 

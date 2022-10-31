@@ -115,16 +115,6 @@ public class AdoptionForm3 extends Fragment
 
     private void checkInformation()
     {
-        Toast.makeText(getActivity(), "Other Animal Numbers: \n"
-                + "Cell: " + AdoptionForm1.newForm.getPg2_ownerContactNumber() + "\n"
-                + "Email: " + AdoptionForm1.newForm.getPg2_ownerEmail()+ "\n"
-                + "ID: " + AdoptionForm1.newForm.getPg2_ownerIDNumber()+ "\n"
-                + "Mailing list: " + AdoptionForm1.newForm.getPg2_ownerAddToMailingList()+ "\n"
-                + "Children: " + AdoptionForm1.newForm.getPg2_childrenAges()+ "\n"
-                + "Dogs: " + AdoptionForm1.newForm.getPg2_otherAnimal_Dogs()+ "\n"
-                + "Cats: " + AdoptionForm1.newForm.getPg2_otherAnimal_Cats()+ "\n"
-                + "Other: " + AdoptionForm1.newForm.getPg2_otherAnimal_Other(), Toast.LENGTH_LONG).show();
-
         int dogs = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Dogs());
         int cats = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Cats());
         int other = Integer.parseInt(AdoptionForm1.newForm.getPg2_otherAnimal_Other());

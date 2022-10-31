@@ -94,7 +94,7 @@ public class FosterForm2 extends Fragment {
 
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
-                    ft.replace(R.id.frag_layout, new AdoptionForm3());
+                    ft.replace(R.id.frag_layout, new FosterForm3());
                     ft.commit();
                 }
             }

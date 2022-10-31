@@ -29,9 +29,18 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class AdoptionForm12 extends Fragment
 {
+    //Date
+    Calendar calendar = Calendar.getInstance();
+    SimpleDateFormat DayFormat, MonthFormat, YearFormat, TimeFormat;
+    String Day, Month, Year, Time;
+
     private DatabaseReference dbRef;
     private String userID;
     private String dogName1;
@@ -51,6 +60,24 @@ public class AdoptionForm12 extends Fragment
 
     public AdoptionForm12() {
         // Required empty public constructor
+    }
+
+    private void setTimeStampData()
+    {
+        DayFormat = new SimpleDateFormat("dd");
+        MonthFormat = new SimpleDateFormat("MMMM");
+        YearFormat = new SimpleDateFormat("yyyy");
+        TimeFormat = new SimpleDateFormat("HH:mm:ss");
+
+        Day = DayFormat.format(calendar.getTime());
+        Month = MonthFormat.format(calendar.getTime());
+        Year = YearFormat.format(calendar.getTime());
+        Time = TimeFormat.format(calendar.getTime());
+
+        currentDay.setText(Day);
+        currentMonth.setText(Month);
+        currentYear.setText(Year);
+        currrentTime.setText(Time);
     }
 
     public static AdoptionForm12 newInstance(String param1) {
@@ -80,7 +107,6 @@ public class AdoptionForm12 extends Fragment
         dogName1 = adopt1.edt_dogNameOne.getText().toString();
         dogName2 = adopt1.edt_dogNameTwo.getText().toString();
 
-
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
         currentYear = getView().findViewById(R.id.edt_currentYear);
@@ -92,6 +118,8 @@ public class AdoptionForm12 extends Fragment
         btnSubmit = getView().findViewById(R.id.btnSubmit);
         btnCancel = getView().findViewById(R.id.btnCancel);
         txtViewRules = getView().findViewById(R.id.txtViewTerms);
+
+        setTimeStampData();
 
         //Listeners
         btnBack.setOnClickListener(new View.OnClickListener() {

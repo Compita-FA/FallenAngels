@@ -19,6 +19,10 @@ import android.widget.Toast;
 import com.example.fallenangels.R;
 import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject.AdoptionFormModel;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class AdoptionForm1 extends Fragment
 {
@@ -26,7 +30,6 @@ public class AdoptionForm1 extends Fragment
 
     //User input fields
     private RadioGroup animalChoice;
-
     public static EditText edt_dogNameOne;
     public static EditText edt_dogNameTwo;
     private EditText edt_NameSurname;
@@ -70,6 +73,7 @@ public class AdoptionForm1 extends Fragment
         {
             //Toast.makeText(getActivity(), "Exception: " + e, Toast.LENGTH_LONG).show();
         }
+
 
         //Finding ID's
         animalChoice = getView().findViewById(R.id.rg_animalChoice);
