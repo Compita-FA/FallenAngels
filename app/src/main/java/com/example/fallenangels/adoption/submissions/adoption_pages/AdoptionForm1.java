@@ -27,8 +27,8 @@ public class AdoptionForm1 extends Fragment
     //User input fields
     private RadioGroup animalChoice;
 
-    private EditText edt_dogNameOne;
-    private EditText edt_dogNameTwo;
+    public static EditText edt_dogNameOne;
+    public static EditText edt_dogNameTwo;
     private EditText edt_NameSurname;
     private EditText edt_address;
     //User input fields END

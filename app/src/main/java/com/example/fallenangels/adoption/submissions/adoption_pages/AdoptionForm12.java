@@ -1,6 +1,7 @@
 package com.example.fallenangels.adoption.submissions.adoption_pages;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fallenangels.R;
+import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.startup.Login;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +34,8 @@ public class AdoptionForm12 extends Fragment
 {
     private DatabaseReference dbRef;
     private String userID;
+    private String dogName1;
+    private String dogName2;
 
     private EditText currentDay;
     private EditText currentMonth;
@@ -71,6 +75,12 @@ public class AdoptionForm12 extends Fragment
         Login login = new Login();
         userID = login.userID;
 
+        //--> retrieving the dogs
+        AdoptionForm1 adopt1 = new AdoptionForm1();
+        dogName1 = adopt1.edt_dogNameOne.getText().toString();
+        dogName2 = adopt1.edt_dogNameTwo.getText().toString();
+
+
         currentDay = getView().findViewById(R.id.edt_currentDay);
         currentMonth = getView().findViewById(R.id.edt_currentMonth);
         currentYear = getView().findViewById(R.id.edt_currentYear);
@@ -100,7 +110,30 @@ public class AdoptionForm12 extends Fragment
             @Override
             public void onClick(View view)
             {
-                //Implement Cancel feature
+                AlertDialog.Builder builder;
+                builder = new AlertDialog.Builder(getActivity());
+
+                //Setting message manually and performing action on button click
+                builder.setMessage("Are you sure you want to cancel your progress?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //User clicks yes
+                                FragmentManager fm = getFragmentManager();
+                                FragmentTransaction ft = fm.beginTransaction();
+                                ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                                ft.commit();
+                            }
+                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //User clicks no
+                        return;
+                    }
+                });
+
             }
         });
 
@@ -162,6 +195,9 @@ public class AdoptionForm12 extends Fragment
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getActivity());
 
+        DatabaseReference dbRefDog = FirebaseDatabase.getInstance().getReference("Users").child(userID).child("SubmittedDogs");
+
+
         //Setting message manually and performing action on button click
         builder.setMessage("Would you like to submit this Adoption Application?")
                 .setCancelable(false)
@@ -177,8 +213,18 @@ public class AdoptionForm12 extends Fragment
                         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("AdoptionForms");
                         dbRef.push().setValue(AdoptionForm1.newForm);
 
+                        dbRefDog.setValue(dogName1);
+                        dbRefDog.setValue(dogName2);
+
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();
+                        //TODO: SEND SUBMISSION COMPLETED EMAIL
+
+                        //Go back to main adoption page
+                        FragmentManager fm = getFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                        ft.commit();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener()

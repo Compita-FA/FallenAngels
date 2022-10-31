@@ -78,37 +78,34 @@ public class Login extends AppCompatActivity
         String email = txtEmail.getText().toString().trim();
         String password = txtPassword.getText().toString().trim();
 
-        //Check for email and password combination in firebase authentication
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>()
-        {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task)
-            {
-                if (task.isSuccessful())
-                {
-                    final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please enter both email and password.",Toast.LENGTH_SHORT).show();
+        } else {
 
-                    //Check if their email has been verified
-                    if (!currentUser.isEmailVerified())
-                    {
-                        //If email has not been verified
-                        Toast.makeText(Login.this, "Unable to login. Please verify your email", Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                    {
-                        //If email has been valid and password and email combination is authenticated
-                        userID = mAuth.getCurrentUser().getUid();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        finish();
+            //Check for email and password combination in firebase authentication
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+                        //Check if their email has been verified
+                        if (!currentUser.isEmailVerified()) {
+                            //If email has not been verified
+                            Toast.makeText(Login.this, "Unable to login. Please verify your email", Toast.LENGTH_SHORT).show();
+                        } else {
+                            //If email has been valid and password and email combination is authenticated
+                            userID = mAuth.getCurrentUser().getUid();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
+                        }
+                    } else {
+                        //If email and password combination fails to authenticate
+                        Toast.makeText(Login.this, "Unable to authenticate email and password combination. " +
+                                "Please make sure this account exists.", Toast.LENGTH_LONG).show();
                     }
                 }
-                else
-                {
-                    //If email and password combination fails to authenticate
-                    Toast.makeText(Login.this, "Unable to authenticate email and password combination. " +
-                            "Please make sure this account exists.", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+            });
+        }
     }
 }
