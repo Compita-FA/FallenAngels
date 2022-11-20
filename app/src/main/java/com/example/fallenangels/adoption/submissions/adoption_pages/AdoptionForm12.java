@@ -249,8 +249,9 @@ public class AdoptionForm12 extends Fragment
                         pd.setTitle("Uploading Submission...");
                         pd.show();
 
+                        AdoptionForm1 form1 = new AdoptionForm1();
                         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("AdoptionForms");
-                        dbRef.push().setValue(AdoptionForm1.newForm);
+                        dbRef.child(form1.uniqueKey).setValue(AdoptionForm1.newForm);
 
                         dbRefDog.setValue(dog1ID);
                         //dbRefDog.push().setValue(dog2ID);

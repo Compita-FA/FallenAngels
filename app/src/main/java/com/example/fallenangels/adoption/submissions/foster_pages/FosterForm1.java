@@ -38,6 +38,8 @@ public class FosterForm1 extends Fragment {
     public static String dogName1;
     public static String dogName2;
 
+    public static String uniqueKey = "No key";
+
     private DatabaseReference dbRef;
 
     // --- Initialisation of Firebase Variables
@@ -163,10 +165,8 @@ public class FosterForm1 extends Fragment {
     private String CreateKey() {
 
         String userID;
-        String uniqueKey;
 
         userID = mAuth.getCurrentUser().getUid().toString();
-
         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("FosterForms");
 
         return uniqueKey = dbRef.push().getKey();

@@ -246,8 +246,9 @@ public class FosterForm7 extends Fragment
                         pd.setTitle("Uploading Submission...");
                         pd.show();
 
+                        FosterForm1 form1 = new FosterForm1();
                         dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("FosterForms");
-                        dbRef.push().setValue(FosterForm1.newForm);
+                        dbRef.child(form1.uniqueKey).setValue(FosterForm1.newForm);
 
                         dbRefDog.setValue(dog1ID);
 
