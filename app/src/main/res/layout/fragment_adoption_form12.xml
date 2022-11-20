@@ -245,7 +245,7 @@
                     android:fontFamily="@font/poppins_regular"
                     android:text="@android:string/cancel"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="18sp" />
 
                 <Space

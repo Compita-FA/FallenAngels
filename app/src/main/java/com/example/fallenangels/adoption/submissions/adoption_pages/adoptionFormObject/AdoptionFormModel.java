@@ -8,6 +8,9 @@ public class AdoptionFormModel
 
     }
 
+    //Current user's ID
+    private String userID;
+
     //All information form Page 1
     private String pg1_animalSelection;
     private String pg1_animalName;
@@ -98,8 +101,6 @@ public class AdoptionFormModel
     //All information from Page 12
     private String pg12_CurrentDay;
     private String pg12_CurrentMonth;
-
-
 
     private String pg12_CurrentYear;
     private String pg12_CurrentTime;
@@ -632,5 +633,13 @@ public class AdoptionFormModel
 
     public void setPg12_Signature(String pg12_Signature) {
         this.pg12_Signature = pg12_Signature;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }

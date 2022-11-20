@@ -21,6 +21,7 @@ import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.foster_pages.FostorFormObject.FostorFormModel;
 import com.example.fallenangels.user_pages.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class FosterForm1 extends Fragment {
@@ -35,6 +36,9 @@ public class FosterForm1 extends Fragment {
 
     public static String dogName1;
     public static String dogName2;
+
+    // --- Initialisation of Firebase Variables
+    private FirebaseAuth mAuth;
 
     private AppCompatButton btnNext;
 
@@ -69,6 +73,9 @@ public class FosterForm1 extends Fragment {
         edt_address = getView().findViewById(R.id.edt_f_address);
         btnNext = getView().findViewById(R.id.f_btnNext2);
         btnBack = getView().findViewById(R.id.btnBackViewDog2);
+
+        // --- Firebase Instance
+        mAuth = FirebaseAuth.getInstance();
 
         //Hiding the nav view
         BottomNavigationView bottomNav;
@@ -143,6 +150,7 @@ public class FosterForm1 extends Fragment {
             newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
         }
 
+        newForm.setUserID(mAuth.getCurrentUser().getUid().toString());
         newForm.setPg1_animalName(edt_dogNameOne.getText().toString());
         newForm.setPg1_ownerNameAndSurname(edt_NameSurname.getText().toString());
         newForm.setPg1_ownerAddress(edt_address.getText().toString());

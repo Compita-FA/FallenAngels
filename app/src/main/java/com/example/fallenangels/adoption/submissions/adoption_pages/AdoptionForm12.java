@@ -54,6 +54,8 @@ public class AdoptionForm12 extends Fragment
     private EditText currrentTime;
     private EditText signature;
 
+    private BottomNavigationView bottomNav;
+
     private TextView txtViewRules;
 
     private AppCompatButton btnBack;
@@ -256,13 +258,13 @@ public class AdoptionForm12 extends Fragment
 
                         pd.dismiss();
                         Snackbar.make(getActivity().findViewById(android.R.id.content), "Submission Complete.", Snackbar.LENGTH_LONG).show();
-                        //TODO: SEND SUBMISSION COMPLETED EMAIL
 
                         //Go back to main adoption page
                         FragmentManager fm = getFragmentManager();
                         FragmentTransaction ft = fm.beginTransaction();
                         ft.replace(R.id.frag_layout, new HomeFragment());
                         ft.commit();
+                        bottomNav.setSelectedItemId(R.id.bttm_item_home);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener()

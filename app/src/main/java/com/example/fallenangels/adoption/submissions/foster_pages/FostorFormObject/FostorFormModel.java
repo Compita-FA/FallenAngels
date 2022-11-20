@@ -7,6 +7,9 @@ public class FostorFormModel
 
     }
 
+    //Current user's ID
+    private String userID;
+
     //All information form Page 1
     private String pg1_animalSelection;
     private String pg1_animalName;
@@ -397,5 +400,13 @@ public class FostorFormModel
 
     public void setPg1_ownerAddress(String pg1_ownerAddress) {
         this.pg1_ownerAddress = pg1_ownerAddress;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }

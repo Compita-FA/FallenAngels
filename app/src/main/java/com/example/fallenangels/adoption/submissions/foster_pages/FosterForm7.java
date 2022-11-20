@@ -63,6 +63,8 @@ public class FosterForm7 extends Fragment
     private AppCompatButton btnSubmit;
     private AppCompatButton btnCancel;
 
+    private BottomNavigationView bottomView;
+
     public FosterForm7()
     {
         // Required empty public constructor
@@ -110,9 +112,8 @@ public class FosterForm7 extends Fragment
         btnCancel = getView().findViewById(R.id.btnCancel2);
 
         //Hiding the nav view
-        BottomNavigationView bottomNav;
-        bottomNav = getActivity().findViewById(R.id.bottomNavView);
-        bottomNav.setVisibility(View.INVISIBLE);
+        bottomView = getActivity().findViewById(R.id.bottomNavView);
+        bottomView.setVisibility(View.INVISIBLE);
 
         //Default operations
         Login login = new Login();
@@ -259,8 +260,9 @@ public class FosterForm7 extends Fragment
                         //Go back to main adoption page
                         FragmentManager fm = getFragmentManager();
                         FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.frag_layout, new MainAdoptFragment());
+                        ft.replace(R.id.frag_layout, new HomeFragment());
                         ft.commit();
+                        bottomView.setSelectedItemId(R.id.bttm_item_home);
 
                     }
                 })

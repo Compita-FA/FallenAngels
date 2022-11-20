@@ -273,7 +273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_weight="1"
-                            android:background="@drawable/btn_blue_rounded"
+                            android:background="@drawable/btn_pink_rounded"
                             android:fontFamily="@font/poppins_regular"
                             android:text="Submit"
                             android:textAllCaps="false"
