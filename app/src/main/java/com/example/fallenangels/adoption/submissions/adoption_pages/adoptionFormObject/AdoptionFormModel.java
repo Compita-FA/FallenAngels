@@ -9,7 +9,7 @@ public class AdoptionFormModel
     }
 
     //Current user's ID
-    private String userID;
+    private String formID;
 
     //All information form Page 1
     private String pg1_animalSelection;
@@ -635,11 +635,11 @@ public class AdoptionFormModel
         this.pg12_Signature = pg12_Signature;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getFormID() {
+        return formID;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setFormID(String formID) {
+        this.formID = formID;
     }
 }

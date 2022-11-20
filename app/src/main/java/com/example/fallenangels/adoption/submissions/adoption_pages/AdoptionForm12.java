@@ -114,7 +114,6 @@ public class AdoptionForm12 extends Fragment
         txtViewRules = getView().findViewById(R.id.txtViewTerms);
 
         //Hiding the nav view
-        BottomNavigationView bottomNav;
         bottomNav = getActivity().findViewById(R.id.bottomNavView);
         bottomNav.setVisibility(View.INVISIBLE);
 

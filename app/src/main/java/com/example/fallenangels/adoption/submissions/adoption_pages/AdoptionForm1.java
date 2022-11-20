@@ -21,12 +21,8 @@ import com.example.fallenangels.adoption.MainAdoptFragment;
 import com.example.fallenangels.adoption.submissions.adoption_pages.adoptionFormObject.AdoptionFormModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.ArrayList;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class AdoptionForm1 extends Fragment
@@ -42,6 +38,8 @@ public class AdoptionForm1 extends Fragment
     private AppCompatButton btnBack;
 
     public static String dogName1;
+
+    private DatabaseReference dbRef;
 
     // --- Initialisation of Firebase Variables
     private FirebaseAuth mAuth;
@@ -174,7 +172,7 @@ public class AdoptionForm1 extends Fragment
             newForm.setPg1_animalSelection(selectedRadioButton.getText().toString());
         }
 
-        newForm.setUserID(mAuth.getCurrentUser().getUid().toString());
+        newForm.setFormID(CreateKey());
         newForm.setPg1_animalName(edt_dogNameOne.getText().toString());
         newForm.setPg1_ownerNameAndSurname(edt_NameSurname.getText().toString());
         newForm.setPg1_ownerAddress(edt_address.getText().toString());
@@ -182,6 +180,20 @@ public class AdoptionForm1 extends Fragment
 
     public void loadPreviousData()
     {
+
+    }
+
+    //Method to retrieve a unique key
+    private String CreateKey() {
+
+        String userID;
+        String uniqueKey;
+
+        userID = mAuth.getCurrentUser().getUid().toString();
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Forms").child(userID).child("FosterForms");
+
+        return uniqueKey = dbRef.push().getKey();
 
     }
 }
